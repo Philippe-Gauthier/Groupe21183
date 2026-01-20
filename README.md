@@ -5,3 +5,4 @@
 # - Luc Desforges
 # - Antoine Desjardins-Chapleau
 # - Marie-Hélène Mercier
+# - Anthony Ouellet
