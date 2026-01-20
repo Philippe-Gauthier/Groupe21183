@@ -7,3 +7,4 @@
 # - Marie-Hélène Mercier
 # - Anthony Ouellet
 # - Emmanuel Bissonnette
+# - Léonard Lefebvre
