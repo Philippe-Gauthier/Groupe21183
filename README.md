@@ -9,3 +9,4 @@
 # - Emmanuel Bissonnette
 # - Léonard Lefebvre
 # - Marvyn Mbeugmo
+# Langage de programmation : python
