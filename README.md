@@ -2,3 +2,4 @@
 
 # Éleves
 # - Luc Desforges (Test)
+# - Antoine Desjardins-Chapleau
