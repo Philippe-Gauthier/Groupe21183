@@ -1,5 +1,5 @@
 # Groupe21183
 
-# Éleves
-# - Luc Desforges (Test)
+# Éleves:
+# - Luc Desforges
 # - Antoine Desjardins-Chapleau
