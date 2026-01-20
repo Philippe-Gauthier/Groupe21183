@@ -6,3 +6,4 @@
 # - Antoine Desjardins-Chapleau
 # - Marie-Hélène Mercier
 # - Anthony Ouellet
+# - Emmanuel Bissonnette
