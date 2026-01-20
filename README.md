@@ -8,3 +8,4 @@
 # - Anthony Ouellet
 # - Emmanuel Bissonnette
 # - Léonard Lefebvre
+# - Marvyn Mbeugmo
