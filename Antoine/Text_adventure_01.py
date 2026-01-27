@@ -1,1 +1,2 @@
-print("Hello World, welcome to the Text Adventure Game!")
+print("Hello World")
+print("Welcome to the Text Adventure Game!")
