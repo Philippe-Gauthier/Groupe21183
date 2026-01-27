@@ -19,8 +19,18 @@ def scene1():
     
 
     print("\n--- What do you do? ---")
+    print("option1")
+    print("option2")
+    print("option3")
     path1 = input("choice: ")
     return path1
 
 #gameplay tree
 print(scene1())
+path1 = scene1()
+if path1 == "1":
+    print_("choice1")
+elif path1 == "2":
+    print_("choice2")  
+elif path1 == "3":
+    print_("choice3")
