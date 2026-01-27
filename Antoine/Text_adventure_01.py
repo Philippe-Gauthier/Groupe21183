@@ -2,7 +2,9 @@
 import time
 
 #game logic
-def print_ (text, delay=0.5):
+debug_delay = 0.5
+
+def print_ (text, delay=debug_delay):
     print(text)
     time.sleep(delay)
 
@@ -10,10 +12,10 @@ def print_ (text, delay=0.5):
 
 ##scene 1, starting point
 def scene1():
-    print_("Welcome to the Text Adventure Game!")
+    print_("\n\nWelcome to the Text Adventure Game!")
     name = input("What is your name, adventurer? ")
     print_(f"Hello, {name}! Your journey begins now.")
-    print_("You wake up from a deep slumber at a corner table in your local taverne.")
+    print_("\nYou wake up from a deep slumber at a corner table in your local taverne.")
     print_("As you steadily regain consciousness, you notice a hooded figure sitting across from you.")
     print_("Just as you noticed it, it noticed you and is now rapidly approaching your table in strong, heavy strides.")
     print_("suddently, with a rush of adrenaline, you recall what it is you went to do here today,")
@@ -22,7 +24,7 @@ def scene1():
     print_("""Indeed, last week, you were invited to be here, at this moment, for an "opportunity". """)
     print_("The hooded stranger sits down facing you and, without warning, unsheaths a dagger, propelling it's edge towards your throat")
 
-
+    time.sleep(debug_delay+0.5)
     print("\n--- What do you do? ---")
     print("(1) lean back with your entire body do try and avoid the blade")
     print("(2) throw the table upwards to deflect the blow")
@@ -30,11 +32,20 @@ def scene1():
     path1 = input("What do you do? (1/2/3): ")
     return path1
 
+##scene 2, lean back
+def scene1_1():
+    print_("you lean back with your entire body do try and avoid the blade")
+    print_("it misses you by mere inches, then, just as swiftly as it had slashed, it retracted into it's sheath.")
+    print_("it all happened so fast that, for al else present, it looked only as if you had fallen to the ground from alcohol, nothing more.")
+
+
+
+
 #gameplay tree
 
 path1 = scene1()
 if path1 == "1":
-    print_("choice1")
+    print_(scene1_1())
 elif path1 == "2":
     print_("choice2")  
 elif path1 == "3":
