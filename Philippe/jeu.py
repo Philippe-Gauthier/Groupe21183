@@ -1,10 +1,5 @@
-# aaaaah
-#testjsdlkjf
+print(1)
 
-# les ecureuils
+print(2)
 
-print("test")
-
-
-print ("aaaah")
-
+print(3)
