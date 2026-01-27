@@ -13,4 +13,4 @@ Les entrées sont les choix du lecteur. Le lecteur aura le choix entre 2 ou parf
 Les sorties sont le résultat du choix du lecteur, l'ammenant par la suite vers d'autres choix jusqu'à arriver à une des fins possibles.
 
 ### Structure:
-Arbre, ce qui signifie que chacun des choix mènent vers un résultat différent.
+Arbre, ce qui signifie que chacun des choix mènent vers un résultat différent. 
