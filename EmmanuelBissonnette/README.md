@@ -14,4 +14,17 @@ Le joueur vas devoir trouver les objets suivants
 * un poissont Carpe mutante
 * les shorts du maire lewis
 
-# strucuture
+# Entree 
+ lentree du joueur est un chiffre entre deux chiffre variable dependament du nombre doption
+
+ # sortie
+
+ la sortie est dans le terminal et il sagit dun texte (page) et parfois des immages faites en ascii art 
+
+ # Strucutre
+
+  1. Le joueur lit le texte et regarde les images affiches par le programe
+  2. le joueur prend une desision 
+  3. le joueur apuie sur le numero corespondant a la reponse a la question quil veux donner
+  4. le jeux change de page 
+  5. retour a letape 1
