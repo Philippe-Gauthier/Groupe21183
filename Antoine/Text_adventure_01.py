@@ -34,12 +34,19 @@ def scene1():
 
 ##scene 2, lean back
 def scene1_1():
-    print_("you lean back with your entire body do try and avoid the blade")
+    print_("\n\nyou lean back with your entire body do try and avoid the blade")
     print_("it misses you by mere inches, then, just as swiftly as it had slashed, it retracted into it's sheath.")
     print_("it all happened so fast that, for al else present, it looked only as if you had fallen to the ground from alcohol, nothing more.")
 
+##scene 2, throw table
+def scene1_2():
+    print_("choice2")
 
-
+##scene 3, do nothing
+def scene1_3():
+    print_("\n\nyou stand your ground, facing down death in its eyes, stoic and unflinching.")
+    print_("the hooded figure stops, with a slight chuckle, it sheaths its blade and lowers its hood.")
+    print_(""" "you are indeed as brave and insightful as described, my time is not being wasted here" , it says.""")
 
 #gameplay tree
 
@@ -47,6 +54,6 @@ path1 = scene1()
 if path1 == "1":
     print_(scene1_1())
 elif path1 == "2":
-    print_("choice2")  
+    print_(scene1_2())  
 elif path1 == "3":
-    print_("choice3")
+    print_(scene1_3())
