@@ -2,7 +2,7 @@
 import time
 
 #game logic
-debug_delay = 0.5
+debug_delay = 0
 
 def print_ (text, delay=debug_delay):
     print(text)
@@ -10,11 +10,16 @@ def print_ (text, delay=debug_delay):
 
 #scenes
 
-##scene 1, starting point
-def scene1():
+##menu
+def intro():
     print_("\n\nWelcome to the Text Adventure Game!")
     name = input("What is your name, adventurer? ")
     print_(f"Hello, {name}! Your journey begins now.")
+    return name
+
+##scene 1, starting point
+def scene1():
+
     print_("\nYou wake up from a deep slumber at a corner table in your local taverne.")
     print_("As you steadily regain consciousness, you notice a hooded figure sitting across from you.")
     print_("Just as you noticed it, it noticed you and is now rapidly approaching your table in strong, heavy strides.")
@@ -24,7 +29,7 @@ def scene1():
     print_("""Indeed, last week, you were invited to be here, at this moment, for an "opportunity". """)
     print_("The hooded stranger sits down facing you and, without warning, unsheaths a dagger, propelling it's edge towards your throat")
 
-    time.sleep(debug_delay+0.5)
+    time.sleep(debug_delay * 2)
     print("\n--- What do you do? ---")
     print("(1) lean back with your entire body do try and avoid the blade")
     print("(2) throw the table upwards to deflect the blow")
@@ -40,16 +45,27 @@ def scene1_1():
 
 ##scene 2, throw table
 def scene1_2():
-    print_("choice2")
+    print_("\n\nyou rapidly raise your knees, lunching the table upwards with all your strength.")
+    print_("the blade narrowly misses your chin, your legs it hurts and you're not one to leave pain unpunished.")
+    print_("taking advantage of the ensuing cahos, you spring over the  tavern table, now split in two by the impact with your assailant'arms.")
+    print_("pushing him to the rough floor, punching him bloody, you pull out your own dagger and place it on his throat.")
+    print_("shouting over his struggles, you demand to know who he is and why he attacked you.")
+    print_("after a long pause, the hooded figure speaks up, his voice hoarse and weak from the beating.")
+    print_("")
 
 ##scene 3, do nothing
 def scene1_3():
     print_("\n\nyou stand your ground, facing down death in its eyes, stoic and unflinching.")
-    print_("the hooded figure stops, with a slight chuckle, it sheaths its blade and lowers its hood.")
-    print_(""" "you are indeed as brave and insightful as described, my time is not being wasted here" , it says.""")
+    print_("the hooded figure stops, centimeters from your throat with a slight chuckle, it sheaths its blade and lowers its hood.")
+    print_(f""""you are {name},are you not? it says.""")
+    print_("you aprehenctively nod, on your guard, hand on your dagger.")
+    print_(""""you are indeed as brave and insightful as described, my time is not being wasted here". he continues.""")
+
+
 
 #gameplay tree
 
+name = intro()
 path1 = scene1()
 if path1 == "1":
     print_(scene1_1())

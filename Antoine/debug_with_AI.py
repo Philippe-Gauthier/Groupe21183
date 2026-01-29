@@ -1,59 +1,66 @@
+#libraries
 import time
-#print text with delay, for esthetics and ambiance
-def print_with_delay(text, delay=0.5):
+
+#game logic
+debug_delay = 0.5
+
+def print_ (text, delay=debug_delay):
     print(text)
     time.sleep(delay)
 
-#scene1 - tavern encounter
-def scene1(name):
-    print_with_delay("You wake up from a deep slumber at a corner table in your local taverne.")
-    print_with_delay("As you steadily regain consciousness, you notice a hooded figure sitting across from you.")
-    print_with_delay("Just as you noticed it, it noticed you and is now rapidly approaching your table in strong, heavy strides.")
-    
-    print("\n--- What do you do? ---")
-    print("1. Stand up and confront the figure")
-    print("2. Try to escape through the back door")
-    print("3. Call for the tavern keeper")
-    
-    choice = input("\nEnter your choice (1-3): ")
-    return choice
+#scenes
 
-#Scene1-1: Confronting the hooded figure
-def scene2_confront(name):
-    print_with_delay("\nYou stand up bravely, meeting the figure face to face.")
-    print_with_delay("The figure pulls back their hood, revealing an old friend!")
-    print_with_delay(f"'{name}! I've been looking everywhere for you!'")
-    # Add more to scenes here
-
-#Scene1-2: Attempting escape
-def scene2_escape(name):
-    print_with_delay("\nYou quickly move toward the back door...")
-    print_with_delay("You make it outside into the alley!")
-    # Add more to scenes here
-
-#Scene1-3: Calling for help
-def scene2_tavern_keeper(name):
-    print_with_delay("\nYou wave frantically at the tavern keeper.")
-    print_with_delay("The figure stops in their tracks...")
-    # Add more to scenes here
-
-def main():
-    print("Welcome to the Text Adventure Game!")
+##menu
+def intro():
+    print_("\n\nWelcome to the Text Adventure Game!")
     name = input("What is your name, adventurer? ")
-    print(f"Hello, {name}! Your journey begins now.")
-    time.sleep(0.5)
-    
-    # Start the game
-    choice = scene1(name)
-    
-    if choice == "1":
-        scene2_confront(name)
-    elif choice == "2":
-        scene2_escape(name)
-    elif choice == "3":
-        scene2_tavern_keeper(name)
-    else:
-        print("Invalid choice!")
+    print_(f"Hello, {name}! Your journey begins now.")
+    return name
+##scene 1, starting point
+def scene1():
 
-if __name__ == "__main__":
-    main()
+    print_("\nYou wake up from a deep slumber at a corner table in your local taverne.")
+    print_("As you steadily regain consciousness, you notice a hooded figure sitting across from you.")
+    print_("Just as you noticed it, it noticed you and is now rapidly approaching your table in strong, heavy strides.")
+    print_("suddently, with a rush of adrenaline, you recall what it is you went to do here today,")
+    print_("it wasn't simply to get drunk, although that is an always pleasant side effewct of meetings in pubs.")
+    print_("Today was thge day where you would finally learn who sent that letter and why it was so vague.") #if an inventory system ever gets added, here would be th point to put a "mysterious letter added to inventory" line
+    print_("""Indeed, last week, you were invited to be here, at this moment, for an "opportunity". """)
+    print_("The hooded stranger sits down facing you and, without warning, unsheaths a dagger, propelling it's edge towards your throat")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) lean back with your entire body do try and avoid the blade")
+    print("(2) throw the table upwards to deflect the blow")
+    print("(3) nothing")
+    path1 = input("What do you do? (1/2/3): ")
+    return path1
+
+##scene 2, lean back
+def scene1_1():
+    print_("\n\nyou lean back with your entire body do try and avoid the blade")
+    print_("it misses you by mere inches, then, just as swiftly as it had slashed, it retracted into it's sheath.")
+    print_("it all happened so fast that, for al else present, it looked only as if you had fallen to the ground from alcohol, nothing more.")
+
+##scene 2, throw table
+def scene1_2():
+    print_("choice2")
+
+##scene 3, do nothing
+def scene1_3():
+    print_("\n\nyou stand your ground, facing down death in its eyes, stoic and unflinching.")
+    print_("the hooded figure stops, with a slight chuckle, it sheaths its blade and lowers its hood.")
+    print_(f""""you are {name},are you not? it says.""")
+    print_("you aprehenctively nod, on your guard, hand on your dagger.")
+    print_(""""you are indeed as brave and insightful as described, my time is not being wasted here". he continues.""")
+
+#gameplay tree
+
+name = intro()
+path1 = scene1()
+if path1 == "1":
+    print_(scene1_1())
+elif path1 == "2":
+    print_(scene1_2())  
+elif path1 == "3":
+    print_(scene1_3())
