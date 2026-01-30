@@ -1,5 +1,6 @@
 #libraries
 import time
+import random
 
 #game logic
 debug_delay = 0
@@ -37,7 +38,7 @@ def scene1():
     path1 = input("What do you do? (1/2/3): ")
     return path1
 
-##scene 2, lean back
+##scene 1_1, lean back
 def scene1_1():
     print_("\n\nYou lean back with your entire body do try and avoid the blade")
     print_("It misses you by mere inches, then, just as swiftly as it had slashed, it retracted into it's sheath.")
@@ -59,7 +60,20 @@ def scene1_1():
     path1_1 = input("What do you do? (1/2/3): ")
     return path1_1
 
-##scene 2, throw table
+##scene 1_1_1, accept
+def scene1_1_1():
+    print_("111")
+
+##scene 1_1_2, accept
+def scene1_1_2():
+    print_("112")
+
+##scene 1_1_3, accept
+def scene1_1_3():
+    print_("113")
+
+
+##scene 1_2, throw table
 def scene1_2():
     print_("\n\nYou rapidly raise your knees, lunching the table upwards with all your strength.")
     print_("The blade narrowly misses your chin, your legs it hurts and you're not one to leave pain unpunished.")
@@ -77,7 +91,20 @@ def scene1_2():
     path1_2 = input("What do you do? (1/2/3): ")
     return path1_2
 
-##scene 3, do nothing
+##scene 1_2_1, accept
+def scene1_2_1():
+    print_("121")
+
+##scene 1_2_2, accept
+def scene1_2_2():
+    print_("122")
+
+##scene 1_2_3, accept
+def scene1_2_3():
+    print_("123")
+
+
+##scene 1_3, do nothing
 def scene1_3():
     print_("\n\nYou stand your ground, facing down death in its eyes, stoic and unflinching.")
     print_("The hooded figure stops, centimeters from your throat with a slight chuckle, it sheaths its blade and lowers its hood.")
@@ -99,14 +126,44 @@ def scene1_3():
     path1_3 = input("What do you do? (1/2/3): ")
     return path1_3
 
+##scene 1_3_1, accept
+def scene1_3_1():
+    print_("131")
+
+##scene 1_3_2, accept
+def scene1_3_2():
+    print_("132")
+
+##scene 1_3_3, accept
+def scene1_3_3():
+    print_("133")
+
 
 #gameplay tree
 
 name = intro()
 path1 = scene1()
 if path1 == "1":
-    print_(scene1_1())
+    choice = scene1_1()
+    if choice == "1":
+        scene1_1_1()
+    elif choice == "2":
+        scene1_1_2()
+    elif choice == "3":
+        scene1_1_3()
 elif path1 == "2":
-    print_(scene1_2())  
+    choice = scene1_3()
+    if choice == "1":
+        scene1_2_1()
+    elif choice == "2":
+        scene1_2_2()
+    elif choice == "3":
+        scene1_2_3()  
 elif path1 == "3":
-    print_(scene1_3())
+    choice = scene1_3()
+    if choice == "1":
+        scene1_3_1()
+    elif choice == "2":
+        scene1_3_2()
+    elif choice == "3":
+        scene1_3_3()
