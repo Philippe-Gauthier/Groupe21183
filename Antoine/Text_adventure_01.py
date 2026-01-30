@@ -2,7 +2,7 @@
 import time
 
 #game logic
-debug_delay = 0.5
+debug_delay = 0
 
 def print_ (text, delay=debug_delay):
     print(text)
@@ -20,7 +20,7 @@ def intro():
 ##scene 1, starting point
 def scene1():
 
-    print_("\nYou wake up from a deep slumber at a corner table in your local taverne.")
+    print_("\n\nYou wake up from a deep slumber at a corner table in your local taverne.")
     print_("As you steadily regain consciousness, you notice a hooded figure sitting across from you.")
     print_("Just as you noticed it, it noticed you and is now rapidly approaching your table in strong, heavy strides.")
     print_("Suddently, with a rush of adrenaline, you recall what it is you went to do here today,")
@@ -41,8 +41,23 @@ def scene1():
 def scene1_1():
     print_("\n\nYou lean back with your entire body do try and avoid the blade")
     print_("It misses you by mere inches, then, just as swiftly as it had slashed, it retracted into it's sheath.")
-    print_("It all happened so fast that, for al else present, it looked only as if you had fallen to the ground from alcohol, nothing more.")
+    print_("It all happened so fast that, for all else present, it looked only as if you had fallen to the ground from alcohol, nothing more.")
     print_("The figure stands up and offers to help you back to your feet.")
+    print_(""""You are indeed as swift and insightfull as described, my time is not being wasted here". he says.""")
+    print_(""""Let's talk buisness", he continues,"as you have no doubt heard, multiple adventurers have recently lost their lives climbing the mountain" """)
+    print_(""""It is my belief that this, coupled with the recent unrest and growth in strenght of dark powers in the kingdom, is no coincidence." """)
+    print_(""""From what I have gathered, this could be caused by the arrival of an ancient and wicked being from times long forgotten by men." """)
+    print_(""""What is it?" you ask." """)
+    print_(""""A foul beast, from the northern wastes, known only as the Ice Wyrm." """)
+    print_(""""I, alone, cannot defeat it, that is why I come to you for aid." """)
+
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) Accept")
+    print("(2) Decline")
+    print("(3) Ask for details")
+    path1_1 = input("What do you do? (1/2/3): ")
+    return path1_1
 
 ##scene 2, throw table
 def scene1_2():
@@ -58,9 +73,9 @@ def scene1_2():
     print("\n--- What do you do? ---")
     print("(1) Slowly help him up and order mead as an appology")
     print("(2) Let violence and adrenalline blind you and kill him")
-    print("(3) L:eave him there and walk away")
-    path2 = input("What do you do? (1/2/3): ")
-    return path2
+    print("(3) Leave him there and walk away")
+    path1_2 = input("What do you do? (1/2/3): ")
+    return path1_2
 
 ##scene 3, do nothing
 def scene1_3():
@@ -69,7 +84,20 @@ def scene1_3():
     print_(f""""You are {name},are you not? it says.""")
     print_("You aprehenctively nod, on your guard, hand on your dagger.")
     print_(""""You are indeed as brave and insightful as described, my time is not being wasted here". he continues.""")
+    print_(""""Let's talk buisness", he continues,"as you have no doubt heard, multiple adventurers have recently lost their lives climbing the mountain" """)
+    print_(""""It is my belief that this, coupled with the recent unrest and growth in strenght of dark powers in the kingdom, is no coincidence." """)
+    print_(""""From what I have gathered, this could be caused by the arrival of an ancient and wicked being from times long forgotten by men." """)
+    print_(""""What is it?" you ask." """)
+    print_(""""A foul beast, from the northern wastes, known only as the Ice Wyrm." """)
+    print_(""""I, alone, cannot defeat it, that is why I come to you for aid." """)
 
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) Accept")
+    print("(2) Decline")
+    print("(3) Ask for details")
+    path1_3 = input("What do you do? (1/2/3): ")
+    return path1_3
 
 
 #gameplay tree

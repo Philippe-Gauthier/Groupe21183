@@ -44,7 +44,7 @@ def scene1_1():
 
 ##scene 2, throw table
 def scene1_2():
-    print_("choice2")
+    print_("choice")
 
 ##scene 3, do nothing
 def scene1_3():
@@ -63,4 +63,4 @@ if path1 == "1":
 elif path1 == "2":
     print_(scene1_2())  
 elif path1 == "3":
-    print_(scene1_3())
+    print_(scene1_3())s
