@@ -56,8 +56,7 @@ def scene1_1():
     print("\n--- What do you do? ---")
     print("(1) Accept")
     print("(2) Decline")
-    print("(3) Ask for details")
-    path1_1 = input("What do you do? (1/2/3): ")
+    path1_1 = input("What do you do? (1/2): ")
     return path1_1
 
 ##scene 1_1_1, accept
@@ -67,10 +66,6 @@ def scene1_1_1():
 ##scene 1_1_2, decline
 def scene1_1_2():
     print_("112")
-
-##scene 1_1_3, ask for details
-def scene1_1_3():
-    print_("113")
 
 
 ##scene 1_2, throw table
@@ -122,8 +117,7 @@ def scene1_3():
     print("\n--- What do you do? ---")
     print("(1) Accept")
     print("(2) Decline")
-    print("(3) Ask for details")
-    path1_3 = input("What do you do? (1/2/3): ")
+    path1_3 = input("What do you do? (1/2): ")
     return path1_3
 
 ##scene 1_3_1, accept (2)
@@ -133,10 +127,6 @@ def scene1_3_1():
 ##scene 1_3_2, decline (2)
 def scene1_3_2():
     print_("132")
-
-##scene 1_3_3, ask for details (2)
-def scene1_3_3():
-    print_("133")
 
 
 #gameplay tree
@@ -149,8 +139,6 @@ if path1 == "1":
         scene1_1_1()
     elif choice == "2":
         scene1_1_2()
-    elif choice == "3":
-        scene1_1_3()
 elif path1 == "2":
     choice = scene1_3()
     if choice == "1":
@@ -165,5 +153,3 @@ elif path1 == "3":
         scene1_3_1()
     elif choice == "2":
         scene1_3_2()
-    elif choice == "3":
-        scene1_3_3()
