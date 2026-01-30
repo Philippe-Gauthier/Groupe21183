@@ -64,11 +64,11 @@ def scene1_1():
 def scene1_1_1():
     print_("111")
 
-##scene 1_1_2, accept
+##scene 1_1_2, decline
 def scene1_1_2():
     print_("112")
 
-##scene 1_1_3, accept
+##scene 1_1_3, ask for details
 def scene1_1_3():
     print_("113")
 
@@ -91,15 +91,15 @@ def scene1_2():
     path1_2 = input("What do you do? (1/2/3): ")
     return path1_2
 
-##scene 1_2_1, accept
+##scene 1_2_1, help him up
 def scene1_2_1():
     print_("121")
 
-##scene 1_2_2, accept
+##scene 1_2_2, kill him
 def scene1_2_2():
     print_("122")
 
-##scene 1_2_3, accept
+##scene 1_2_3, walk away
 def scene1_2_3():
     print_("123")
 
@@ -126,15 +126,15 @@ def scene1_3():
     path1_3 = input("What do you do? (1/2/3): ")
     return path1_3
 
-##scene 1_3_1, accept
+##scene 1_3_1, accept (2)
 def scene1_3_1():
     print_("131")
 
-##scene 1_3_2, accept
+##scene 1_3_2, decline (2)
 def scene1_3_2():
     print_("132")
 
-##scene 1_3_3, accept
+##scene 1_3_3, ask for details (2)
 def scene1_3_3():
     print_("133")
 
