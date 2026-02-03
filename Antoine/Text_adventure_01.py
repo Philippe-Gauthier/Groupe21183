@@ -61,11 +61,42 @@ def scene1_1():
 
 ##scene 1_1_1, accept
 def scene1_1_1():
-    print_("111")
+    print_("\n\nYou accept, finaly, a quest worthy of your legendary skills.")
+    print_(""""We shall leave at dawn", he says, "meet me at the town gates." """)
+    print_("you part ways as to not attreact attention further and go to your cottage.")
+    print_("as the sun creeps over the nearby hills you make your way to the town's edge where the man awaits with horses and provisions")
+    print_(""""Onwards" you enthoustiacally call once all is set." """)
+    print_(""""to which path?" he anwsers,"we should decide on the road." """)
+    print_(""""quite right" you say, we shall pass... """)
 
-##scene 1_1_2, decline
+    time.sleep(debug_delay * 2)
+    print("\n--- where will you go? ---")
+    print("(1) across the mountains, it may be perrilous but it's the fastest route")
+    print("(2) around, by the forest, it may take longer but it's safer")
+    path1_1_1 = input("Where to? (1/2): ")
+    return path1_1_1
+
+##scene 1_1_1_1, across mountains       open
+def scene1_1_1_1():
+    print_("1111")
+
+##scene 1_1_1_2, around forest      open
+def scene1_1_1_2():
+    print_("1112")
+
+##scene 1_1_2, decline      open
 def scene1_1_2():
-    print_("112")
+    print_("\n\nYou politely decline the offer, although you may be a great adventurer, an ice wyrm is not to be trifled with.")
+    print_(""""That is why I require a companion" he says,"I cannot do this alone and neither can you, but together..." """)
+    print_("it is true that you have no idea of the man's skills, it may be possible and even likely that he is as capable as you are.")
+    print_("the idea starts to tempt you, you imagine the glory and riches that would come from slaying such a beast.")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- Do you change your mind? ---")
+    print("(1) Accept")
+    print("(2) Decline")
+    path1_1_2 = input("What do you do? (1/2): ")
+    return path1_1_2
 
 
 ##scene 1_2, throw table
@@ -86,15 +117,15 @@ def scene1_2():
     path1_2 = input("What do you do? (1/2/3): ")
     return path1_2
 
-##scene 1_2_1, help him up
+##scene 1_2_1, help him up      open
 def scene1_2_1():
     print_("121")
 
-##scene 1_2_2, kill him
+##scene 1_2_2, kill him     open
 def scene1_2_2():
     print_("122")
 
-##scene 1_2_3, walk away
+##scene 1_2_3, walk away        open
 def scene1_2_3():
     print_("123")
 
@@ -120,11 +151,24 @@ def scene1_3():
     path1_3 = input("What do you do? (1/2): ")
     return path1_3
 
-##scene 1_3_1, accept (2)
+##scene 1_3_1, accept (2)       open
 def scene1_3_1():
-    print_("131")
+    print_("\n\nYou accept, finaly, a quest worthy of your legendary skills.")
+    print_(""""We shall leave at dawn", he says, "meet me at the town gates." """)
+    print_("you part ways as to not attreact attention further and go to your cottage.")
+    print_("as the sun creeps over the nearby hills you make your way to the town's edge where the man awaits with horses and provisions")
+    print_(""""Onwards" you enthoustiacally call once all is set." """)
+    print_(""""to which path?" he anwsers,"we should decide on the road." """)
+    print_(""""quite right" you say, we shall pass... """)
 
-##scene 1_3_2, decline (2)
+    time.sleep(debug_delay * 2)
+    print("\n--- where will you go? ---")
+    print("(1) across the mountains, it may be perrilous but it's the fastest route")
+    print("(2) around, by the forest, it may take longer but it's safer")
+    path1_3_1 = input("Where to? (1/2): ")
+    return path1_3_1
+
+##scene 1_3_2, decline (2)      open
 def scene1_3_2():
     print_("132")
 
