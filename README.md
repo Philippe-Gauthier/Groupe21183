@@ -54,7 +54,8 @@ print("aaaa")
 ---
 
 ---
-### exemples de chose à faire dans un readme
+### Par Antoine 
+#### exemples de chose à faire dans un readme
 - Summary
 - Developpement
 - toDo
@@ -67,3 +68,4 @@ print("aaaa")
 - features
 - Limitations
 - Issues
+---
