@@ -59,3 +59,9 @@ print("aaaa")
 ---Communauté
 
 ---
+<p align="center"> 
+  <img src="https://cegepsherbrooke.qc.ca/wp-content/themes/cegepsherbrooke.qc.ca/dist/images/logo.svg" alt="cegepsherbrooke Logo" width="80px" height="80px">
+</p>
+<h1 align="center"> Choose your adventure </h1>
+<h3 align="center"> 243-224-SH PROGRAMMATION 1</h3>
+<h5 align="center"> Project Assignment 1 - <a href="https://cegepsherbrooke.qc.ca/">Cegep de Sherbrooke</a> (Winter 2026) </h5>
