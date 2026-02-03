@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src="gif/Pacman Logo2.jpg" alt="Pacman Logo" width="80px" height="80px">
+  <img src="https://cegepsherbrooke.qc.ca/wp-content/themes/cegepsherbrooke.qc.ca/dist/images/logo.svg" alt="Pacman Logo" width="80px" height="80px">
 </p>
 <h1 align="center"> Choose your adventure </h1>
 <h3 align="center"> COMP 6721 - Artificial Intelligence </h3>
