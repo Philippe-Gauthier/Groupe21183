@@ -54,3 +54,16 @@ print("aaaa")
 ---
 
 ---
+### exemples de chose à faire dans un readme
+- Summary
+- Developpement
+- toDo
+- Usage
+- Testing
+- Installation
+- faq
+- Licences
+- acknowledgement
+- features
+- Limitations
+- Issues
