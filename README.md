@@ -92,7 +92,7 @@ print("aaaa")
     <li><a href="#about-the-project"> ➤ À propos du projet</a></li>
     <li><a href="#overview"> ➤ Sommaire</a></li>
     <li><a href="#project-files-description"> ➤ Description de l'hierarchie des fichiers</a></li>
-    <li><a href="#getting-started"> ➤ Pour commencerd</a></li>
+    <li><a href="#getting-started"> ➤ Pour commencer</a></li>
     <li><a href="#scenario1"> ➤ Scenario 1: Mort Seul </a></li>
     <li><a href="#scenario2"> ➤ Scenario 2: Mort avec companion </a></li>
     <li><a href="#scenario3"> ➤ Scenario 3: Companion meurt et pas de réussite </a></li>
