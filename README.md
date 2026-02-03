@@ -64,26 +64,23 @@ print("aaaa")
 </p>
 <h1 align="center"> Choose your adventure </h1>
 <h3 align="center"> 243-224-SH PROGRAMMATION 1</h3>
-<h5 align="center"> Project Assignment 1 - <a href="https://cegepsherbrooke.qc.ca/">Cegep de Sherbrooke</a> (Winter 2026) </h5>
+<h5 align="center"> Projet 1 - <a href="https://cegepsherbrooke.qc.ca/">Cegep de Sherbrooke</a> (Winter 2026) </h5>
 
 <!-- TABLE OF CONTENTS -->
-<h2 id="table-of-contents"> :book: Table of Contents</h2>
+<h2 id="table-of-contents"> :book: Table des matières</h2>
 
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#about-the-project"> ➤ About The Project</a></li>
-    <li><a href="#overview"> ➤ Overview</a></li>
-    <li><a href="#project-files-description"> ➤ Project Files Description</a></li>
-    <li><a href="#getting-started"> ➤ Getting Started</a></li>
-    <li><a href="#scenario1"> ➤ Scenario 1: Depth First Search </a></li>
-    <li><a href="#scenario2"> ➤ Scenario 2: Breadth First Search </a></li>
-    <li><a href="#scenario3"> ➤ Scenario 3: Uniform Cost Search </a></li>
-    <li><a href="#scenario4"> ➤ Scenario 4: A* search algorithm </a></li>
-    <li><a href="#scenario5"> ➤ Scenario 5: Finding All Corners </a></li>
-    <li><a href="#scenario6"> ➤ Scenario 6: Admissible and Consistent Heuristic </a></li>
-    <li><a href="#scenario7"> ➤ Scenario 7: Eating All Dots </a></li>
-    <li><a href="#scenario8"> ➤ Scenario 8: Suboptimal Search </a></li>
+    <li><a href="#about-the-project"> ➤ À propos du projet</a></li>
+    <li><a href="#overview"> ➤ Sommaire</a></li>
+    <li><a href="#project-files-description"> ➤ Description de l'hierarchie des fichiers</a></li>
+    <li><a href="#getting-started"> ➤ Pour commencerd</a></li>
+    <li><a href="#scenario1"> ➤ Scenario 1: Mort Seul </a></li>
+    <li><a href="#scenario2"> ➤ Scenario 2: Mort avec companion </a></li>
+    <li><a href="#scenario3"> ➤ Scenario 3: Companion meurt et pas de réussite </a></li>
+    <li><a href="#scenario4"> ➤ Scenario 4: Réussite seul </a></li>
+    <li><a href="#scenario5"> ➤ Scenario 5: Réussite avec companion </a></li>
     <li><a href="#references"> ➤ References</a></li>
     <li><a href="#credits"> ➤ Credits</a></li>
   </ol>
