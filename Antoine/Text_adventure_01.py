@@ -84,7 +84,7 @@ def scene1_1_1_1():
 def scene1_1_1_2():
     print_("1112")
 
-##scene 1_1_2, decline      open
+##scene 1_1_2, decline
 def scene1_1_2():
     print_("\n\nYou politely decline the offer, although you may be a great adventurer, an ice wyrm is not to be trifled with.")
     print_(""""That is why I require a companion" he says,"I cannot do this alone and neither can you, but together..." """)
@@ -98,6 +98,13 @@ def scene1_1_2():
     path1_1_2 = input("What do you do? (1/2): ")
     return path1_1_2
 
+##scene 1_1_2_1, accept     open
+def scene1_1_2_1():
+    print_("1121")
+
+##scene 1_1_2_2, decline      open
+def scene1_1_2_2():
+    print_("1122")
 
 ##scene 1_2, throw table
 def scene1_2():
@@ -151,7 +158,7 @@ def scene1_3():
     path1_3 = input("What do you do? (1/2): ")
     return path1_3
 
-##scene 1_3_1, accept (2)       open
+##scene 1_3_1, accept
 def scene1_3_1():
     print_("\n\nYou accept, finaly, a quest worthy of your legendary skills.")
     print_(""""We shall leave at dawn", he says, "meet me at the town gates." """)
@@ -168,9 +175,35 @@ def scene1_3_1():
     path1_3_1 = input("Where to? (1/2): ")
     return path1_3_1
 
-##scene 1_3_2, decline (2)      open
+##scene 1_3_1_1, across mountains       open and clone
+def scene1_3_1_1():
+    print_("1311")
+
+##scene 1_3_1_2, around forest      open and clone
+def scene1_3_1_2():
+    print_("1312")
+
+##scene 1_3_2, decline
 def scene1_3_2():
-    print_("132")
+    print_("\n\nYou politely decline the offer, although you may be a great adventurer, an ice wyrm is not to be trifled with.")
+    print_(""""That is why I require a companion" he says,"I cannot do this alone and neither can you, but together..." """)
+    print_("it is true that you have no idea of the man's skills, it may be possible and even likely that he is as capable as you are.")
+    print_("the idea starts to tempt you, you imagine the glory and riches that would come from slaying such a beast.")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- Do you change your mind? ---")
+    print("(1) Accept")
+    print("(2) Decline")
+    path1_3_2 = input("What do you do? (1/2): ")
+    return path1_3_2
+
+##scene 1_3_2_1, accept     open and clone
+def scene1_3_2_1():
+    print_("1321")
+
+##scene 1_3_2_2, decline      open and clone
+def scene1_3_2_2():
+    print_("1322")
 
 
 #gameplay tree
@@ -178,22 +211,40 @@ def scene1_3_2():
 name = intro()
 path1 = scene1()
 if path1 == "1":
-    choice = scene1_1()
-    if choice == "1":
-        scene1_1_1()
-    elif choice == "2":
-        scene1_1_2()
+    path1_1 = scene1_1()
+    if path1_1 == "1":
+        path1_1_1 = scene1_1_1()
+        if path1_1_1 == "1":
+            scene1_1_1_1()
+        elif path1_1_1 == "2":
+            scene1_1_1_2()
+    elif path1_1 == "2":
+        path1_1_2 = scene1_1_2()
+        if path1_1_2 == "1":
+            scene1_1_2_1()
+        elif path1_1_2 == "2":
+            scene1_1_2_2()
+
 elif path1 == "2":
-    choice = scene1_3()
-    if choice == "1":
+    path1_2 = scene1_2()
+    if path1_2 == "1":
         scene1_2_1()
-    elif choice == "2":
+    elif path1_2 == "2":
         scene1_2_2()
-    elif choice == "3":
-        scene1_2_3()  
+    elif path1_2 == "3":
+        scene1_2_3()
+
 elif path1 == "3":
-    choice = scene1_3()
-    if choice == "1":
-        scene1_3_1()
-    elif choice == "2":
-        scene1_3_2()
+    path1_3 = scene1_3()
+    if path1_3 == "1":
+        path1_3_1 = scene1_3_1()
+        if path1_3_1 == "1":
+            scene1_3_1_1()
+        elif path1_3_1 == "2":
+            scene1_3_1_2()
+    elif path1_3 == "2":
+        path1_3_2 = scene1_3_2()
+        if path1_3_2 == "1":
+            scene1_3_2_1()
+        elif path1_3_2 == "2":
+            scene1_3_2_2()
