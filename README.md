@@ -59,6 +59,23 @@ print("aaaa")
 ---Communauté
 
 ---
+### Par Antoine 
+#### exemples de chose à faire dans un readme
+- Summary
+- Developpement
+- toDo
+- Usage
+- Testing
+- Installation
+- faq
+- Licences
+- acknowledgement
+- features
+- Limitations
+- Issues
+---
+
+
 <p align="center"> 
   <img src="https://cegepsherbrooke.qc.ca/wp-content/themes/cegepsherbrooke.qc.ca/dist/images/logo.svg" alt="cegepsherbrooke Logo" width="80px" height="80px">
 </p>
