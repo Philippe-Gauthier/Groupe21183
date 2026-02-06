@@ -12,10 +12,7 @@
 - James Bergeron
 ### Langage de programmation : python
 
-
 ---
-
-
 
 # titre
 ## titre
@@ -51,54 +48,30 @@ print("aaaa")
 ```
 ---
 ***weeeeeeeee***
----
----Troubleshooting
-
----Documentation
-
----Communauté
 
 ---
-### Par Antoine 
-#### exemples de chose à faire dans un readme
-- Summary
-- Developpement
-- toDo
-- Usage
-- Testing
-- Installation
-- faq
-- Licences
+- Résumé (ce que c'est le programme)
+- image
+  - logo
+  - Exemples
+- Fonctionnalités
+- FAQ
+- Table des matières
+
+- Troubleshooting
+  - usage
+  - testing
+  - installation
+  - dépendance
+
+- Développement
+  - Hiérarchie des fichiers
+  - Todo (à faire)
+  - issues (problèmes connus)
+  - limitations
+  - Calendrier
+  
+- Lien vers documentation externe
+- Lien vers une communauté (support ou utilisateur)
+- license
 - acknowledgement
-- features
-- Limitations
-- Issues
----
-
-
-<p align="center"> 
-  <img src="https://cegepsherbrooke.qc.ca/wp-content/themes/cegepsherbrooke.qc.ca/dist/images/logo.svg" alt="cegepsherbrooke Logo" width="80px" height="80px">
-</p>
-<h1 align="center"> Choose your adventure </h1>
-<h3 align="center"> 243-224-SH PROGRAMMATION 1</h3>
-<h5 align="center"> Projet 1 - <a href="https://cegepsherbrooke.qc.ca/">Cegep de Sherbrooke</a> (Winter 2026) </h5>
-
-<!-- TABLE OF CONTENTS -->
-<h2 id="table-of-contents"> :book: Table des matières</h2>
-
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project"> ➤ À propos du projet</a></li>
-    <li><a href="#overview"> ➤ Sommaire</a></li>
-    <li><a href="#project-files-description"> ➤ Description de l'hierarchie des fichiers</a></li>
-    <li><a href="#getting-started"> ➤ Pour commencer</a></li>
-    <li><a href="#scenario1"> ➤ Scenario 1: Mort Seul </a></li>
-    <li><a href="#scenario2"> ➤ Scenario 2: Mort avec companion </a></li>
-    <li><a href="#scenario3"> ➤ Scenario 3: Companion meurt et pas de réussite </a></li>
-    <li><a href="#scenario4"> ➤ Scenario 4: Réussite seul </a></li>
-    <li><a href="#scenario5"> ➤ Scenario 5: Réussite avec companion </a></li>
-    <li><a href="#references"> ➤ References</a></li>
-    <li><a href="#credits"> ➤ Credits</a></li>
-  </ol>
-</details>
