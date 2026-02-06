@@ -61,12 +61,50 @@ def scene1_1():
 
 ##scene 1_1_1, accept
 def scene1_1_1():
-    print_("111")
+    print_("\n\nYou accept, finaly, a quest worthy of your legendary skills.")
+    print_(""""We shall leave at dawn", he says, "meet me at the town gates." """)
+    print_("you part ways as to not attreact attention further and go to your cottage.")
+    print_("as the sun creeps over the nearby hills you make your way to the town's edge where the man awaits with horses and provisions")
+    print_(""""Onwards" you enthoustiacally call once all is set." """)
+    print_(""""to which path?" he anwsers,"we should decide on the road." """)
+    print_(""""quite right" you say, we shall pass... """)
+
+    time.sleep(debug_delay * 2)
+    print("\n--- where will you go? ---")
+    print("(1) across the mountains, it may be perrilous but it's the fastest route")
+    print("(2) around, by the forest, it may take longer but it's safer")
+    path1_1_1 = input("Where to? (1/2): ")
+    return path1_1_1
+
+##scene 1_1_1_1, across mountains       open
+def scene1_1_1_1():
+    print_("1111")
+
+##scene 1_1_1_2, around forest      open
+def scene1_1_1_2():
+    print_("1112")
 
 ##scene 1_1_2, decline
 def scene1_1_2():
-    print_("112")
+    print_("\n\nYou politely decline the offer, although you may be a great adventurer, an ice wyrm is not to be trifled with.")
+    print_(""""That is why I require a companion" he says,"I cannot do this alone and neither can you, but together..." """)
+    print_("it is true that you have no idea of the man's skills, it may be possible and even likely that he is as capable as you are.")
+    print_("the idea starts to tempt you, you imagine the glory and riches that would come from slaying such a beast.")
 
+    time.sleep(debug_delay * 2)
+    print("\n--- Do you change your mind? ---")
+    print("(1) Accept")
+    print("(2) Decline")
+    path1_1_2 = input("What do you do? (1/2): ")
+    return path1_1_2
+
+##scene 1_1_2_1, accept     open
+def scene1_1_2_1():
+    print_("1121")
+
+##scene 1_1_2_2, decline      open
+def scene1_1_2_2():
+    print_("1122")
 
 ##scene 1_2, throw table
 def scene1_2():
@@ -86,15 +124,15 @@ def scene1_2():
     path1_2 = input("What do you do? (1/2/3): ")
     return path1_2
 
-##scene 1_2_1, help him up
+##scene 1_2_1, help him up      open
 def scene1_2_1():
     print_("121")
 
-##scene 1_2_2, kill him
+##scene 1_2_2, kill him     open
 def scene1_2_2():
     print_("122")
 
-##scene 1_2_3, walk away
+##scene 1_2_3, walk away        open
 def scene1_2_3():
     print_("123")
 
@@ -120,13 +158,52 @@ def scene1_3():
     path1_3 = input("What do you do? (1/2): ")
     return path1_3
 
-##scene 1_3_1, accept (2)
+##scene 1_3_1, accept
 def scene1_3_1():
-    print_("131")
+    print_("\n\nYou accept, finaly, a quest worthy of your legendary skills.")
+    print_(""""We shall leave at dawn", he says, "meet me at the town gates." """)
+    print_("you part ways as to not attreact attention further and go to your cottage.")
+    print_("as the sun creeps over the nearby hills you make your way to the town's edge where the man awaits with horses and provisions")
+    print_(""""Onwards" you enthoustiacally call once all is set." """)
+    print_(""""to which path?" he anwsers,"we should decide on the road." """)
+    print_(""""quite right" you say, we shall pass... """)
 
-##scene 1_3_2, decline (2)
+    time.sleep(debug_delay * 2)
+    print("\n--- where will you go? ---")
+    print("(1) across the mountains, it may be perrilous but it's the fastest route")
+    print("(2) around, by the forest, it may take longer but it's safer")
+    path1_3_1 = input("Where to? (1/2): ")
+    return path1_3_1
+
+##scene 1_3_1_1, across mountains       open and clone
+def scene1_3_1_1():
+    print_("1311")
+
+##scene 1_3_1_2, around forest      open and clone
+def scene1_3_1_2():
+    print_("1312")
+
+##scene 1_3_2, decline
 def scene1_3_2():
-    print_("132")
+    print_("\n\nYou politely decline the offer, although you may be a great adventurer, an ice wyrm is not to be trifled with.")
+    print_(""""That is why I require a companion" he says,"I cannot do this alone and neither can you, but together..." """)
+    print_("it is true that you have no idea of the man's skills, it may be possible and even likely that he is as capable as you are.")
+    print_("the idea starts to tempt you, you imagine the glory and riches that would come from slaying such a beast.")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- Do you change your mind? ---")
+    print("(1) Accept")
+    print("(2) Decline")
+    path1_3_2 = input("What do you do? (1/2): ")
+    return path1_3_2
+
+##scene 1_3_2_1, accept     open and clone
+def scene1_3_2_1():
+    print_("1321")
+
+##scene 1_3_2_2, decline      open and clone
+def scene1_3_2_2():
+    print_("1322")
 
 
 #gameplay tree
@@ -134,22 +211,40 @@ def scene1_3_2():
 name = intro()
 path1 = scene1()
 if path1 == "1":
-    choice = scene1_1()
-    if choice == "1":
-        scene1_1_1()
-    elif choice == "2":
-        scene1_1_2()
+    path1_1 = scene1_1()
+    if path1_1 == "1":
+        path1_1_1 = scene1_1_1()
+        if path1_1_1 == "1":
+            scene1_1_1_1()
+        elif path1_1_1 == "2":
+            scene1_1_1_2()
+    elif path1_1 == "2":
+        path1_1_2 = scene1_1_2()
+        if path1_1_2 == "1":
+            scene1_1_2_1()
+        elif path1_1_2 == "2":
+            scene1_1_2_2()
+
 elif path1 == "2":
-    choice = scene1_3()
-    if choice == "1":
+    path1_2 = scene1_2()
+    if path1_2 == "1":
         scene1_2_1()
-    elif choice == "2":
+    elif path1_2 == "2":
         scene1_2_2()
-    elif choice == "3":
-        scene1_2_3()  
+    elif path1_2 == "3":
+        scene1_2_3()
+
 elif path1 == "3":
-    choice = scene1_3()
-    if choice == "1":
-        scene1_3_1()
-    elif choice == "2":
-        scene1_3_2()
+    path1_3 = scene1_3()
+    if path1_3 == "1":
+        path1_3_1 = scene1_3_1()
+        if path1_3_1 == "1":
+            scene1_3_1_1()
+        elif path1_3_1 == "2":
+            scene1_3_1_2()
+    elif path1_3 == "2":
+        path1_3_2 = scene1_3_2()
+        if path1_3_2 == "1":
+            scene1_3_2_1()
+        elif path1_3_2 == "2":
+            scene1_3_2_2()
