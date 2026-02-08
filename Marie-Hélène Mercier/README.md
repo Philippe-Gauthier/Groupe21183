@@ -67,8 +67,8 @@ Les sensation restent.
 
 Ce projet s'inspire de l'idée que :
 
->> L'art n'explique pas.
->> L'art imprime une trace.
+> L'art n'explique pas.
+> L'art imprime une trace.
 
 Les images ne sont pas décrites.
 Elles sont suggérées.
