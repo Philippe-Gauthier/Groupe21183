@@ -1,19 +1,29 @@
 ### Projet 1: Livre interractif (Par Anthony Ouellet)
 
+import time
+
+# Fonction de naration style RPG pour ralentir l'affichage du texte histoire
+def nar(texte):
+    for lettre in texte:
+        print(lettre, end='', flush=True)
+        time.sleep(0.05) # Vitesse d'affichage
+    print()
+    time.sleep(0.5) # Petite pause de réflexion après la phrase
+
 # Situation initiale
 def situation_initiale():
-    print("test")
-    print("test")
-    print("test")
-    print("test")
-    print("test")
-    print("test")
-    print("test")
+    nar("test")
+    nar("test")
+    nar("test")
+    nar("test")
+    nar("test")
+    nar("test")
+    nar("test")
 
-    choix = input("\nQuel est votre choix? (1, 2 ou 3) : ")
-    print("(1) Choix 1")
+    print("\n(1) Choix 1")
     print("(2) Choix 2")
     print("(3) Choix 3")
+    choix = input("\nQuel est votre choix? (1, 2 ou 3) : ")
 
     if choix == "1":
         chemin_1()
@@ -27,14 +37,14 @@ def situation_initiale():
     
 
 def chemin_1(): # Branche principale 1
-    print("\ntest")
-    print("test")
-    print("test")
-    print("test")
+    nar("\ntest")
+    nar("test")
+    nar("test")
+    nar("test")
 
-    choix = input("\nQuel est votre choix? (1 ou 2) : ")
-    print("(1) Choix 1")
+    print("\n(1) Choix 1")
     print("(2) Choix 2")
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
 
     if choix == "1":
         chemin_1_1()
@@ -45,21 +55,21 @@ def chemin_1(): # Branche principale 1
         chemin_1()
 
 def chemin_1_1():
-    print("test")
-    print("test")
+    nar("test")
+    nar("test")
 
 def chemin_1_2():
-    print("test")
-    print("test")
+    nar("test")
+    nar("test")
 
 def chemin_2(): # Branche principale 2
-    print("\ntest")
-    print("test")
-    print("test")
+    nar("\ntest")
+    nar("test")
+    nar("test")
 
 def chemin_3(): # Branche principale 3
-    print("\nTest")
-    print("test")
+    nar("\nTest")
+    nar("test")
 
 # Lancement de l'hisoire
 situation_initiale()
