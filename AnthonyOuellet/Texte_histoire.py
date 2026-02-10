@@ -22,11 +22,11 @@ def situation_initiale():
     elif choix == "3":
         chemin_3()
     else: 
-        print("Saisie invalide. Entrez un nombre de 1 à 3 correspondant à votre choix.")
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
         situation_initiale()
     
 
-def chemin_1():
+def chemin_1(): # Branche principale 1
     print("\ntest")
     print("test")
     print("test")
@@ -41,15 +41,23 @@ def chemin_1():
     elif choix == "2":
         chemin_1_2()
     else: 
-        print("Saisie invalide. Entrez un nombre de 1 à 3 correspondant à votre choix.")
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
         chemin_1()
 
-def chemin_2():
+def chemin_1_1():
+    print("test")
+    print("test")
+
+def chemin_1_2():
+    print("test")
+    print("test")
+
+def chemin_2(): # Branche principale 2
     print("\ntest")
     print("test")
     print("test")
 
-def chemin_3():
+def chemin_3(): # Branche principale 3
     print("\nTest")
     print("test")
 
