@@ -5,7 +5,6 @@ by Antoine D-C
 
 #libraries
 import time
-import random
 
 #game logic
 debug_delay = 0  #usually 0.5, 0 for debugging
@@ -156,7 +155,7 @@ def scene1_1_2():
 def scene1_1_2_1():
     print_("1121")
 
-##scene 1_1_2_2, decline      open
+##scene 1_1_2_2, decline
 def scene1_1_2_2():
     print_("\n\nInfinite riches are useless if you're not alive to enjoy them")
     print_("""You tell him it's too dangerous and, unless he has the fabled "plot armor", you will surely die fighting the dreadfull thing" """)
@@ -226,6 +225,7 @@ def end(depth):
 ## this prints when you finally slay the ice wyrm and win the game      open
 def win():
     print_("win")
+
 
 #gameplay tree
 
