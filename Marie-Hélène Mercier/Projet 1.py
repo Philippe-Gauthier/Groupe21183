@@ -1,3 +1,24 @@
+#Cette fonction permet de forcer l'utilisateur à utiliser des nombres de 1 à 4 ou 1 à 2 et éviter que le jeu plante.
+#Cette fonction reçoit 2 paramètres, valeur minimal et valeur maximale.
+def ask_choice(min_value, max_value):
+    #Crée un boucle qui s'arrêtera quand on utilise return.
+    while True:
+        #Attend que l'on écrive quelque chose.
+        choice = input("> ")
+        #Vérifie si la variable choice est composé uniquement de chiffres.
+        if choice.isdigit():
+            #Transforme les numéro string "1." en nombre.
+            choice = int(choice)
+            #Vérifie si le nombre est accepté.
+            if min_value <= choice <= max_value:
+                #Quitte la fonction et envoie le nombre au programme principal.
+                return choice
+            else:
+                #Le f permet d'insérer des variables dans le texte.
+                print(f"Entrez un nombre entre {min_value} et {max_value}.")
+        else:
+            print("Entre un nombre.")
+
 def start_game():
     print("--- Zdzisław Beksiński ---")
     print("Tu es sur une plaine de cendres. Un carnet vide repose dans ta main.")
@@ -6,7 +27,7 @@ def start_game():
     print("3. Regarder le ciel.")
     print("4. T'asseoir dans la cendre")
 
-    choice = int(input("> "))
+    choice = ask_choice(1, 4)
     if choice == 1:
         print("--- Avancer ver la cité ---")
         print("Quatre formes émergent.")
@@ -15,13 +36,13 @@ def start_game():
         print("3. Métal")
         print("4. Oeil")
 
-        choice = int(input("> "))
+        choice = ask_choice(1, 2)
         if choice == 1:
             print("Os")
             print("1. Avancer")
             print("2. Toucher statue.")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Prison des os.")
             elif choice == 2:
@@ -32,7 +53,7 @@ def start_game():
             print("1. Lire gravures.")
             print("2. Continuer")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Stase éternelle.")
             elif choice == 2:
@@ -43,7 +64,7 @@ def start_game():
             print("1. Explorer machines.")
             print("2. Monter passerelle")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Fusion mécanique.")
             elif choice == 2:
@@ -54,7 +75,7 @@ def start_game():
             print("1. Accepter vision.")
             print("2. Rejeter vision")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Vision infinie.")
             elif choice == 2:
@@ -69,13 +90,13 @@ def start_game():
         print("3. Déchirer la page")
         print("4. Observer en silence")
 
-        choice = int(input("> "))
+        choice = ask_choice(1, 2)
         if choice == 1:
             print("Toucher dessin")
             print("1. Entrer dessin")
             print("2. Observer.")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Absorption.")
             elif choice == 2:
@@ -86,7 +107,7 @@ def start_game():
             print("1. Ouvrir à nouveau.")
             print("2. Partir")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Boucle temporelle.")
             elif choice == 2:
@@ -97,7 +118,7 @@ def start_game():
             print("1. Lire morceaux.")
             print("2. Écrire dessus")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Messages brisés.")
             elif choice == 2:
@@ -108,7 +129,7 @@ def start_game():
             print("1. Attendre.")
             print("2. Tourner page")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Temps suspendue.")
             elif choice == 2:
@@ -123,13 +144,13 @@ def start_game():
         print("3. Lever le carnet")
         print("4. Reculer")
 
-        choice = int(input("> "))
+        choice = ask_choice(1, 2)
         if choice == 1:
             print("Continuer")
             print("1. Observer frome")
             print("2. Approcher ombre.")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Ascension.")
             elif choice == 2:
@@ -140,7 +161,7 @@ def start_game():
             print("1. Compter souffle.")
             print("2. Ouvrir yeux")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Oubli.")
             elif choice == 2:
@@ -151,7 +172,7 @@ def start_game():
             print("1. Toucher ciel.")
             print("2. Lire à voix haute")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Énergie du ciel.")
             elif choice == 2:
@@ -162,12 +183,64 @@ def start_game():
             print("1. Entrer cité.")
             print("2. Toucher sol")
 
-            choice = int(input("> "))
+            choice = ask_choice(1, 2)
             if choice == 1:
                 print("FIN : Mirage.")
             elif choice == 2:
                 print("FIN : Racines anciennes.")
     
     
+    elif choice == 4 :
+        print("--- T'asseoir dans la cendre ---")
+        print("1. Te relever")
+        print("2. T'allonger")
+        print("3. Écrire ton nom")
+        print("4. Laisser tomber le carnet")
 
+        choice = ask_choice(1, 2)
+        if choice == 1:
+            print("Te relever")
+            print("1. Avancer")
+            print("2. Observer le ciel.")
+
+            choice = ask_choice(1, 2)
+            if choice == 1:
+                print("FIN : Illusion.")
+            elif choice == 2:
+                print("FIN : Vent éveillé.")
+        
+        elif choice == 2:
+            print("T'allonger")
+            print("1. Rêver.")
+            print("2. Fermer yeux")
+
+            choice = ask_choice(1, 2)
+            if choice == 1:
+                print("FIN : Sommeil éternelli.")
+            elif choice == 2:
+                print("FIN : Absorption douce.")
+        
+        elif choice == 3:
+            print("Écrire nom")
+            print("1. Lire page.")
+            print("2. Lever yeux")
+
+            choice = ask_choice(1, 2)
+            if choice == 1:
+                print("FIN : Mot oublié.")
+            elif choice == 2:
+                print("FIN : Nom dans le vent.")
+    
+        elif choice == 4:
+            print("Laisser tomber carnet")
+            print("1. Ramasser.")
+            print("2. Partir")
+
+            choice = ask_choice(1, 2)
+            if choice == 1:
+                print("FIN : Livre vivant.")
+            elif choice == 2:
+                print("FIN : Néant mouvant.")
+
+#Démarre le jeu
 start_game()
