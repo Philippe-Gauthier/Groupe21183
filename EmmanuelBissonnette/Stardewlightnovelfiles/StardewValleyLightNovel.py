@@ -27,13 +27,16 @@ def page_calling (page_number):
     file = open(page_number,"r")
     char = file.readlines()[1]
     header =  char[0]
+    file.close()
     if header == current_page:
+        file = open(page_number,"r")
         page = file.readlines()[2:]
         file.close()
         return (page)
+        
     else:
         print("numero de page invalide")
-
+        file.close()
 # une fonction pour ajouter les items au joueur
 def items_get ():
     item_page = str(current_page + ".txt")
