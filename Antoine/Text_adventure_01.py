@@ -1,9 +1,13 @@
+"""
+Text adventure game
+by Antoine D-C
+"""
+
 #libraries
 import time
-import random
 
 #game logic
-debug_delay = 0
+debug_delay = 0  #usually 0.5, 0 for debugging
 
 def print_ (text, delay=debug_delay):
     print(text)
@@ -71,18 +75,67 @@ def scene1_1_1():
 
     time.sleep(debug_delay * 2)
     print("\n--- where will you go? ---")
-    print("(1) across the mountains, it may be perrilous but it's the fastest route")
-    print("(2) around, by the forest, it may take longer but it's safer")
+    print("(1) Across the mountains, it may be perrilous but it's the fastest route")
+    print("(2) Around, by the forest, it may take longer but it's safer")
     path1_1_1 = input("Where to? (1/2): ")
     return path1_1_1
 
-##scene 1_1_1_1, across mountains       open
+##scene 1_1_1_1, across mountains
 def scene1_1_1_1():
-    print_("1111")
+    print_("\n\nYou set off towards the mountains")
+    print_("The path is easy at first, small trails often traveled by adventurers and merchants alike")
+    print_("It quickly gets harsher once you step off the main roads, the paths, littered with jagged rocks and loose gravel, threaten to give way below your steps at any moment.")
+    print_("the wind too picks up speed as it looses warmth, its chill soon becoming unbearable")
+    print_("Just then do you reach the foot of the mountain, the path ahead of you is steep and unwelcoming, the stones replaced by even sharper icicles.")
+    print_("Luckily for the both of you, you know a bit of magic from the town's artificer and you manage to conjure a small wisp of flame for thwe both of you")
+    print_("It, combined with the heavy fur coats he brought, should be enough to keep you warm, for now")
+    print_("As you reach the smallest peak, you start to be able to see beyond and it is both beautiful and terrifying")
+    print_("You see the old fortress in the cold valley below, you can see the wicked beast circling the anciant bastion in the air above, it had been taken over,")
 
-##scene 1_1_1_2, around forest      open
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) descend towards the fortress")
+    print("(2) setup camp and observe")
+    path1_1_1_1 = input("What do you do? (1/2): ")
+    return path1_1_1_1
+
+##scene 1_1_1_1_1, descend towards the fortress     open
+def scene1_1_1_1_1():
+    print_("11111")
+
+##scene 1_1_1_1_2, setup camp and observe       open
+def scene1_1_1_1_2():
+    print_("11112")
+
+##scene 1_1_1_2, through forest
 def scene1_1_1_2():
-    print_("1112")
+    print_("\n\nYou decide to pass by the forest, this will let you go around the mountains, straight into the valley where the old fortress stands")
+    print_("During the rather uneventfull begining of the trip, you talk with him to find out a little more on this quest")
+    print_("He tells you that in his village, it was rumored that a dangerous demonspawn had taken refuge in these parts")
+    print_("You find out this expedition is entirely based on the rambling of a half dead knight who stumbled into his village, talking about the beast")
+    print_("You also find out he did a little research himself and, through tracking down travelers and adventurers, gathered enough intel to confidently say the dragon has taken over the forgotten stronghold")
+    print_("About halfway througt the forest path, a group of scruffy-looking men jump out of the surrounding bushes and trees, they seem to be bandits")
+    print_(""""Give us all ye got o' we gonna gut ya 'ed off " the closest one yells, pointing a small knife in your general direction""")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) Pay them")
+    print("(2) Talk it out")
+    print("(3) Make the geneva convention look like a checklist")
+    path1_1_1_1 = input("What do you do? (1/2/3): ")
+    return path1_1_1_1
+
+# pay them      open
+def scene1_1_1_2_1():
+    print_("111121")
+
+# talk it out       open
+def scene1_1_1_2_2():
+    print_("111122")
+
+# unspeakable violence      open
+def scene1_1_1_2_3():
+    print_("111123")
 
 ##scene 1_1_2, decline
 def scene1_1_2():
@@ -102,9 +155,13 @@ def scene1_1_2():
 def scene1_1_2_1():
     print_("1121")
 
-##scene 1_1_2_2, decline      open
+##scene 1_1_2_2, decline
 def scene1_1_2_2():
-    print_("1122")
+    print_("\n\nInfinite riches are useless if you're not alive to enjoy them")
+    print_("""You tell him it's too dangerous and, unless he has the fabled "plot armor", you will surely die fighting the dreadfull thing" """)
+    print_("You order a beer for him and leave after appologising that you could not be of any help to him")
+    
+    return int(3)
 
 ##scene 1_2, throw table
 def scene1_2():
@@ -158,52 +215,16 @@ def scene1_3():
     path1_3 = input("What do you do? (1/2): ")
     return path1_3
 
-##scene 1_3_1, accept
-def scene1_3_1():
-    print_("\n\nYou accept, finaly, a quest worthy of your legendary skills.")
-    print_(""""We shall leave at dawn", he says, "meet me at the town gates." """)
-    print_("you part ways as to not attreact attention further and go to your cottage.")
-    print_("as the sun creeps over the nearby hills you make your way to the town's edge where the man awaits with horses and provisions")
-    print_(""""Onwards" you enthoustiacally call once all is set." """)
-    print_(""""to which path?" he anwsers,"we should decide on the road." """)
-    print_(""""quite right" you say, we shall pass... """)
+## this is the "death screen" if you will, it prints when a path is a dead end, you made a wrong choice
+def end(depth):
+    print_("\n________________________________")
+    print(f"your adventure ends here {name}")
+    print(f"you went {depth} choices deep")
+    print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n\n")
 
-    time.sleep(debug_delay * 2)
-    print("\n--- where will you go? ---")
-    print("(1) across the mountains, it may be perrilous but it's the fastest route")
-    print("(2) around, by the forest, it may take longer but it's safer")
-    path1_3_1 = input("Where to? (1/2): ")
-    return path1_3_1
-
-##scene 1_3_1_1, across mountains       open and clone
-def scene1_3_1_1():
-    print_("1311")
-
-##scene 1_3_1_2, around forest      open and clone
-def scene1_3_1_2():
-    print_("1312")
-
-##scene 1_3_2, decline
-def scene1_3_2():
-    print_("\n\nYou politely decline the offer, although you may be a great adventurer, an ice wyrm is not to be trifled with.")
-    print_(""""That is why I require a companion" he says,"I cannot do this alone and neither can you, but together..." """)
-    print_("it is true that you have no idea of the man's skills, it may be possible and even likely that he is as capable as you are.")
-    print_("the idea starts to tempt you, you imagine the glory and riches that would come from slaying such a beast.")
-
-    time.sleep(debug_delay * 2)
-    print("\n--- Do you change your mind? ---")
-    print("(1) Accept")
-    print("(2) Decline")
-    path1_3_2 = input("What do you do? (1/2): ")
-    return path1_3_2
-
-##scene 1_3_2_1, accept     open and clone
-def scene1_3_2_1():
-    print_("1321")
-
-##scene 1_3_2_2, decline      open and clone
-def scene1_3_2_2():
-    print_("1322")
+## this prints when you finally slay the ice wyrm and win the game      open
+def win():
+    print_("win")
 
 
 #gameplay tree
@@ -215,15 +236,26 @@ if path1 == "1":
     if path1_1 == "1":
         path1_1_1 = scene1_1_1()
         if path1_1_1 == "1":
-            scene1_1_1_1()
+            path1_1_1_1 = scene1_1_1_1()
+            if path1_1_1_1 == "1":
+                scene1_1_1_1_1()
+            elif path1_1_1_1 == "2":
+                scene1_1_1_1_2()
         elif path1_1_1 == "2":
-            scene1_1_1_2()
+            path1_1_1_2 = scene1_1_1_2()
+            if path1_1_1_2 == "1":
+                scene1_1_1_2_1
+            elif path1_1_1_2 == "2":
+                scene1_1_1_2_2
+            elif scene1_1_1_2 == "3":
+                scene1_1_1_2_3
     elif path1_1 == "2":
         path1_1_2 = scene1_1_2()
         if path1_1_2 == "1":
-            scene1_1_2_1()
+            scene1_1_2_1()         #this choice should be replaced with the entire "Accept" path, from the if above, change before putting into 3rd path
         elif path1_1_2 == "2":
-            scene1_1_2_2()
+            depth = scene1_1_2_2()
+        end(depth)
 
 elif path1 == "2":
     path1_2 = scene1_2()
@@ -236,15 +268,15 @@ elif path1 == "2":
 
 elif path1 == "3":
     path1_3 = scene1_3()
-    if path1_3 == "1":
-        path1_3_1 = scene1_3_1()
+    if path1_3 == "1":       #from this point on, it's the same as the first branche, just change the variable names to have a 3 in them, for consistency
+        path1_3_1 = scene1_1_1()
         if path1_3_1 == "1":
-            scene1_3_1_1()
+            scene1_1_1_1()
         elif path1_3_1 == "2":
-            scene1_3_1_2()
+            scene1_1_1_2()
     elif path1_3 == "2":
-        path1_3_2 = scene1_3_2()
+        path1_3_2 = scene1_1_2()
         if path1_3_2 == "1":
-            scene1_3_2_1()
+            scene1_1_2_1()
         elif path1_3_2 == "2":
-            scene1_3_2_2()
+        	scene1_1_2_2()
