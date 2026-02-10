@@ -63,6 +63,23 @@ def get_post(id, check_author=True):
 @login_required
 def update(id):
     post = get_post(id)
+    db = get_db()
+    posts = db.execute(
+        'SELECT p.id, title, body, created, author_id, username'
+        ' FROM post p JOIN user u ON p.author_id = u.id'
+        ' ORDER BY created DESC'
+    ).fetchall()
+
+    param = {'origin_id': id}
+    choices = db.execute(
+        'SELECT p.title, origin_id, destination_id'
+        ' FROM choice c JOIN post p ON p.id = c.destination_id'
+        ' WHERE origin_id = :origin_id',
+        (param)
+    ).fetchall()
+
+    for choice_item in choices:
+        print(choice_item['title'])
 
     if request.method == 'POST':
         title = request.form['title']
@@ -84,7 +101,75 @@ def update(id):
             db.commit()
             return redirect(url_for('blog.index'))
 
-    return render_template('blog/update.html', post=post)
+    return render_template('blog/update.html', post=post, posts=posts, choices=choices)
+
+@bp.route('/<int:id>/read', methods=('GET', 'POST'))
+@login_required
+def read(id):
+    post = get_post(id, False)
+    db = get_db()
+
+    param = {'origin_id': id}
+
+    choices = db.execute(
+        'SELECT p.title, origin_id, destination_id'
+        ' FROM choice c JOIN post p ON p.id = c.destination_id'
+        ' WHERE origin_id = :origin_id',
+        (param)
+    ).fetchall()
+
+    if request.method == 'POST':
+        title = request.form['title']
+        body = request.form['body']
+        error = None
+
+        if not title:
+            error = 'Title is required.'
+
+        if error is not None:
+            flash(error)
+        else:
+            db = get_db()
+            db.execute(
+                'SELECT post'
+                ' WHERE id = ?',
+                (title, body, id)
+            )
+            db.commit()
+            return redirect(url_for('blog.index'))
+
+    return render_template('blog/read.html', post=post, choices=choices)
+
+@bp.route('/<int:id>/add_option', methods=('POST',))
+@login_required
+def add_option(id):
+    destination_id = request.form.get('destination_id')
+    print("destination_id" + str(destination_id))
+    post_origin = get_post(id)
+    post_destination = get_post(destination_id)
+
+    db = get_db()
+    posts = db.execute(
+        'SELECT p.id, title, body, created, author_id, username'
+        ' FROM post p JOIN user u ON p.author_id = u.id'
+        ' ORDER BY created DESC'
+    ).fetchall()
+    if request.method == 'POST':
+        error = None
+
+        if error is not None:
+            flash(error)
+        else:
+            db = get_db()
+            db.execute(
+                'INSERT INTO choice (origin_id, destination_id)'
+                ' VALUES (?, ?)',
+                (id, destination_id)
+            )
+            db.commit()
+            return redirect(url_for('blog.index'))
+
+    return render_template('blog/update.html', post=post_origin, posts=posts)
 
 @bp.route('/<int:id>/delete', methods=('POST',))
 @login_required
