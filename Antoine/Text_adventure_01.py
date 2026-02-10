@@ -81,9 +81,32 @@ def scene1_1_1():
     path1_1_1 = input("Where to? (1/2): ")
     return path1_1_1
 
-##scene 1_1_1_1, across mountains       open
+##scene 1_1_1_1, across mountains
 def scene1_1_1_1():
-    print_("1111")
+    print_("\n\nYou set off towards the mountains")
+    print_("The path is easy at first, small trails often traveled by adventurers and merchants alike")
+    print_("It quickly gets harsher once you step off the main roads, the paths, littered with jagged rocks and loose gravel, threaten to give way below your steps at any moment.")
+    print_("the wind too picks up speed as it looses warmth, its chill soon becoming unbearable")
+    print_("Just then do you reach the foot of the mountain, the path ahead of you is steep and unwelcoming, the stones replaced by even sharper icicles.")
+    print_("Luckily for the both of you, you know a bit of magic from the town's artificer and you manage to conjure a small wisp of flame for thwe both of you")
+    print_("It, combined with the heavy fur coats he brought, should be enough to keep you warm, for now")
+    print_("as you reach the smallest peak, you start to be able to see beyond and it is both beautiful and terrifying")
+    print_("you see the old fortress in the cold valley below, you can see the wicked beast circling the anciant bastion in the air above, it had been taken over,")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) descend towards the fortress")
+    print("(2) setup camp and observe")
+    path1_1_1_1 = input("Where to? (1/2): ")
+    return path1_1_1_1
+
+##scene 1_1_1_1_1, descend towards the fortress     open
+def scene1_1_1_1_1():
+    print_("11111")
+
+##scene 1_1_1_1_2, setup camp and observe       open
+def scene1_1_1_1_2():
+    print_("11112")
 
 ##scene 1_1_1_2, around forest      open
 def scene1_1_1_2():
@@ -174,7 +197,11 @@ if path1 == "1":
     if path1_1 == "1":
         path1_1_1 = scene1_1_1()
         if path1_1_1 == "1":
-            scene1_1_1_1()
+            path1_1_1_1 = scene1_1_1_1()
+            if path1_1_1_1 == "1":
+                scene1_1_1_1_1()
+            elif path1_1_1_1 == "2":
+                scene1_1_1_1_2()
         elif path1_1_1 == "2":
             scene1_1_1_2()
     elif path1_1 == "2":
@@ -195,7 +222,7 @@ elif path1 == "2":
 
 elif path1 == "3":
     path1_3 = scene1_3()
-    if path1_3 == "1":
+    if path1_3 == "1":       #from this point on, it's the same as the first branche, just change the variable names to have a 3 in them, for consistency
         path1_3_1 = scene1_1_1()
         if path1_3_1 == "1":
             scene1_1_1_1()
