@@ -1,11 +1,12 @@
 ### Projet 1: Livre interractif (Par Anthony Ouellet)
 
+# Bibliothèque
 import time
 
 # Fonction de naration style RPG pour ralentir l'affichage du texte histoire
 def nar(texte):
-    for lettre in texte:
-        print(lettre, end='', flush=True)
+    for lettre in texte: # Pour chaque caractère contenu dans la phrase (un par un)
+        print(lettre, end='', flush=True) # Affiche la lettre sans passer à la ligne et force l'affichage immédiat
         time.sleep(0.05) # Vitesse d'affichage
     print()
     time.sleep(0.5) # Petite pause de réflexion après la phrase
