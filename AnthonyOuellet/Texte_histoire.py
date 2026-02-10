@@ -40,3 +40,6 @@ def chemin_2():
 def chemin_3():
     print("\nTest")
     print("test")
+
+# Lancement de l'hisoire
+situation_initiale()
