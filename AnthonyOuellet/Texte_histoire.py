@@ -32,6 +32,18 @@ def chemin_1():
     print("test")
     print("test")
 
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
+    print("(1) Choix 1")
+    print("(2) Choix 2")
+
+    if choix == "1":
+        chemin_1_1()
+    elif choix == "2":
+        chemin_1_2()
+    else: 
+        print("Saisie invalide. Entrez un nombre de 1 à 3 correspondant à votre choix.")
+        chemin_1()
+
 def chemin_2():
     print("\ntest")
     print("test")
