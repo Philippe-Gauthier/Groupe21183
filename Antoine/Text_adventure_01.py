@@ -108,7 +108,7 @@ def scene1_1_1_1_1():
 def scene1_1_1_1_2():
     print_("11112")
 
-##scene 1_1_1_2, through forest      open
+##scene 1_1_1_2, through forest
 def scene1_1_1_2():
     print_("\n\nYou decide to pass by the forest, this will let you go around the mountains, straight into the valley where the old fortress stands")
     print_("During the rather uneventfull begining of the trip, you talk with him to find out a little more on this quest")
@@ -158,7 +158,11 @@ def scene1_1_2_1():
 
 ##scene 1_1_2_2, decline      open
 def scene1_1_2_2():
-    print_("1122")
+    print_("\n\nInfinite riches are useless if you're not alive to enjoy them")
+    print_("""You tell him it's too dangerous and, unless he has the fabled "plot armor", you will surely die fighting the dreadfull thing" """)
+    print_("You order a beer for him and leave after appologising that you could not be of any help to him")
+    
+    return int(3)
 
 ##scene 1_2, throw table
 def scene1_2():
@@ -212,7 +216,16 @@ def scene1_3():
     path1_3 = input("What do you do? (1/2): ")
     return path1_3
 
+## this is the "death screen" if you will, it prints when a path is a dead end, you made a wrong choice
+def end(depth):
+    print_("\n________________________________")
+    print(f"your adventure ends here {name}")
+    print(f"you went {depth} choices deep")
+    print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n\n")
 
+## this prints when you finally slay the ice wyrm and win the game      open
+def win():
+    print_("win")
 
 #gameplay tree
 
@@ -239,9 +252,10 @@ if path1 == "1":
     elif path1_1 == "2":
         path1_1_2 = scene1_1_2()
         if path1_1_2 == "1":
-            scene1_1_2_1()
+            scene1_1_2_1()         #this choice should be replaced with the entire "Accept" path, from the if above, change before putting into 3rd path
         elif path1_1_2 == "2":
-        	scene1_1_2_2()
+            depth = scene1_1_2_2()
+        end(depth)
 
 elif path1 == "2":
     path1_2 = scene1_2()
