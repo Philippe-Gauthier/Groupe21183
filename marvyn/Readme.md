@@ -19,4 +19,4 @@ python main.py
 -PEP8(Python Enhanvement Propposal) 8= Numero de document
 -Fonctions modulaires
 -Documentation complète
--Docstrings.
+-Docstrings
