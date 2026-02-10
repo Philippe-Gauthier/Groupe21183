@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <!--<h1>{% block title %}Read "{{ post['title'] }}"{% endblock %}</h1>-->
+{% endblock %}
+
+{% block content %}
+  <form method="get">
+    <!--<label for="title">Title</label>-->
+    <h1>{{ request.form['title'] or post['title'] }}</h1>
+    <!--<label for="body">Body</label><label for="body">Body</label>-->
+    <h3>{{ request.form['body'] or post['body'] }}</h3>
+  </form>
+  <hr>
+  <div style="display:flex;justify-content: space-evenly;">
+    {% for choice_item in choices %}
+      <a href="../{{ request.form['destination_id'] or choice_item['destination_id'] }}/read">{{ request.form['title'] or choice_item['title'] }}</label>
+    {% endfor %}
+  </div>
+
+{% endblock %}

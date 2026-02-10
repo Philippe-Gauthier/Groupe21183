@@ -15,3 +15,11 @@ CREATE TABLE post (
   body TEXT NOT NULL,
   FOREIGN KEY (author_id) REFERENCES user (id)
 );
+
+CREATE TABLE choice (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    origin_id INTEGER NOT NULL,
+    destination_id INTEGER NOT NULL,
+    FOREIGN KEY (origin_id) REFERENCES post (id)
+    FOREIGN KEY (destination_id) REFERENCES post (id)
+);
