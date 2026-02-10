@@ -1,6 +1,10 @@
-#Cette fonction permet de forcer l'utilisateur à utiliser des nombres de 1 à 4 ou 1 à 2 et éviter que le jeu plante.
-#Cette fonction reçoit 2 paramètres, valeur minimal et valeur maximale.
 def ask_choice(min_value, max_value):
+    """
+    Cette fonction permet de forcer l'utilisateur à utiliser des nombres 
+    de 1 à 4 ou 1 à 2 et éviter que le jeu plante. Elle reçoit 2 paramètres, 
+    valeur minimal et valeur maximale. Elle répète la question tant qu'une valeur 
+    valide n'est pas fournie et retourne un entier valide.
+    """
     #Crée un boucle qui s'arrêtera quand on utilise return.
     while True:
         #Attend que l'on écrive quelque chose.
@@ -20,6 +24,22 @@ def ask_choice(min_value, max_value):
             print("Entre un nombre.")
 
 def start_game():
+    """
+    Lance le jeu textuel 'Dans le silence des rêves'.
+
+    L'utilisateur fait des choix parmi plusieurs options, qui influencent le déroulement
+    et mènent à différentes fins. Chaque choix est demandé avec la fonction ask_choice,
+    garantissant que l'entrée est un nombre valide.
+
+    Étapes principales :
+    1. Départ : le joueur se trouve sur une plaine de cendres.
+    2. Choix de direction : avancer vers la cité, examiner le carnet, regarder le ciel,
+       ou s'asseoir dans la cendre.
+    3. Sous-choix : chaque action principale propose deux options qui conduisent
+       à une fin spécifique.
+    
+    La fonction ne retourne rien ; elle se termine après l'affichage de la FIN.
+    """
     print("--- Zdzisław Beksiński ---")
     print("Tu es sur une plaine de cendres. Un carnet vide repose dans ta main.")
     print("1. Avancer vers la cité")
