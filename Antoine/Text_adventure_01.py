@@ -76,8 +76,8 @@ def scene1_1_1():
 
     time.sleep(debug_delay * 2)
     print("\n--- where will you go? ---")
-    print("(1) across the mountains, it may be perrilous but it's the fastest route")
-    print("(2) around, by the forest, it may take longer but it's safer")
+    print("(1) Across the mountains, it may be perrilous but it's the fastest route")
+    print("(2) Around, by the forest, it may take longer but it's safer")
     path1_1_1 = input("Where to? (1/2): ")
     return path1_1_1
 
@@ -90,14 +90,14 @@ def scene1_1_1_1():
     print_("Just then do you reach the foot of the mountain, the path ahead of you is steep and unwelcoming, the stones replaced by even sharper icicles.")
     print_("Luckily for the both of you, you know a bit of magic from the town's artificer and you manage to conjure a small wisp of flame for thwe both of you")
     print_("It, combined with the heavy fur coats he brought, should be enough to keep you warm, for now")
-    print_("as you reach the smallest peak, you start to be able to see beyond and it is both beautiful and terrifying")
-    print_("you see the old fortress in the cold valley below, you can see the wicked beast circling the anciant bastion in the air above, it had been taken over,")
+    print_("As you reach the smallest peak, you start to be able to see beyond and it is both beautiful and terrifying")
+    print_("You see the old fortress in the cold valley below, you can see the wicked beast circling the anciant bastion in the air above, it had been taken over,")
 
     time.sleep(debug_delay * 2)
     print("\n--- What do you do? ---")
     print("(1) descend towards the fortress")
     print("(2) setup camp and observe")
-    path1_1_1_1 = input("Where to? (1/2): ")
+    path1_1_1_1 = input("What do you do? (1/2): ")
     return path1_1_1_1
 
 ##scene 1_1_1_1_1, descend towards the fortress     open
@@ -108,9 +108,35 @@ def scene1_1_1_1_1():
 def scene1_1_1_1_2():
     print_("11112")
 
-##scene 1_1_1_2, around forest      open
+##scene 1_1_1_2, through forest      open
 def scene1_1_1_2():
-    print_("1112")
+    print_("\n\nYou decide to pass by the forest, this will let you go around the mountains, straight into the valley where the old fortress stands")
+    print_("During the rather uneventfull begining of the trip, you talk with him to find out a little more on this quest")
+    print_("He tells you that in his village, it was rumored that a dangerous demonspawn had taken refuge in these parts")
+    print_("You find out this expedition is entirely based on the rambling of a half dead knight who stumbled into his village, talking about the beast")
+    print_("You also find out he did a little research himself and, through tracking down travelers and adventurers, gathered enough intel to confidently say the dragon has taken over the forgotten stronghold")
+    print_("About halfway througt the forest path, a group of scruffy-looking men jump out of the surrounding bushes and trees, they seem to be bandits")
+    print_(""""Give us all ye got o' we gonna gut ya 'ed off " the closest one yells, pointing a small knife in your general direction""")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) Pay them")
+    print("(2) Talk it out")
+    print("(3) Make the geneva convention look like a checklist")
+    path1_1_1_1 = input("What do you do? (1/2/3): ")
+    return path1_1_1_1
+
+# pay them      open
+def scene1_1_1_2_1():
+    print_("111121")
+
+# talk it out       open
+def scene1_1_1_2_2():
+    print_("111122")
+
+# unspeakable violence      open
+def scene1_1_1_2_3():
+    print_("111123")
 
 ##scene 1_1_2, decline
 def scene1_1_2():
@@ -203,7 +229,13 @@ if path1 == "1":
             elif path1_1_1_1 == "2":
                 scene1_1_1_1_2()
         elif path1_1_1 == "2":
-            scene1_1_1_2()
+            path1_1_1_2 = scene1_1_1_2()
+            if path1_1_1_2 == "1":
+                scene1_1_1_2_1
+            elif path1_1_1_2 == "2":
+                scene1_1_1_2_2
+            elif scene1_1_1_2 == "3":
+                scene1_1_1_2_3
     elif path1_1 == "2":
         path1_1_2 = scene1_1_2()
         if path1_1_2 == "1":
