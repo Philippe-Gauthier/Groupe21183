@@ -151,7 +151,7 @@ def scene1_1_2():
     path1_1_2 = input("What do you do? (1/2): ")
     return path1_1_2
 
-##scene 1_1_2_1, accept     open
+##scene 1_1_2_1, accept     open        but will be replaced
 def scene1_1_2_1():
     print_("1121")
 
@@ -185,9 +185,19 @@ def scene1_2():
 def scene1_2_1():
     print_("121")
 
-##scene 1_2_2, kill him     open
+##scene 1_2_2, kill him
 def scene1_2_2():
-    print_("122")
+    print_("\n\nYou can't hear his pleas over the blood pumping through you, the adrenaline and your pain blind and deafen you completely")
+    print_("Violently, you decide it's not worth it to let him live, you slice his throat thrice,")
+    print_("Each time comming back with more force, digging deeper in his flesh as blood spills out on the floor")
+    print_("Drenching you in his warmth as he expires in your arms")
+    print_("The pub is now silent, everyone either drawing their weapons or hiding under tables or behind barrels")
+    print_(""""You all saw him trying to kill me, that was self-defence" you yell at them""")
+    print_("Most agree out of fear, others genuinely, the bartender comes forwards cautiously ")
+    print_("He asks you to leave")
+    print_("You do")
+
+    return int(2)
 
 ##scene 1_2_3, walk away        open
 def scene1_2_3():
@@ -218,8 +228,8 @@ def scene1_3():
 ## this is the "death screen" if you will, it prints when a path is a dead end, you made a wrong choice
 def end(depth):
     print_("\n________________________________")
-    print(f"your adventure ends here {name}")
-    print(f"you went {depth} choices deep")
+    print(f"Your adventure ends here {name}")
+    print(f"You went {depth} choices deep")
     print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n\n")
 
 ## this prints when you finally slay the ice wyrm and win the game      open
@@ -262,7 +272,8 @@ elif path1 == "2":
     if path1_2 == "1":
         scene1_2_1()
     elif path1_2 == "2":
-        scene1_2_2()
+        depth = scene1_2_2()
+        end(depth)
     elif path1_2 == "3":
         scene1_2_3()
 
