@@ -7,7 +7,7 @@ by Antoine D-C
 import time
 
 #game logic
-debug_delay = 0  #usually 0.5, 0 for debugging
+debug_delay = 0.5  #usually 0.5, 0 for debugging
 
 def print_ (text, delay=debug_delay):
     print(text)
@@ -177,7 +177,7 @@ def scene1_2():
     print("\n--- What do you do? ---")
     print("(1) Slowly help him up and order mead as an appology")
     print("(2) Let violence and adrenalline blind you and kill him")
-    print("(3) Leave him there and walk away")
+    print("(3) Stop and wait")
     path1_2 = input("What do you do? (1/2/3): ")
     return path1_2
 
@@ -199,9 +199,16 @@ def scene1_2_2():
 
     return int(2)
 
-##scene 1_2_3, walk away        open
+##scene 1_2_3, wait
 def scene1_2_3():
-    print_("123")
+    print_("\n\nYou unfortunately won't ever know what he meant by that, he simply dies on you")
+    print_("The pub is now silent, everyone either drawing their weapons or hiding under tables or behind barrels")
+    print_(""""You all saw him trying to kill me, that was self-defence" you yell at them""")
+    print_("Most agree out of fear, others genuinely, the bartender comes forwards cautiously ")
+    print_("He asks you to leave")
+    print_("You do")
+
+    return int(2)
 
 
 ##scene 1_3, do nothing
@@ -227,7 +234,7 @@ def scene1_3():
 
 ## this is the "death screen" if you will, it prints when a path is a dead end, you made a wrong choice
 def end(depth):
-    print_("\n________________________________")
+    print("\n________________________________")
     print(f"Your adventure ends here {name}")
     print(f"You went {depth} choices deep")
     print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n\n")
@@ -265,7 +272,7 @@ if path1 == "1":
             scene1_1_2_1()         #this choice should be replaced with the entire "Accept" path, from the if above, change before putting into 3rd path
         elif path1_1_2 == "2":
             depth = scene1_1_2_2()
-        end(depth)
+            end(depth)
 
 elif path1 == "2":
     path1_2 = scene1_2()
@@ -275,7 +282,8 @@ elif path1 == "2":
         depth = scene1_2_2()
         end(depth)
     elif path1_2 == "3":
-        scene1_2_3()
+        depth = scene1_2_3()
+        end(depth)
 
 elif path1 == "3":
     path1_3 = scene1_3()
