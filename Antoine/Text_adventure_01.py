@@ -3,11 +3,17 @@ Text adventure game
 by Antoine D-C
 """
 
+"""
+notes to self:
+- comment decision tree for easy targetting
+-
+"""
+
 #libraries
 import time
 
 #game logic
-debug_delay = 0.5  #usually 0.5, 0 for debugging
+debug_delay = 0  #usually 0.5, 0 for debugging
 
 def print_ (text, delay=debug_delay):
     print(text)
@@ -87,7 +93,7 @@ def scene1_1_1_1():
     print_("It quickly gets harsher once you step off the main roads, the paths, littered with jagged rocks and loose gravel, threaten to give way below your steps at any moment.")
     print_("the wind too picks up speed as it looses warmth, its chill soon becoming unbearable")
     print_("Just then do you reach the foot of the mountain, the path ahead of you is steep and unwelcoming, the stones replaced by even sharper icicles.")
-    print_("Luckily for the both of you, you know a bit of magic from the town's artificer and you manage to conjure a small wisp of flame for thwe both of you")
+    print_("Luckily for the both of you, you know a bit of magic from the town's artificer and you manage to conjure a small wisp of flame for the both of you")
     print_("It, combined with the heavy fur coats he brought, should be enough to keep you warm, for now")
     print_("As you reach the smallest peak, you start to be able to see beyond and it is both beautiful and terrifying")
     print_("You see the old fortress in the cold valley below, you can see the wicked beast circling the anciant bastion in the air above, it had been taken over,")
@@ -135,7 +141,9 @@ def scene1_1_1_2_2():
 
 # unspeakable violence      open
 def scene1_1_1_2_3():
-    print_("111123")
+    print_("\n\nYou look at youy companion, he looks back at you, you understand each other, you don't have time for this")
+    print_("You then both get off your horses and while he pulls out a battle axe from his bag, you swiftly load your wrist crossbows and unsheath your daggers")
+    print_(""""So, you wish to die" the bandit yells pretentiously, "Same to you" your companion calls back""")
 
 ##scene 1_1_2, decline
 def scene1_1_2():
