@@ -39,9 +39,10 @@ def page_calling (page_number):
         file.close()
 # une fonction pour ajouter les items au joueur
 def items_get ():
-    item_page = str(current_page + ".txt")
-    open(item_page, "r")
-    char = file.readlines()[1]
+    current_page = str(current_page) 
+    page = current_page + ".txt"
+    file = open(page, "r")
+    char = file.readlines()[0]
     money = money + char[1]
     melons = melons + char[2]
     hearts = hearts + char[3]
@@ -63,10 +64,10 @@ def win_con ():
 
             else: 
                 print ("reponse invalide entrez une reponse valide")
-
+                
             
     else : 
-        pass 
+        return(False)
 
 
 
@@ -84,6 +85,10 @@ with open("save.txt","r") as file:
     file.close() 
 
 #main
-#while done != True :
+while done != True :
     display_page = page_calling(current_page)
     print (display_page)
+    current_page = input("inscrire le numero de page a laquelle vous voulez aller")
+    items_get()
+    done = win_con()
+    save()
