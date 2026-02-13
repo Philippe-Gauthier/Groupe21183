@@ -14,4 +14,6 @@ le résultat du-dit choix, qui promptera d'autre choix, d'ou la structure d'arbr
 l'entièreté du jeu
 ### optionnel
 un système de combat tour-à-tour
+un système d'inventaire avec des items et cartes utilisable en combat
 ## Arbre
+à faire
