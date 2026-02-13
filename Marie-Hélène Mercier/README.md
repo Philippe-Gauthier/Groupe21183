@@ -7,6 +7,19 @@ Seulement des passages.
 Ce monde n'a pas été créé pour être compris.
 Il existe pour être traversé.
 
+# Table des matières
+- [Zdzisław Beksińskiion](#zdzisław-beksińskiion)
+- [Table des matières](#table-des-matières)
+  - [Présentation](#présentation)
+  - [Nature du jeu](#nature-du-jeu)
+  - [Comment jouer](#comment-jouer)
+  - [Structure](#structure)
+  - [Types de fins](#types-de-fins)
+  - [Philosophie](#philosophie)
+  - [Avertissement](#avertissement)
+  - [Objectif](#objectif)
+  - [Licence](#licence)
+  
 ## Présentation
 
 Zdzisław Beksiński est une courte aventure textuelle. Tu te retrouve dans un monde gris, silencieux et étrange où chaque choix influence ton destin. 
@@ -17,7 +30,7 @@ Le jeu se joue uniquement avec des choix numérique et chaque chemin mène à un
 
 - Aventure textuelle à choix multiple
 - Atmosphère surréaliste et cauchemardesque
-- 64 choix possible
+- 40 choix possible
 - Aucune chronologie fixe
 - Aucun chemin canonique
 
