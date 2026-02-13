@@ -5,7 +5,6 @@ by Antoine D-C
 
 """
 notes to self:
-- comment decision tree for easy targetting
 -
 """
 
@@ -131,19 +130,44 @@ def scene1_1_1_2():
     path1_1_1_1 = input("What do you do? (1/2/3): ")
     return path1_1_1_1
 
-# pay them      open
+## pay them      open
 def scene1_1_1_2_1():
     print_("111121")
 
-# talk it out       open
+## talk it out       open
 def scene1_1_1_2_2():
     print_("111122")
 
-# unspeakable violence      open
+## unspeakable violence
 def scene1_1_1_2_3():
     print_("\n\nYou look at youy companion, he looks back at you, you understand each other, you don't have time for this")
     print_("You then both get off your horses and while he pulls out a battle axe from his bag, you swiftly load your wrist crossbows and unsheath your daggers")
     print_(""""So, you wish to die" the bandit yells pretentiously, "Same to you" your companion calls back""")
+    print_("To cut it short, let's simply say their bodies won't be found because there arent any bodies left to find.")
+    print_("You then both get on your horses after having carefully looted the bodies")
+    print_("you got  afew healing potions, some coins and throwing daggers from it")
+    print_("you continue along the path and eventually reconvene with the other end of the mountain path, you start to be able to see the valley and it is both beautiful and terrifying")
+    print_("You see the old fortress in the cold valley before you, you can see the wicked beast circling the anciant bastion in the air above, it had been taken over,")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) ascend towards the fortress")
+    print("(2) be content with having killed bandits and head back home")
+    path1_1_1_2_3 = input("What do you do? (1/2): ")
+    return path1_1_1_2_3
+
+## ascend towards the fortress      open
+def scene1_1_1_2_3_1():
+    print_("111231")
+
+## head home scared
+def scene1_1_1_2_3_2():
+    print_("\n\nThat beast looks way too feirce, you have already rid the world of some danger today and that's enough")
+    print_("you look at  your companion and both understand you're outmatched")
+    print_("you take the bath back towards the town and, once there, get praised at the tavern on your exploits of the day")
+    print_("another evil vanquished by you, your reputation grows, no one needs to know the whole thing")
+
+    return int(5)
 
 ##scene 1_1_2, decline
 def scene1_1_2():
@@ -256,46 +280,51 @@ def win():
 
 name = intro()
 path1 = scene1()
-if path1 == "1":
+if path1 == "1":        #lean back
     path1_1 = scene1_1()
-    if path1_1 == "1":
+    if path1_1 == "1":      #accept
         path1_1_1 = scene1_1_1()
-        if path1_1_1 == "1":
+        if path1_1_1 == "1":        #across mountains
             path1_1_1_1 = scene1_1_1_1()
-            if path1_1_1_1 == "1":
+            if path1_1_1_1 == "1":      #descend towards the fortress
                 scene1_1_1_1_1()
-            elif path1_1_1_1 == "2":
+            elif path1_1_1_1 == "2":        #setup camp and observe
                 scene1_1_1_1_2()
-        elif path1_1_1 == "2":
+        elif path1_1_1 == "2":      #through forest
             path1_1_1_2 = scene1_1_1_2()
-            if path1_1_1_2 == "1":
-                scene1_1_1_2_1
-            elif path1_1_1_2 == "2":
-                scene1_1_1_2_2
-            elif scene1_1_1_2 == "3":
-                scene1_1_1_2_3
-    elif path1_1 == "2":
+            if path1_1_1_2 == "1":      # pay them
+                scene1_1_1_2_1()
+            elif path1_1_1_2 == "2":    # talk it out
+                scene1_1_1_2_2()
+            elif path1_1_1_2 == "3":    # unspeakable violence
+                path1_1_1_2_3 = scene1_1_1_2_3()
+                if path1_1_1_2_3 == "1":  # ascend
+                     scene1_1_1_2_3_1()
+                elif path1_1_1_2_3 == "2":  # head home
+                    depth = scene1_1_1_2_3_2()
+                    end(depth)
+    elif path1_1 == "2":        #decline
         path1_1_2 = scene1_1_2()
-        if path1_1_2 == "1":
-            scene1_1_2_1()         #this choice should be replaced with the entire "Accept" path, from the if above, change before putting into 3rd path
-        elif path1_1_2 == "2":
+        if path1_1_2 == "1":        #accept again
+            scene1_1_2_1()         ##this choice should be replaced with the entire "Accept" path, from the if above, change before putting into 3rd path
+        elif path1_1_2 == "2":      #decline again
             depth = scene1_1_2_2()
             end(depth)
 
-elif path1 == "2":
+elif path1 == "2":      #throw table
     path1_2 = scene1_2()
-    if path1_2 == "1":
+    if path1_2 == "1":      #help him up
         scene1_2_1()
-    elif path1_2 == "2":
+    elif path1_2 == "2":        #kill him
         depth = scene1_2_2()
         end(depth)
-    elif path1_2 == "3":
+    elif path1_2 == "3":        #wait
         depth = scene1_2_3()
         end(depth)
 
-elif path1 == "3":
+elif path1 == "3":      #do nothing
     path1_3 = scene1_3()
-    if path1_3 == "1":       #from this point on, it's the same as the first branche, just change the variable names to have a 3 in them, for consistency
+    if path1_3 == "1":       ##from this point on, it's the same as the first branche, just change the variable names to have a 3 in them, for consistency
         path1_3_1 = scene1_1_1()
         if path1_3_1 == "1":
             scene1_1_1_1()
