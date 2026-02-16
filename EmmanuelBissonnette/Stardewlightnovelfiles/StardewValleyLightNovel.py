@@ -22,21 +22,25 @@ def save ():
 
 #une fonction pour call une page dans une liste de fichier txt 
 def page_calling (page_number):
-    page_number = str(page_number)
-    page_number =  page_number + ".txt"
-    file = open(page_number,"r")
-    char = file.readlines()[1]
-    header =  char[0]
-    file.close()
-    if header == current_page:
+    if 0 >= page_number >10:
+        page_number = str(page_number)
+        page_number =  page_number + ".txt"
         file = open(page_number,"r")
-        page = file.readlines()[2:]
+        char = file.readlines()[1]
+        header =  char[0]
         file.close()
-        return (page)
-        
-    else:
-        print("numero de page invalide")
-        file.close()
+        if header == current_page:
+            file = open(page_number,"r")
+            page = file.readlines()[2:]
+            file.close()
+            return (page)
+
+        else:
+            print("numero de page invalide")
+            file.close()
+    else: 
+        print("non valide")
+    
 # une fonction pour ajouter les items au joueur
 def items_get ():
     current_page = str(current_page) 
@@ -92,3 +96,4 @@ while done != True :
     items_get()
     done = win_con()
     save()
+    
