@@ -10,8 +10,7 @@ Il existe pour être traversé.
 ---
 
 ### Table des matières
-- [Zdzisław Beksińskiion](#zdzisław-beksińskiion)
-    - [Table des matières](#table-des-matières)
+
   - [Présentation](#présentation)
   - [Nature du jeu](#nature-du-jeu)
   - [Comment jouer](#comment-jouer)
