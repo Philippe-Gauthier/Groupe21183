@@ -59,9 +59,6 @@ def play_again():
         else:
             print("Entrez oui ou non.")
 
-
-
-
 def start_game():
     """
     Démarre le jeu.
@@ -91,7 +88,7 @@ def start_game():
         print("3. Métal")
         print("4. Oeil")
 
-        choice = ask_choice(1, 2)
+        choice = ask_choice(1, 4)
         if choice == 1:
             print("Os")
             print("1. Avancer")
@@ -145,7 +142,7 @@ def start_game():
         print("3. Déchirer la page")
         print("4. Observer en silence")
 
-        choice = ask_choice(1, 2)
+        choice = ask_choice(1, 4)
         if choice == 1:
             print("Toucher dessin")
             print("1. Entrer dessin")
@@ -186,11 +183,11 @@ def start_game():
 
             choice = ask_choice(1, 2)
             if choice == 1:
-                print("FIN : Temps suspendue.")
+                print("FIN : Temps suspendu.")
             elif choice == 2:
                 print("FIN : Monde qui change.")
 
-
+    
     elif choice == 3:
         print("--- Regarder le ciel ---")
         print("Quelque chose bouge.")
@@ -199,10 +196,10 @@ def start_game():
         print("3. Lever le carnet")
         print("4. Reculer")
 
-        choice = ask_choice(1, 2)
+        choice = ask_choice(1, 4)
         if choice == 1:
             print("Continuer")
-            print("1. Observer frome")
+            print("1. Observer forme")
             print("2. Approcher ombre.")
 
             choice = ask_choice(1, 2)
@@ -252,7 +249,7 @@ def start_game():
         print("3. Écrire ton nom")
         print("4. Laisser tomber le carnet")
 
-        choice = ask_choice(1, 2)
+        choice = ask_choice(1, 4)
         if choice == 1:
             print("Te relever")
             print("1. Avancer")
@@ -271,7 +268,7 @@ def start_game():
 
             choice = ask_choice(1, 2)
             if choice == 1:
-                print("FIN : Sommeil éternelli.")
+                print("FIN : Sommeil éternel.")
             elif choice == 2:
                 print("FIN : Absorption douce.")
         
