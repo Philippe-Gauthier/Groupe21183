@@ -18,7 +18,7 @@ def ask_choice(min_value, max_value):
         int: Le choix valide entré par l'utilisateur.
 
     """
-    #Crée un boucle qui s'arrêtera quand on utilise return.
+    #Crée une boucle qui s'arrêtera quand on utilise return.
     while True:
         #Attend que l'on écrive quelque chose.
         choice = input("> ")
@@ -37,15 +37,22 @@ def ask_choice(min_value, max_value):
             print("Entrez un nombre.")
 
 def play_again():
+    #Crée une boucle qui s'arrêtera quand on utilise return.
     while True:
+        #Demande au joueur s'il veut rejouer.
         rejouer = input("Rejouer? (oui/non): ").lower()
+        #Si oui, returne True et le jeu recommence.
         if rejouer == "oui":
             return True
+        #Si non, retourne False et le jeux arrête.
         elif rejouer == "non":
             print("Merci d'avoir joué!")
             return False
         else:
             print("Entrez oui ou non.")
+
+
+
 
 def start_game():
     """
@@ -283,9 +290,10 @@ def start_game():
                 print("FIN : Néant mouvant.")
 
 while True:
+    #Démarre le jeux.
     start_game()
-
+    #Si la fonction rejouer retoure True le jeux recommence.
     rejouer = play_again()
-    
+    #Si la fonction rejouer retourne False le jeux arrête.
     if rejouer == False:
         break
