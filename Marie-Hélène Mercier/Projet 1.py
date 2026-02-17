@@ -5,6 +5,13 @@ def ask_choice(min_value, max_value):
     valeur minimal et valeur maximale. Elle répète la question tant qu'une valeur 
     valide n'est pas fournie et retourne un entier valide.
 
+    Args:
+        min_value (int): Valeur minimale acceptée.
+        max_value (int): Valeur maximale acceptée.
+
+    Returns:
+        int: Le choix valide entré par l'utilisateur.
+
     """
     #Crée un boucle qui s'arrêtera quand on utilise return.
     while True:
@@ -22,11 +29,31 @@ def ask_choice(min_value, max_value):
                 #Le f permet d'insérer des variables dans le texte.
                 print(f"Entrez un nombre entre {min_value} et {max_value}.")
         else:
-            print("Entre un nombre.")
+            print("Entrez un nombre.")
+
+def play_again():
+    while True:
+        rejouer = input("Rejouer? (oui/non): ").lower()
+        if rejouer == "oui":
+            return True
+        elif rejouer == "non":
+            print("Merci d'avoir joué!")
+            return False
+        else:
+            print("Entrez oui ou non.")
 
 def start_game():
     """
-    Docstring for start_game
+    Démarre le jeu.
+
+    Présente des choix et dirige l'utilisateur vers différentes branches selon
+    les décisions du joueur.
+
+    La fonction utilise ask_choice() pour valider les entrées
+    et se termine lorsqu'une fin est atteinte.
+
+    Return:
+        None
     """
     print("--- Zdzisław Beksiński ---")
     print("Tu es sur une plaine de cendres. Un carnet vide repose dans ta main.")
@@ -37,7 +64,7 @@ def start_game():
 
     choice = ask_choice(1, 4)
     if choice == 1:
-        print("--- Avancer ver la cité ---")
+        print("--- Avancer vers la cité ---")
         print("Quatre formes émergent.")
         print("1. Os")
         print("2. Pierre")
@@ -250,5 +277,10 @@ def start_game():
             elif choice == 2:
                 print("FIN : Néant mouvant.")
 
-#Démarre le jeu
-start_game()
+while True:
+    start_game()
+
+    rejouer = play_again()
+    
+    if rejouer == False:
+        break
