@@ -110,11 +110,20 @@ def clé_autel(): # Branche 1.1.2.1
     print("(2) Le laisser et partir")
     choix = input("\nQuel est votre choix? (1 ou 2) : ")
 
-    if choix == "1":
+    if choix == "1": # Branche 1.1.2.1.1
         nar("\nL'anneau se resserre autour de votre doigt comme une mâchoire.")
         nar("Des visions de carnage inondent votre esprit.")
         nar("Vous êtes maintenant consumé par sa malédiction.")
         nar("\n=== FIN : L'anneau du chaos ===")
+        rejouer()
+    elif choix == "2": # Branche 1.1.2.1.2
+        nar("\nVous laissez l'anneau et quittez la cathédrale.")
+        nar("Vous avez échappé à une malédiction, mais votre destin reste incertain.")
+        nar("\n=== FIN : La prudence récompensée ===")
+        rejouer()
+    else: 
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        clé_autel()
 
 def clé_clocher(): # Branche 1.1.2.2
     nar("\nAu sommet du clocher, la clé ouvre une trappe.")
@@ -188,14 +197,15 @@ def liberer_chevalier(): # Branche 1.1.3.2
 
     if choix == "1": # Branche 1.1.3.2.1
         nar("\nLe rituel consume votre énergie vitale mais le libère.")
-        nar("Vous vous effondrez, satsisfait d'avoir sauvé une âme.")
-        nar("\n === FIN : Le sacrifice du libérateur ===")
+        nar("Vous vous effondrez, satisfait d'avoir sauvé une âme.")
+        nar("\n=== FIN : Le sacrifice du libérateur ===")
         rejouer()
     elif choix == "2": # Branche 1.1.3.2.2
         nar("\nVous endossez son rôle.")
         nar("Votre corps se rigidifie.")
         nar("Vous êtes maintenant le nouveau gardien éternel.")
         nar("\n=== FIN : Le nouveau gardien ===")
+        rejouer()
 
 def contourne_vers_autel(): # Branche 1.2
     nar("\nVous vous faufilez dans l'ombre entre les colonnes brisées.")
@@ -236,7 +246,7 @@ def examiner_autel(): # Branche 1.2.2
         nar("Vous accomplissez le rituel. Le cycle est brisé.")
         nar("\n=== FIN: La Liberté Finale ===")
         rejouer()
-    if choix == "2": # Branche 1.2.2.2
+    elif choix == "2": # Branche 1.2.2.2
         nar("\nVous partez, condamné à errer pour l'éternité.")
         nar("\n=== FIN: Le Refus du Destin ===")
         rejouer()
@@ -258,6 +268,7 @@ def renverser_calice(): # Branche 1.2.3
         nar("\nVous vous défendez du mieux que vous pouvez, mais le chevalier est implacable.")
         nar("Il vous terrasse rapidement.")
         nar("\n=== FIN : La fureur du chevalier ===")
+        rejouer()
     else:
         print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
         renverser_calice()
@@ -293,8 +304,7 @@ def escalier_clocher(): # Branche 1.3
 
     print("\n(1) Approcher la silhouette")
     print("(2) Observer depuis l'entrée")
-    print("(3) Redescendre immédiatement")
-    choix = input("\nQuel est votre choix? (1, 2 ou 3) : ")
+    choix = input("\nQuel est votre choix? (1 ou 2): ")
 
     if choix == "1":
         approcher_silhouette()
@@ -306,7 +316,7 @@ def escalier_clocher(): # Branche 1.3
 
 def approcher_silhouette(): # Branche 1.3.1
     nar("\nLa silhouette se retourne.")
-    nar("C'est un mirroir de vous-même.")
+    nar("C'est un miroir de vous-même.")
     nar("« Je suis ce que tu aurais pu être », dit-il d'une voix glaciale.")
 
     print("\n(1) Attaquer votre reflet")
@@ -319,18 +329,21 @@ def approcher_silhouette(): # Branche 1.3.1
         nar("\n=== FIN: Le Suicide Métaphysique ===")
         rejouer()
     elif choix == "2": # Branche 1.3.1.2
-        nar("\n« Accepte ton passé », dit le reflet avant de fisparaître")
-        nar("Vous trouvez la paix intérieure malgré l'hoerreur environnante.")
+        nar("\n« Accepte ton passé », dit le reflet avant de disparaître")
+        nar("Vous trouvez la paix intérieure malgré l'horreur environnante.")
         nar("\n=== FIN : L'acceptation ===")
         rejouer()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        approcher_silhouette()
 
 def observer_silhouette(): # Branche 1.3.2
     nar("\nVous observez la silhouette manipuler quelque chose.")
     nar("C'est une cloche. Si elle sonne, quelque chose de terrible arrivera.")
     
-    print("\n(1) L'empe^cher de sonner")
+    print("\n(1) L'empêcher de sonner")
     print("(2) Laisser faire")
-    choix = input("\nQuel est votre choix? (1 ou 2)")
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
 
     if choix == "1": # Branche 1.3.2.1
         nar("\nVous vous précipitez et détruisez la cloche.")
@@ -341,6 +354,9 @@ def observer_silhouette(): # Branche 1.3.2
         nar("\nLa cloche sonne. Le monde s'effondre dans les ténèbres.")
         nar("\n=== FIN : La fin de toute chose ===")
         rejouer()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        observer_silhouette()
 
 def catacombes(): # Branche principale 2
     nar("\nLes marches descendent dans l'obscurité totale.")
@@ -458,6 +474,10 @@ def avancer_vers_lumière(): # Branche 2.2.2
         nar("« La vérité est dans le sang. » Énigmatique.")
         nar("\n=== FIN: Le Mystère Non Résolu ===")
         rejouer()
+    else: 
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        avancer_vers_lumière()
+    
 
 def prendre_épée(): # Branche 2.2.2.1
     nar("\nL'épée s'illumine dans votre main. Une puissance ancienne vous envahit.")
@@ -550,7 +570,7 @@ def parler_enfant(): # Branche 3.1.2
     nar("Il se transforme en une abomination.")
 
     print("\n(1) Combattre")
-    print("\n(2) Fuir")
+    print("(2) Fuir")
     choix = input("\nQuel est votre choix? (1 ou 2) : ")
 
     if choix == "1": # Branche 3.1.2.1
@@ -643,7 +663,7 @@ def explorer_village(): # Branche 3.3.1
 
 def regarder_puits(): # Branche 3.3.1.1
     nar("\nDans le puits, vous voyez des centaines de visages hurlants.")
-    nar("Ils vous appellent. Vous tendent les bras.")
+    nar("Ils vous appellent. Vous tendent les bras vers l'enfer.")
 
     print("\n(1) Sauter pour les rejoindre")
     print("(2) Reculer horrifié")
