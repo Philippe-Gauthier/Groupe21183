@@ -13,7 +13,8 @@ def nar(texte):
 
 # Situation initiale
 def situation_initiale():
-    nar("La cloche funèbre résonne dans les ruines.")
+    nar("=== NOUVELLE PARTIE ===")
+    nar("\nLa cloche funèbre résonne dans les ruines.")
     nar("Le ciel est noir, figé dans une nuit éternelle.")
     nar("Vous vous réveillez sur un pavé de pierre froide.")
     nar("Votre mémoire est brisée, votre corps marqué de cicatrices anciennes.")
