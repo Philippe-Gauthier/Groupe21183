@@ -1,3 +1,8 @@
+"""
+Nom du fichier : Projet 1.py
+Auteur : Marie-Hélène Mercier
+"""
+
 def ask_choice(min_value, max_value):
     """
     Cette fonction permet de forcer l'utilisateur à utiliser des nombres 
