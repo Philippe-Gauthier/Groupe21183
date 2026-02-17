@@ -5,7 +5,10 @@ by Antoine D-C
 
 """
 notes to self:
--
+- maybe clean up tree once you've finished modiying it, it could easily be cut in halb just by removing the varriable change
+-add dockstring to describe variables
+-protect your loops
+-Capitalise all start of line in text, for consistency, also make sure the \n are in the right place
 """
 
 #libraries
@@ -123,8 +126,8 @@ def scene1_1_1_1_1_1():
     print_("\n\nYou both jump out from behind the pillar and run, screaming down at it")
     print_("Your companion striks first, his battle axe  smashing into the dragon's front leg, closely followed by your knives peircing a bit of its wing")
     print_("Unfortunately, its hideis to thick for the axe and it shatters upon impact and your knives are not sharp enough to slice cleanly through the wing membrane")
-    print_("All this sudden violence only enrages the beast and in one movement, it throws you aside with it's powerfull taloned paws and blasts a spray of ice shards from it's mouth towards your helpless companion")
-    print_("You see the storm of frosen knives shred through him like nothing, taking chunks of flesh and bones with is , in an instant, all that remains is a puddle of mangled biomass on the ground")
+    print_("All this sudden violence only enrages the beast and in one movement, it throws you aside with its powerfull taloned paws and blasts a spray of ice shards from it's mouth towards your helpless companion")
+    print_("You see the storm of frosen knives shred through him like nothing, taking chunks of flesh and bones with it, in an instant, all that remains is a puddle of mangled biomass on the ground")
     print_("No time to mourn though, the dragon turns to you now, preparing another, its eyes glowing with malice")
 
     time.sleep(debug_delay * 2)
@@ -134,10 +137,10 @@ def scene1_1_1_1_1_1():
     path1_1_1_1_1_1 = input("What do you do? (1/2): ")
     return path1_1_1_1_1_1
 
-##scene 1_1_1_1_1_1_1,defend with scraps
+##scene 1_1_1_1_1_1_1,defend with scraps        end
 def scene1_1_1_1_1_1_1():
     print_("\n\nYou rapidly gather all the spare, broken or loose planks of wood within reach, same with bricks and pebbles and pile them up precariously before you")
-    print_("The dragon unleashes another spray of icy death in your eirectiopn and, for a small moment, the barricaade holds")
+    print_("The dragon unleashes another spray of icy death in your direction and, for a small moment, the barricaade holds")
     print_("You still get disintegrated in a fine mist of blood and bones half a second later of course, but it was worth a try.")
 
     return int(6)
@@ -149,14 +152,70 @@ def scene1_1_1_1_1_1_2():
 
     return int(6)
 
-##scene 1_1_1_1_1_2,gather intel        open
+##scene 1_1_1_1_1_2,gather intel        win
 def scene1_1_1_1_1_2():
-    print_("111112")
+    print_("\n\nYou wait and observe the beast, trying to find a flaw to expliot")
+    print_("it takes a while but you notice that a few scales are missing in th center of its chest, probably a mark left by another adventurer who failed to do what you are currently attempting")
+    print_("""You take your chance and while yelling "distract it's head!!" to your companion, you pull out your daggers and jump for the heart if the wyrm""")
+    print_("While the dragon charges down its bait, you land the blades squarely in its hears, the cursed beast writhes in agony for a few minutes, thrashing around its limbs")
 
+    return int(5)
 
-##scene 1_1_1_1_2, setup camp and observe       open
+##scene 1_1_1_1_2, setup camp and observe
 def scene1_1_1_1_2():
-    print_("11112")
+    print_("\n\nYou set up camp and observe the dragon fly around its lair")
+    print_("before long, the light from your wisp alerts the beast to your location and it starts rapidly approaching the awkward camp you made")
+    print_("It looks like you will need to fight it here, it's not ideal but you have no choice")
+    print_("the wyrm is finally within range, you shoot your two small wrist crossbows at it, they miss, you only turned its curiosity into anger")
+    print_("The dragon then lets out a blood chilling roar and blasts a spray of ice shards from it's mouth towards your helpless companion")
+    print_("You see the storm of frosen knives shred through him like nothing, taking chunks of flesh and bones with it, in an instant, all that remains is a puddle of mangled biomass on the ground")
+    print_("No time to mourn though, the dragon turns to you now, preparing another, its eyes glowing with malice")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) try and hide beheind a rock")
+    print("(2) reload and attempt to shoot it again")
+    path1_1_1_1_2 = input("What do you do? (1/2): ")
+    return path1_1_1_1_2
+
+##scene 1_1_1_1_2_1, hide behind rock
+def scene1_1_1_1_2_1():
+    print_("\n\nYou hide behind a nearby rock and pray the dragon doesn't fly around to face you")
+    print_("It doesn't, but it still sprays at you, the rock holds")
+    print_("You emerge from your hiding spot, having had time to reload your crossbows, you notice the face of the stone has been reduced to gravel by the ice blast")
+    print_("You take aim and, as you are about to fire, you see a small patch of broken scales near the beast's heart, probably a mark left by another adventurer who failed to do what you are currently attempting")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) wait for it to land and attempt to strike it with your daggers")
+    print("(2) aim for the bare skin")
+    path1_1_1_1_2_1 = input("What do you do? (1/2): ")
+    return path1_1_1_1_2_1
+
+## scene1_1_1_1_2_1_1, wait for landing         end
+def  scene1_1_1_1_2_1_1():
+    print_("\n\nYou wait for the beast to land")
+    print_("At some point it seems to be swooping down for it but you were wrong, it actually just starts to attack you with its powerfull taloned paws")
+    print_("You dodge them all at first but after a few passes, one talon you couldn't see opens a huge gaping wound in your back")
+    print_("You feel your blood pour out of your veins and cascade down your legs")
+    print_("you die")
+
+    return int(6)
+
+## scene1_1_1_1_2_1_2, shoot crossbow       win
+def scene1_1_1_1_2_1_2():
+    print_("\n\nYou aim and shoot as it swoops down to attack with its powerfull taloned paws")
+    print_("Both your arrows land, the wyrm crashes out of the air and writhes in agony for a few minutes, thrashing around its limbs")
+
+    return int(6)
+
+##scene 1_1_1_1_2_2, reload crossbows       end
+def scene1_1_1_1_2_2():
+    print_("\n\nYou reach for your spare arrows and rapidly reload your crossbows but it's too late")
+    print_("The dragon unleashes another spray of icy death in your direction")
+    print_("You get disintegrated in a fine mist of blood and bones half a second later, but it was worth a try.")
+
+    return int(5)
 
 ##scene 1_1_1_2, through forest
 def scene1_1_1_2():
@@ -176,15 +235,15 @@ def scene1_1_1_2():
     path1_1_1_1 = input("What do you do? (1/2/3): ")
     return path1_1_1_1
 
-## pay them      open
+##scene1_1_1_2_1, pay them      open
 def scene1_1_1_2_1():
     print_("111121")
 
-## talk it out       open
+##scene1_1_1_2_2, talk it out       open
 def scene1_1_1_2_2():
     print_("111122")
 
-## unspeakable violence
+##scene1_1_1_2_3, unspeakable violence
 def scene1_1_1_2_3():
     print_("\n\nYou look at youy companion, he looks back at you, you understand each other, you don't have time for this")
     print_("You then both get off your horses and while he pulls out a battle axe from his bag, you swiftly load your wrist crossbows and unsheath your daggers")
@@ -202,11 +261,11 @@ def scene1_1_1_2_3():
     path1_1_1_2_3 = input("What do you do? (1/2): ")
     return path1_1_1_2_3
 
-## ascend towards the fortress      open
+##scene1_1_1_2_3_1, ascend towards the fortress      open       but might be replaced
 def scene1_1_1_2_3_1():
     print_("111231")
 
-## head home scared
+##scene1_1_1_2_3_2, head home scared     end
 def scene1_1_1_2_3_2():
     print_("\n\nThat beast looks way too feirce, you have already rid the world of some danger today and that's enough")
     print_("you look at  your companion and both understand you're outmatched")
@@ -233,7 +292,7 @@ def scene1_1_2():
 def scene1_1_2_1():
     print_("1121")
 
-##scene 1_1_2_2, decline
+##scene 1_1_2_2, decline        end
 def scene1_1_2_2():
     print_("\n\nInfinite riches are useless if you're not alive to enjoy them")
     print_("""You tell him it's too dangerous and, unless he has the fabled "plot armor", you will surely die fighting the dreadfull thing" """)
@@ -263,7 +322,7 @@ def scene1_2():
 def scene1_2_1():
     print_("121")
 
-##scene 1_2_2, kill him
+##scene 1_2_2, kill him     end
 def scene1_2_2():
     print_("\n\nYou can't hear his pleas over the blood pumping through you, the adrenaline and your pain blind and deafen you completely")
     print_("Violently, you decide it's not worth it to let him live, you slice his throat thrice,")
@@ -277,7 +336,7 @@ def scene1_2_2():
 
     return int(2)
 
-##scene 1_2_3, wait
+##scene 1_2_3, wait     end
 def scene1_2_3():
     print_("\n\nYou unfortunately won't ever know what he meant by that, he simply dies on you")
     print_("The pub is now silent, everyone either drawing their weapons or hiding under tables or behind barrels")
@@ -317,7 +376,7 @@ def end(depth):
     print(f"You went {depth} choices deep")
     print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n\n")
 
-## this prints when you finally slay the ice wyrm and win the game      open
+## this prints when you finally slay the ice wyrm and win the game
 def win(depth):
     print("\n________________________________________________________________________________________________________________________________")
     print(f"Congratulations {name}, You have killed the Ice wyrm and saved the kingdom from almost certain doom, it only took You {depth} choices.")
@@ -344,9 +403,17 @@ if path1 == "1":        #lean back
                     elif path1_1_1_1_1_1 == "2":        #attack while charging
                         win(scene1_1_1_1_1_1_2())
                 elif path1_1_1_1_1 == "2":      #gather intel
-                    scene1_1_1_1_1_2()
+                    win(scene1_1_1_1_1_2())
             elif path1_1_1_1 == "2":        #setup camp and observe
-                scene1_1_1_1_2()
+                path1_1_1_1_2 = scene1_1_1_1_2()
+                if path1_1_1_1_2 == "1":        #hide behind rock
+                    path1_1_1_1_2_1 = scene1_1_1_1_2_1()
+                    if  path1_1_1_1_2_1 == "1":     #wait for landing
+                         end(scene1_1_1_1_2_1_1())
+                    elif path1_1_1_1_2_1 == "2":        #shoot crossbows
+                        win(scene1_1_1_1_2_1_2())
+                elif path1_1_1_1_2 == "2":      #reload crossbows
+                    end(scene1_1_1_1_2_2())
         elif path1_1_1 == "2":      #through forest
             path1_1_1_2 = scene1_1_1_2()
             if path1_1_1_2 == "1":      # pay them
@@ -356,7 +423,7 @@ if path1 == "1":        #lean back
             elif path1_1_1_2 == "3":    # unspeakable violence
                 path1_1_1_2_3 = scene1_1_1_2_3()
                 if path1_1_1_2_3 == "1":  # ascend
-                     scene1_1_1_2_3_1()
+                     scene1_1_1_2_3_1()     ##might be replaced
                 elif path1_1_1_2_3 == "2":  # head home
                     end(scene1_1_1_2_3_2())
     elif path1_1 == "2":        #decline
