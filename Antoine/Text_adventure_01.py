@@ -241,7 +241,10 @@ def scene1_1_1_2_1():
 
 ##scene1_1_1_2_2, talk it out       open
 def scene1_1_1_2_2():
-    print_("111122")
+    print_("""\n\n"Now now" you say "what could we possibly have to offer to distinguished gents such as yourselves" """)
+    print_(""""Well ya look like ye could pe'haps be a lil 'eavy fo' travel, it aint so much about wa' we need so much as wa' ye don't if ye ge' wa' i'm sayn' " he says""")
+    print_(""""I see" you say, "well in that case, learn that we have packed only the strict minimmum for our voyage, we could not forsee letting go of anything" """)
+    print_(""""Real shame tha' is" he says"we still gonna need somtin' fo' our trouble" """)
 
 ##scene1_1_1_2_3, unspeakable violence
 def scene1_1_1_2_3():
@@ -422,9 +425,9 @@ if path1 == "1":        #lean back
                 scene1_1_1_2_2()
             elif path1_1_1_2 == "3":    # unspeakable violence
                 path1_1_1_2_3 = scene1_1_1_2_3()
-                if path1_1_1_2_3 == "1":  # ascend
-                     scene1_1_1_2_3_1()     ##might be replaced
-                elif path1_1_1_2_3 == "2":  # head home
+                if path1_1_1_2_3 == "1":        # ascend
+                     scene1_1_1_2_3_1()         ## might be replaced
+                elif path1_1_1_2_3 == "2":     # head home
                     end(scene1_1_1_2_3_2())
     elif path1_1 == "2":        #decline
         path1_1_2 = scene1_1_2()
