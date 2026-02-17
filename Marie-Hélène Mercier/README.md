@@ -7,9 +7,11 @@ Seulement des passages.
 Ce monde n'a pas été créé pour être compris.
 Il existe pour être traversé.
 
-# Table des matières
+---
+
+### Table des matières
 - [Zdzisław Beksińskiion](#zdzisław-beksińskiion)
-- [Table des matières](#table-des-matières)
+    - [Table des matières](#table-des-matières)
   - [Présentation](#présentation)
   - [Nature du jeu](#nature-du-jeu)
   - [Comment jouer](#comment-jouer)
@@ -19,12 +21,16 @@ Il existe pour être traversé.
   - [Avertissement](#avertissement)
   - [Objectif](#objectif)
   - [Licence](#licence)
+
+---
   
 ## Présentation
 
 Zdzisław Beksiński est une courte aventure textuelle. Tu te retrouve dans un monde gris, silencieux et étrange où chaque choix influence ton destin. 
 
 Le jeu se joue uniquement avec des choix numérique et chaque chemin mène à une fin.
+
+---
 
 ## Nature du jeu
 
@@ -36,6 +42,8 @@ Le jeu se joue uniquement avec des choix numérique et chaque chemin mène à un
 
 Ce jeu ne raconte pas une histoire.
 Il génère des états.
+
+---
   
 ## Comment jouer
 
@@ -46,6 +54,8 @@ Il génère des états.
 
 Il n'y a pas de retour en arrière.
 Seulement d'autres tentatives.
+
+---
 
 ## Structure
 
@@ -62,6 +72,8 @@ Certaines fins sont calmes.
 Certaines sont cruelles.
 Aucune n'est définitive.
 
+---
+
 ## Types de fins
 
 - Dissolution
@@ -76,6 +88,8 @@ Aucune n'est définitive.
 Les mots changent.
 Les sensation restent.
 
+---
+
 ## Philosophie
 
 Ce projet s'inspire de l'idée que :
@@ -89,6 +103,8 @@ Elles sont suggérées.
 
 Ce que tu vois dépend de toi.
 
+---
+
 ## Avertissement
 
 Ce jeu contient :
@@ -101,6 +117,8 @@ Aucune violence graphique.
 Aucun gore.
 Seulement l'étrangeté.
 
+---
+
 ## Objectif
 
 Il n'y a pas d'objectif.
@@ -110,6 +128,8 @@ Se perdre est normal.
 
 Si tu ressens quelque chose,
 le jeu a fonctionné.
+
+---
 
 ## Licence
 
