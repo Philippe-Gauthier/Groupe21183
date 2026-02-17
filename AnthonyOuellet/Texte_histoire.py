@@ -474,6 +474,9 @@ def prendre_épée(): # Branche 2.2.2.1
         nar("\nVous lâchez l'épée et quittez la crypte indemne.")
         nar("\n=== FIN: La Résistance à la Tentation ===")
         rejouer()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        prendre_épée()
 
 def allumer_torche(): # Branche 2.3
     nar("\nLa flamme révèle l'horreur autour de vous.")
@@ -496,10 +499,185 @@ def allumer_torche(): # Branche 2.3
         nar("Des griffes vous attrapent et vous traînent dans les ténèbres.")
         nar("\n=== FIN : Enlevé par les ombres ===")
         rejouer()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        allumer_torche()
 
 def brouillard(): # Branche principale 3
-    nar("\nTest")
-    nar("test")
+    nar("\nLe brouillard est si dense que vous ne voyez pas vos propres mains.")
+    nar("Le sol sous vos pieds est mou, presque vivant.")
+    nar("Des silhouettes se dessinent au loin, immobiles.")
+    nar("Vous entendez des pleurs d'enfant quelque part.")
+
+    print("\n(1) Suivre les pleurs")
+    print("(2) Approcher les silhouettes")
+    print("(3) Avancer droit devant")
+    choix = input("\nQuel est votre choix? (1, 2 ou 3) : ")
+
+    if choix == "1":
+        suivre_pleurs()
+    elif choix == "2":
+        approcher_les_silhouettes()
+    elif choix == "3":
+        avancer_droit_devant()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        brouillard()
+
+def suivre_pleurs(): # Branche 3.1
+    nar("\nLes pleurs vous guident à travers le brouillard.")
+    nar("Vous trouvez un enfant recroquevillé, le visage caché.")
+    nar("Quelque chose semble... incorrect.")
+
+    print("\n(1) S'approcher de l'enfant")
+    print("(2) Lui parler doucement")
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
+
+    if choix == "1": # Branche 3.1.1
+        nar("\nL'enfant se retourne. Son visage est une bouche béante.")
+        nar("Il vous dévore avant que vous ne puissiez réagir.")
+        nar("\n=== FIN : Dévoré par l'innocence ===")
+        rejouer()
+    elif choix == "2":
+        parler_enfant()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        suivre_pleurs()
+
+def parler_enfant(): # Branche 3.1.2
+    nar("\n« Aidez-moi...» pleure-t-il. Sa voix devient grave et monstrueuse.")
+    nar("Il se transforme en une abomination.")
+
+    print("\n(1) Combattre")
+    print("\n(2) Fuir")
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
+
+    if choix == "1": # Branche 3.1.2.1
+        nar("\nVous luttez avec courage mais êtes submergé.")
+        nar("\n=== FIN: Le Combat Héroïque ===")
+        rejouer()
+    elif choix == "2": # Branche 3.1.2.2
+        nar("\nVous fuyez à travers le brouillard, laissant derrière vous les cris de l'abomination.")
+        nar("\n=== FIN : La fuite dans le brouillard ===")
+        rejouer()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        parler_enfant()
+
+def approcher_les_silhouettes(): # Branche 3.2
+    nar("\nLes silhouettes sont des statues de pierre.")
+    nar("Elles représentent des gens ordinaires, figés dans leur dernière seconde.")
+    nar("L'une d'elles vous ressemble étrangement.")
+
+    print("\n(1) Toucher votre statue")
+    print("(2) Examiner les autres statues")
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
+
+    if choix == "1": # Branche 3.2.1
+        nar("\nVous touchez la statue. Une vision vous submerge.")
+        nar("Vous voyez votre propre mort, encore et encore.")
+        nar("Vous devenez fou de cette connaissance.")
+        nar("\n=== FIN : La folie de la connaissance ===")
+        rejouer()
+    elif choix == "2":
+        examiner_autres_statues()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        approcher_les_silhouettes()
+
+def examiner_autres_statues(): # Branche 3.2.2
+    nar("\nChaque statue raconte une histoire de désespoir.")
+    nar("Vous trouvez un journal à leurs pieds.")
+
+    print("\n(1) Lire le journal")
+    print("(2) L'ignorer")
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
+
+    if choix == "1": # Branche 3.2.2.1
+        nar("\nLe journal révèle la vérité : vous êtes déjà mort.")
+        nar("Ce monde est votre purgatoire personnel.")
+        nar("\n=== FIN : La révélation du purgatoire ===")
+        rejouer()
+    elif choix == "2": # Branche 3.2.2.2
+        nar("\nVous partez, préservant votre ignorance.")
+        nar("\n=== FIN : L'ignorance est une bénédiction ===")
+        rejouer()
+
+def avancer_droit_devant(): # Branche 3.3
+    nar("\nVous marchez pendant ce qui semble des heures.")
+    nar("Le brouillard commence à se dissiper.")
+    nar("Vous découvrez un village abandonné.")
+
+    print("\n(1) Explorer le village")
+    print("(2) Le contourner")
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
+
+    if choix == "1":
+        explorer_village()
+    elif choix == "2":
+        contourner_village()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        avancer_droit_devant()
+
+def explorer_village(): # Branche 3.3.1
+    nar("\nLes maisons sont vides mais les tables sont mises.")
+    nar("Comme si les habitants avaient disparu soudainement.")
+    nar("Au centre du village, un puits.")
+
+    print("\n(1) Regarder dans le puits")
+    print("(2) Fouiller les maisons")
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
+
+    if choix == "1":
+        regarder_puits()
+    elif choix == "2": # Branche 3.3.1.2
+        nar("\nVous trouvez un journal parlant d'un rituel raté.")
+        nar("Le village entier a été sacrifié à une entité.")
+        nar("\n=== FIN : Le sacrifice du village ===")
+        rejouer()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        explorer_village()
+
+def regarder_puits(): # Branche 3.3.1.1
+    nar("\nDans le puits, vous voyez des centaines de visages hurlants.")
+    nar("Ils vous appellent. Vous tendent les bras.")
+
+    print("\n(1) Sauter pour les rejoindre")
+    print("(2) Reculer horrifié")
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
+
+    if choix == "1": # Branche 3.3.1.1.1
+        nar("\nVous plongez dans l'abîme. Les âmes vous accueillent.")
+        nar("\n=== FIN : L'union avec les damnés ===")
+        rejouer()
+    elif choix == "2": # Branche 3.3.1.1.2
+        nar("\nVous fuyez le village, hanté par cette vision.")
+        nar("\n=== FIN : Le témoin terrifié ===")
+        rejouer()
+    else:
+        print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
+        regarder_puits()
+
+def contourner_village(): # Branche 3.3.2
+    nar("\nVous contournez le village.")
+    nar("Au loin, vous apercevez une lumière. Un espoir?")
+
+    print("\n(1) Marcher vers la lumière")
+    print("(2) Rester dans l'obscurité familière")
+    choix = input("\nQuel est votre choix? (1 ou 2) : ")
+
+    if choix == "1": # Branche 3.3.2.1
+        nar("\nLa lumière grandit. C'est un portail vers un autre monde.")
+        nar("Vous le franchissez et trouvez peut-être la paix.")
+        nar("\n=== FIN : Le nouveau départ ===")
+        rejouer()
+    elif choix == "2": # Branche 3.3.2.2
+        nar("\nVous restez dans ce monde de brume pour l'éternité.")
+        nar("\n=== FIN : L'éternité dans le brouillard ===")
+        rejouer()
+    
 
 def rejouer():
     choix = input("\nVoulez-vous rejouer? (oui/non) : ")
