@@ -6,7 +6,7 @@ Auteur : Marie-Hélène Mercier
 def ask_choice(min_value, max_value):
     """
     Cette fonction permet de forcer l'utilisateur à utiliser des nombres 
-    de 1 à 4 ou 1 à 2 et éviter que le jeu plante. Elle reçoit 2 paramètres, 
+    de 1 à 4 ou  de 1 à 2 et ainsi éviter que le jeu plante. Elle reçoit 2 paramètres: 
     valeur minimal et valeur maximale. Elle répète la question tant qu'une valeur 
     valide n'est pas fournie et retourne un entier valide.
 
@@ -18,13 +18,13 @@ def ask_choice(min_value, max_value):
         int: Le choix valide entré par l'utilisateur.
 
     """
-    #Crée une boucle qui s'arrêtera quand on utilise return.
+    #Crée une boucle qui s'arrêtera quand l'on retourne un choix.
     while True:
         #Attend que l'on écrive quelque chose.
         choice = input("> ")
         #Vérifie si la variable choice est composé uniquement de chiffres.
         if choice.isdigit():
-            #Transforme les numéro string "1." en nombre.
+            #Transforme les numéros string en nombre, exemple: "1."
             choice = int(choice)
             #Vérifie si le nombre est accepté.
             if min_value <= choice <= max_value:
@@ -37,9 +37,17 @@ def ask_choice(min_value, max_value):
             print("Entrez un nombre.")
 
 def play_again():
+    """
+    Cette fonction permet à l'utilisateur de choisir s'il veut
+    rejouer ou terminer la partie.
+
+    Returns:
+        bool: True si l'utilisateur veut rejouer, False sinon.
+
+    """
     #Crée une boucle qui s'arrêtera quand on utilise return.
     while True:
-        #Demande au joueur s'il veut rejouer.
+        #Demande à l'utilisateur s'il veut rejouer.
         rejouer = input("Rejouer? (oui/non): ").lower()
         #Si oui, returne True et le jeu recommence.
         if rejouer == "oui":
@@ -61,7 +69,7 @@ def start_game():
     Présente des choix et dirige l'utilisateur vers différentes branches selon
     les décisions du joueur.
 
-    La fonction utilise ask_choice() pour valider les entrées
+    La fonction utilise la fonction ask_choice() pour valider les entrées
     et se termine lorsqu'une fin est atteinte.
 
     Return:
@@ -294,6 +302,6 @@ while True:
     start_game()
     #Si la fonction rejouer retoure True le jeux recommence.
     rejouer = play_again()
-    #Si la fonction rejouer retourne False le jeux arrête.
+    #Si la fonction rejouer retourne False le jeux s'arrête.
     if rejouer == False:
         break
