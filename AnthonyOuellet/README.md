@@ -1,6 +1,6 @@
 # Projet 1: Livre interractif
 ## Concept
-Mon projet est un livre intéractif de style «Goosebump» où le lecteur devra faire des choix qui influencera le sort du héro de l'histoire. Plusieurs fins différentes peuvent être atteignables.
+Mon projet est un livre intéractif de style «dark fantasy» où le lecteur devra faire des choix qui influencera le sort du héro de l'histoire. Plusieurs fins différentes peuvent être atteignables.
 
 ## But
 Réussir à arriver à une fin où le héro survit (ou simplement: ne pas mourrir)
