@@ -104,9 +104,55 @@ def scene1_1_1_1():
     path1_1_1_1 = input("What do you do? (1/2): ")
     return path1_1_1_1
 
-##scene 1_1_1_1_1, descend towards the fortress     open
+##scene 1_1_1_1_1, descend towards the fortress
 def scene1_1_1_1_1():
-    print_("11111")
+    print_("\n\nYou make your way down the mountain flank, carefully yet swiftly")
+    print_("as you approach the fort, you can hear the beast lurking about, its evil screeches icing your soul")
+    print_("you enter via a small, near invisible, service door and manage to make your way to the inner court without too much trouble")
+    print_("There, you can see the Wyrm swooping down, as it lands mere meters from the pillar you hide behind, you start to appreceate how impossible a task slaying this beast will be")
+    
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) charge it down ,you have the element of surprise")
+    print("(2) gather intel on the beast before attacking")
+    path1_1_1_1_1 = input("What do you do? (1/2): ")
+    return path1_1_1_1_1
+
+##scene 1_1_1_1_1_1, charge it down boldly
+def scene1_1_1_1_1_1():
+    print_("\n\nYou both jump out from behind the pillar and run, screaming down at it")
+    print_("Your companion striks first, his battle axe  smashing into the dragon's front leg, closely followed by your knives peircing a bit of its wing")
+    print_("Unfortunately, its hideis to thick for the axe and it shatters upon impact and your knives are not sharp enough to slice cleanly through the wing membrane")
+    print_("All this sudden violence only enrages the beast and in one movement, it throws you aside with it's powerfull taloned paws and blasts a spray of ice shards from it's mouth towards your helpless companion")
+    print_("You see the storm of frosen knives shred through him like nothing, taking chunks of flesh and bones with is , in an instant, all that remains is a puddle of mangled biomass on the ground")
+    print_("No time to mourn though, the dragon turns to you now, preparing another, its eyes glowing with malice")
+
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) try and defend yourself with rubble lying around")
+    print("(2) attack while it charges up")
+    path1_1_1_1_1_1 = input("What do you do? (1/2): ")
+    return path1_1_1_1_1_1
+
+##scene 1_1_1_1_1_1_1,defend with scraps
+def scene1_1_1_1_1_1_1():
+    print_("\n\nYou rapidly gather all the spare, broken or loose planks of wood within reach, same with bricks and pebbles and pile them up precariously before you")
+    print_("The dragon unleashes another spray of icy death in your eirectiopn and, for a small moment, the barricaade holds")
+    print_("You still get disintegrated in a fine mist of blood and bones half a second later of course, but it was worth a try.")
+
+    return int(6)
+
+##scene 1_1_1_1_1_1_2,attack while charging     win
+def scene1_1_1_1_1_1_2():
+    print_("\n\nYou rapidly jump up despite the pain and draw your remaining two knives")
+    print_("As the wyrm opens its mouth to spray its icy death, you land your knives directly in the roov of its mouth, mortally wounding it by cutting its brain in half from within")
+
+    return int(6)
+
+##scene 1_1_1_1_1_2,gather intel        open
+def scene1_1_1_1_1_2():
+    print_("111112")
+
 
 ##scene 1_1_1_1_2, setup camp and observe       open
 def scene1_1_1_1_2():
@@ -272,8 +318,11 @@ def end(depth):
     print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n\n")
 
 ## this prints when you finally slay the ice wyrm and win the game      open
-def win():
-    print_("win")
+def win(depth):
+    print("\n________________________________________________________________________________________________________________________________")
+    print(f"Congratulations {name}, You have killed the Ice wyrm and saved the kingdom from almost certain doom, it only took You {depth} choices.")
+    print(f"You make the trip down to the village again and, after bragging about your success to the locals, go home and go to sleep.")
+    print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n\n")
 
 
 #gameplay tree
@@ -287,7 +336,15 @@ if path1 == "1":        #lean back
         if path1_1_1 == "1":        #across mountains
             path1_1_1_1 = scene1_1_1_1()
             if path1_1_1_1 == "1":      #descend towards the fortress
-                scene1_1_1_1_1()
+                path1_1_1_1_1 = scene1_1_1_1_1()
+                if path1_1_1_1_1 == "1":        #charge it down boldly
+                    path1_1_1_1_1_1 = scene1_1_1_1_1_1()
+                    if path1_1_1_1_1_1 == "1":      #defend with scraps
+                        end(scene1_1_1_1_1_1_1())
+                    elif path1_1_1_1_1_1 == "2":        #attack while charging
+                        win(scene1_1_1_1_1_1_2())
+                elif path1_1_1_1_1 == "2":      #gather intel
+                    scene1_1_1_1_1_2()
             elif path1_1_1_1 == "2":        #setup camp and observe
                 scene1_1_1_1_2()
         elif path1_1_1 == "2":      #through forest
@@ -301,26 +358,22 @@ if path1 == "1":        #lean back
                 if path1_1_1_2_3 == "1":  # ascend
                      scene1_1_1_2_3_1()
                 elif path1_1_1_2_3 == "2":  # head home
-                    depth = scene1_1_1_2_3_2()
-                    end(depth)
+                    end(scene1_1_1_2_3_2())
     elif path1_1 == "2":        #decline
         path1_1_2 = scene1_1_2()
         if path1_1_2 == "1":        #accept again
             scene1_1_2_1()         ##this choice should be replaced with the entire "Accept" path, from the if above, change before putting into 3rd path
         elif path1_1_2 == "2":      #decline again
-            depth = scene1_1_2_2()
-            end(depth)
+            end(scene1_1_2_2())
 
 elif path1 == "2":      #throw table
     path1_2 = scene1_2()
     if path1_2 == "1":      #help him up
         scene1_2_1()
     elif path1_2 == "2":        #kill him
-        depth = scene1_2_2()
-        end(depth)
+        end(scene1_2_2())
     elif path1_2 == "3":        #wait
-        depth = scene1_2_3()
-        end(depth)
+        end(scene1_2_3())
 
 elif path1 == "3":      #do nothing
     path1_3 = scene1_3()
