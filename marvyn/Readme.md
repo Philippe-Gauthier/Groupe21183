@@ -5,7 +5,7 @@ Le jouer accumule des points de :
 -Raison
 -Ambition
 
-La fin dépend de schoix effectués.
+La fin dépend des choix effectués.
 
 ## Structure
 -main.py : point d'entrée
