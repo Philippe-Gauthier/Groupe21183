@@ -1,4 +1,4 @@
-# Zdzisław Beksińskiion
+# Zdzisław Beksiński
 
 Il n'y a pas de héros.
 Il n'y a pas de victoire.
@@ -11,6 +11,8 @@ Il existe pour être traversé.
 
 ### Table des matières
 
+- [Zdzisław Beksiński](#zdzisław-beksiński)
+    - [Table des matières](#table-des-matières)
   - [Présentation](#présentation)
   - [Nature du jeu](#nature-du-jeu)
   - [Comment jouer](#comment-jouer)

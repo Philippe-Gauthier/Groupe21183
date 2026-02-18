@@ -1,6 +1,9 @@
 """
+Projet : Zdzisław Beksiński
 Nom du fichier : Projet 1.py
 Auteur : Marie-Hélène Mercier
+Date : 2026-02-18
+Description : Jeu narratif à choix multiples avec arbre décisionnel.
 """
 
 def ask_choice(min_value, max_value):
