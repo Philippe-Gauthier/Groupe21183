@@ -11,8 +11,6 @@ Il existe pour être traversé.
 
 ### Table des matières
 
-- [Zdzisław Beksiński](#zdzisław-beksiński)
-    - [Table des matières](#table-des-matières)
   - [Présentation](#présentation)
   - [Nature du jeu](#nature-du-jeu)
   - [Comment jouer](#comment-jouer)
