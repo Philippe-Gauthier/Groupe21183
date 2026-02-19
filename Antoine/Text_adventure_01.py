@@ -235,16 +235,44 @@ def scene1_1_1_2():
     path1_1_1_1 = input("What do you do? (1/2/3): ")
     return path1_1_1_1
 
-##scene1_1_1_2_1, pay them      open
+##scene1_1_1_2_1, pay them
 def scene1_1_1_2_1():
-    print_("111121")
+    print_("\n\nYou pay them the contents of your pouch and tell them it's all you have ")
+    print_("Since the pouch was filled pretty subtancially, they seem content with the transaction and agree to let you pass")
+    print_("you continue along the path and eventually reconvene with the other end of the mountain path, you start to be able to see the valley and it is both beautiful and terrifying")
+    print_("You see the old fortress in the cold valley before you, you can see the wicked beast circling the anciant bastion in the air above, it had been taken over,")
+    print_("The wyrm looks absolutely terrifying and for the first time, you realise how impossible the task may be")
 
-##scene1_1_1_2_2, talk it out       open
+    time.sleep(debug_delay * 2)
+    print("\n--- What do you do? ---")
+    print("(1) Ascend towards the fortress")
+    print("(2) Head home, you would certainly die")
+    path1_1_1_2_3 = input("What do you do? (1/2): ")
+    return path1_1_1_2_3
+
+##scene1_1_1_2_1_1, ascend to fort      open        but might be replaced
+def scene1_1_1_2_1_1():
+    print_("111211")
+
+##scene1_1_1_2_1_2, head home       end
+def scene1_1_1_2_1_2():
+    print_("\n\nThat beast looks way too feirce, you have already rid the world of some danger today and that's enough")
+    print_("you look at  your companion and both understand you're outmatched")
+    print_("What a waste of time")
+
+    return int(5)
+
+##scene1_1_1_2_2, talk it out       end
 def scene1_1_1_2_2():
     print_("""\n\n"Now now" you say "what could we possibly have to offer to distinguished gents such as yourselves" """)
     print_(""""Well ya look like ye could pe'haps be a lil 'eavy fo' travel, it aint so much about wa' we need so much as wa' ye don't if ye ge' wa' i'm sayn' " he says""")
     print_(""""I see" you say, "well in that case, learn that we have packed only the strict minimmum for our voyage, we could not forsee letting go of anything" """)
     print_(""""Real shame tha' is" he says"we still gonna need somtin' fo' our trouble" """)
+    print_("with that, the whole gang jumps out at you and, while you and your companion do react fast enough, you could not forsee the fact that they had blowguns ")
+    print_("A bandid which stayed hidden in the small nearby stream shoots a poison dart to your necks and you both fall, dead")
+    print_("They loot your corps and, a few months later, perish as the wyrm rampages the region")
+
+    return int(4)
 
 ##scene1_1_1_2_3, unspeakable violence
 def scene1_1_1_2_3():
@@ -420,9 +448,13 @@ if path1 == "1":        #lean back
         elif path1_1_1 == "2":      #through forest
             path1_1_1_2 = scene1_1_1_2()
             if path1_1_1_2 == "1":      # pay them
-                scene1_1_1_2_1()
+                path1_1_1_2_1 = scene1_1_1_2_1()
+                if path1_1_1_2_1 == "1":        #ascend to fort
+                    scene1_1_1_2_1_1()
+                elif path1_1_1_2_1 == "2":      #head home
+                    end(scene1_1_1_2_1_2())
             elif path1_1_1_2 == "2":    # talk it out
-                scene1_1_1_2_2()
+                end(scene1_1_1_2_2())
             elif path1_1_1_2 == "3":    # unspeakable violence
                 path1_1_1_2_3 = scene1_1_1_2_3()
                 if path1_1_1_2_3 == "1":        # ascend
