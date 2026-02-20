@@ -70,9 +70,7 @@ def update(id):
         ' ORDER BY created DESC'
     ).fetchall()
 
-    #originpost = [post_item for post_item in posts if post_item['id'] == id]
-
-    #print('test'+originpost[0]['title'])
+    #posts.
 
     for post_item in posts:
             print(post_item['title'])
@@ -87,16 +85,6 @@ def update(id):
 
     for choice_item in choices:
         print(choice_item['title'])
-
-    fathers = db.execute(
-        'SELECT p.title, origin_id, destination_id'
-        ' FROM choice c JOIN post p ON p.id = c.origin_id'
-        ' WHERE origin_id = :origin_id',
-        (param)
-    ).fetchall()
-
-    for father_item in fathers:
-        print(father_item['title'])
 
     if request.method == 'POST':
         title = request.form['title']
@@ -118,7 +106,7 @@ def update(id):
             db.commit()
             return redirect(url_for('blog.update', id=id))
 
-    return render_template('blog/update.html', post=post, posts=posts, choices=choices, fathers=fathers)
+    return render_template('blog/update.html', post=post, posts=posts, choices=choices)
 
 @bp.route('/<int:id>/read', methods=('GET', 'POST'))
 @login_required
