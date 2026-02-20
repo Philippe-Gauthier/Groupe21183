@@ -70,6 +70,11 @@ def update(id):
         ' ORDER BY created DESC'
     ).fetchall()
 
+    #posts.
+
+    for post_item in posts:
+            print(post_item['title'])
+
     param = {'origin_id': id}
     choices = db.execute(
         'SELECT p.title, origin_id, destination_id'
@@ -99,7 +104,7 @@ def update(id):
                 (title, body, id)
             )
             db.commit()
-            return redirect(url_for('blog.index'))
+            return redirect(url_for('blog.update', id=id))
 
     return render_template('blog/update.html', post=post, posts=posts, choices=choices)
 
@@ -136,7 +141,7 @@ def read(id):
                 (title, body, id)
             )
             db.commit()
-            return redirect(url_for('blog.index'))
+            return redirect(url_for('blog.read', id=id))
 
     return render_template('blog/read.html', post=post, choices=choices)
 
@@ -167,7 +172,7 @@ def add_option(id):
                 (id, destination_id)
             )
             db.commit()
-            return redirect(url_for('blog.index'))
+            return redirect(url_for('blog.update', id=id))
 
     return render_template('blog/update.html', post=post_origin, posts=posts)
 
