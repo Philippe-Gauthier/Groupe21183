@@ -35,5 +35,8 @@
         <a href="../{{ request.form['destination_id'] or choice_item['destination_id'] }}/update">{{ request.form['title'] or choice_item['title'] }}</a>
     {% endfor %}
   </div>
+  {% for father_item in fathers %}
+    <a href="../{{ father_item['origin_id'] }}/update">{{ father_item['title'] }}</a>
+  {% endfor %}
 
 {% endblock %}
