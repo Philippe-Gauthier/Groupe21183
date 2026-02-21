@@ -15,14 +15,24 @@ notes to self:
 import time
 
 #game logic
-debug_delay = 0  #usually 0.5, 0 for debugging
+debug_delay = 0  #usually 0.5, 0 for debugging, controlls delay between lines being displayed.
 
 def print_ (text, delay = debug_delay):
+    """
+    This code is for adding dramatic delay toi the thext display,
+    it's used exactly as a print would since the delay is already preset by the debug_delay elsewhere
+    """
     print(text)
     time.sleep(delay)
 
 #scenes
-
+"""
+All the "functions" below work similarly, they're just the different scenes , or "pages of the book"
+they have no parameters since they are not meant to threat data but store "pages" and return the user's choice.
+Some return raw int values, they're for branch ends, others return strings, they're the choices.
+The first one starts the adventure, it return the user's name to be used and displayed elsewhere.
+The last two ones are the actually ends of the paths, they take an int, represrenting how many choices the user made, and display their name and nb of choices made in a text
+"""
 ##menu
 def intro():
     print_("\n\nWelcome to the Text Adventure Game!")
