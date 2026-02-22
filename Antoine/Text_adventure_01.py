@@ -8,7 +8,6 @@ notes to self:
 - maybe clean up tree once you've finished modiying it, it could easily be cut in half just by removing the varriable change
 -add dockstring to describe variables
 -Capitalise all start of line in text, for consistency, also make sure the \n are in the right place
--fix ends and win choice counter
 """
 
 #libraries
@@ -21,6 +20,7 @@ debug_mode = 1
 #game logic
 default_text_color = "white"
 text_color = default_text_color
+path_length = 0
 
 def delay():
     """
@@ -52,7 +52,7 @@ def ans(amnt, question):
     """
     while True:
         try:
-            choice = int(input(question))
+            choice = int(input(colored(question, "green")))
             if 1 <= choice <= amnt:
                 return str(choice)
             else:
@@ -66,6 +66,7 @@ def color_change(color):
     """
     global text_color
     text_color = color
+
 
 #scenes
 """
@@ -87,6 +88,8 @@ def intro():
 
 ##scene 1, starting point
 def scene1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou wake up from a deep slumber at a corner table in your local taverne.")
     print_("As you steadily regain consciousness, you notice a hooded figure sitting across from you.")
     print_("Just as you notice it, it notices you and is now rapidly approaching your table in strong, heavy strides.")
@@ -105,6 +108,8 @@ def scene1():
 
 ##scene 1_1, lean back
 def scene1_1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou lean back with your entire body do try and avoid the blade")
     print_("It misses you by mere inches, then, just as swiftly as it had slashed, it retracted into it's sheath.")
     print_("It all happens so fast that, for all else present, it looks only as if you had fallen to the ground from alcohol, nothing more.")
@@ -125,6 +130,8 @@ def scene1_1():
 
 ##scene 1_1_1, accept
 def scene1_1_1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou accept, finaly, a quest worthy of your legendary skills.")
     print_(""""We shall leave at dawn", he says, "meet me at the town gates." """)
     print_("you part ways as to not attreact attention further and go to your cottage.")
@@ -141,6 +148,8 @@ def scene1_1_1():
 
 ##scene 1_1_1_1, across mountains
 def scene1_1_1_1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou set off towards the mountains")
     print_("The path is easy at first, small trails often traveled by adventurers and merchants alike")
     print_("It quickly gets harsher once you step off the main roads, the paths, littered with jagged rocks and loose gravel, threaten to give way below your steps at any moment.")
@@ -159,6 +168,8 @@ def scene1_1_1_1():
 
 ##scene 1_1_1_1_1, descend towards the fortress
 def scene1_1_1_1_1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou make your way down the mountain flank, carefully yet swiftly")
     print_("as you approach the fort, you can hear the beast lurking about, its evil screeches icing your soul")
     print_("you enter via a small, near invisible, service door and manage to make your way to the inner court without too much trouble")
@@ -172,6 +183,8 @@ def scene1_1_1_1_1():
 
 ##scene 1_1_1_1_1_1, charge it down boldly
 def scene1_1_1_1_1_1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou both jump out from behind the pillar and run, screaming down at it")
     print_("Your companion striks first, his battle axe  smashing into the dragon's front leg, closely followed by your knives peircing a bit of its wing")
     print_("Unfortunately, its hideis to thick for the axe and it shatters upon impact and your knives are not sharp enough to slice cleanly through the wing membrane")
@@ -187,30 +200,35 @@ def scene1_1_1_1_1_1():
 
 ##scene 1_1_1_1_1_1_1,defend with scraps        end
 def scene1_1_1_1_1_1_1():
+    global path_length
     print_("\n\nYou rapidly gather all the spare, broken or loose planks of wood within reach, same with bricks and pebbles and pile them up precariously before you")
     print_("The dragon unleashes another spray of icy death in your direction and, for a small moment, the barricaade holds")
     print_("You still get disintegrated in a fine mist of blood and bones half a second later of course, but it was worth a try.")
 
-    return int(6)
+    return path_length
 
 ##scene 1_1_1_1_1_1_2,attack while charging     win
 def scene1_1_1_1_1_1_2():
+    global path_length
     print_("\n\nYou rapidly jump up despite the pain and draw your remaining two knives")
     print_("As the wyrm opens its mouth to spray its icy death, you land your knives directly in the roov of its mouth, mortally wounding it by cutting its brain in half from within")
 
-    return int(6)
+    return path_length
 
 ##scene 1_1_1_1_1_2,gather intel        win
 def scene1_1_1_1_1_2():
+    global path_length
     print_("\n\nYou wait and observe the beast, trying to find a flaw to expliot")
     print_("it takes a while but you notice that a few scales are missing in th center of its chest, probably a mark left by another adventurer who failed to do what you are currently attempting")
     print_("""You take your chance and while yelling "distract it's head!!" to your companion, you pull out your daggers and jump for the heart if the wyrm""")
     print_("While the dragon charges down its bait, you land the blades squarely in its hears, the cursed beast writhes in agony for a few minutes, thrashing around its limbs")
 
-    return int(5)
+    return path_length
 
 ##scene 1_1_1_1_2, setup camp and observe
 def scene1_1_1_1_2():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou set up camp and observe the dragon fly around its lair")
     print_("before long, the light from your wisp alerts the beast to your location and it starts rapidly approaching the awkward camp you made")
     print_("It looks like you will need to fight it here, it's not ideal but you have no choice")
@@ -227,6 +245,8 @@ def scene1_1_1_1_2():
 
 ##scene 1_1_1_1_2_1, hide behind rock
 def scene1_1_1_1_2_1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou hide behind a nearby rock and pray the dragon doesn't fly around to face you")
     print_("It doesn't, but it still sprays at you, the rock holds")
     print_("You emerge from your hiding spot, having had time to reload your crossbows, you notice the face of the stone has been reduced to gravel by the ice blast")
@@ -240,31 +260,36 @@ def scene1_1_1_1_2_1():
 
 ## scene1_1_1_1_2_1_1, wait for landing         end
 def  scene1_1_1_1_2_1_1():
+    global path_length
     print_("\n\nYou wait for the beast to land")
     print_("At some point it seems to be swooping down for it but you were wrong, it actually just starts to attack you with its powerfull taloned paws")
     print_("You dodge them all at first but after a few passes, one talon you couldn't see opens a huge gaping wound in your back")
     print_("You feel your blood pour out of your veins and cascade down your legs")
     print_("you die")
 
-    return int(6)
+    return path_length
 
 ## scene1_1_1_1_2_1_2, shoot crossbow       win
 def scene1_1_1_1_2_1_2():
+    global path_length
     print_("\n\nYou aim and shoot as it swoops down to attack with its powerfull taloned paws")
     print_("Both your arrows land, the wyrm crashes out of the air and writhes in agony for a few minutes, thrashing around its limbs")
 
-    return int(6)
+    return path_length
 
 ##scene 1_1_1_1_2_2, reload crossbows       end
 def scene1_1_1_1_2_2():
+    global path_length
     print_("\n\nYou reach for your spare arrows and rapidly reload your crossbows but it's too late")
     print_("The dragon unleashes another spray of icy death in your direction")
     print_("You get disintegrated in a fine mist of blood and bones half a second later, but it was worth a try.")
 
-    return int(5)
+    return path_length
 
 ##scene 1_1_1_2, through forest
 def scene1_1_1_2():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou decide to pass by the forest, this will let you go around the mountains, straight into the valley where the old fortress stands")
     print_("During the rather uneventfull begining of the trip, you talk with him to find out a little more on this quest")
     print_("He tells you that in his village, it was rumored that a dangerous demonspawn had taken refuge in these parts")
@@ -282,6 +307,8 @@ def scene1_1_1_2():
 
 ##scene1_1_1_2_1, pay them
 def scene1_1_1_2_1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou pay them the contents of your pouch and tell them it's all you have ")
     print_("Since the pouch was filled pretty subtancially, they seem content with the transaction and agree to let you pass")
     print_("you continue along the path and eventually reconvene with the other end of the mountain path, you start to be able to see the valley and it is both beautiful and terrifying")
@@ -296,6 +323,8 @@ def scene1_1_1_2_1():
 
 ##scene1_1_1_2_1_1, ascend to fort
 def scene1_1_1_2_1_1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou make your way up the valley, carefully yet swiftly")
     print_("as you approach the fort, you can hear the beast lurking about, its evil screeches icing your soul")
     print_("you enter via a small, near invisible, service door and manage to make your way to the inner court without too much trouble")
@@ -309,14 +338,16 @@ def scene1_1_1_2_1_1():
 
 ##scene1_1_1_2_1_2, head home       end
 def scene1_1_1_2_1_2():
+    global path_length
     print_("\n\nThat beast looks way too feirce, you have already rid the world of some danger today and that's enough")
     print_("you look at  your companion and both understand you're outmatched")
     print_("What a waste of time")
 
-    return int(5)
+    return path_length
 
 ##scene1_1_1_2_2, talk it out       end
 def scene1_1_1_2_2():
+    global path_length
     print_("""\n\n"Now now" you say "what could we possibly have to offer to distinguished gents such as yourselves" """)
     print_(""""Well ya look like ye could pe'haps be a lil 'eavy fo' travel, it aint so much about wa' we need so much as wa' ye don't if ye ge' wa' i'm sayn' " he says""")
     print_(""""I see" you say, "well in that case, learn that we have packed only the strict minimmum for our voyage, we could not forsee letting go of anything" """)
@@ -325,10 +356,12 @@ def scene1_1_1_2_2():
     print_("A bandid which stayed hidden in the small nearby stream shoots a poison dart to your necks and you both fall, dead")
     print_("They loot your corps and, a few months later, perish as the wyrm rampages the region")
 
-    return int(4)
+    return path_length
 
 ##scene1_1_1_2_3, unspeakable violence
 def scene1_1_1_2_3():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou look at youy companion, he looks back at you, you understand each other, you don't have time for this")
     print_("You then both get off your horses and while he pulls out a battle axe from his bag, you swiftly load your wrist crossbows and unsheath your daggers")
     print_(""""So, you wish to die" the bandit yells pretentiously, "Same to you" your companion calls back""")
@@ -346,6 +379,8 @@ def scene1_1_1_2_3():
 
 ##scene1_1_1_2_3_1, ascend towards the fortress
 def scene1_1_1_2_3_1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou make your way up the valley, carefully yet swiftly")
     print_("as you approach the fort, you can hear the beast lurking about, its evil screeches icing your soul")
     print_("you enter via a small, near invisible, service door and manage to make your way to the inner court without too much trouble")
@@ -359,15 +394,18 @@ def scene1_1_1_2_3_1():
 
 ##scene1_1_1_2_3_2, head home scared     end
 def scene1_1_1_2_3_2():
+    global path_length
     print_("\n\nThat beast looks way too feirce, you have already rid the world of some danger today and that's enough")
     print_("you look at  your companion and both understand you're outmatched")
     print_("you take the bath back towards the town and, once there, get praised at the tavern on your exploits of the day")
     print_("another evil vanquished by you, your reputation grows, no one needs to know the whole thing")
 
-    return int(5)
+    return path_length
 
 ##scene 1_1_2, decline
 def scene1_1_2():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou politely decline the offer, although you may be a great adventurer, an ice wyrm is not to be trifled with.")
     print_(""""That is why I require a companion" he says,"I cannot do this alone and neither can you, but together..." """)
     print_("it is true that you have no idea of the man's skills, it may be possible and even likely that he is as capable as you are.")
@@ -381,14 +419,17 @@ def scene1_1_2():
 
 ##scene 1_1_2_2, decline again       end
 def scene1_1_2_2():
+    global path_length
     print_("\n\nInfinite riches are useless if you're not alive to enjoy them")
     print_("""You tell him it's too dangerous and, unless he has the fabled "plot armor", you will surely die fighting the dreadfull thing" """)
     print_("You order a beer for him and leave after appologising that you could not be of any help to him")
     
-    return int(3)
+    return path_length
 
 ##scene 1_2, throw table
 def scene1_2():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou rapidly raise your knees, lunching the table upwards with all your strength.")
     print_("The blade narrowly misses your chin, your legs hit the wood with immense strength, it hurts and you're not one to leave pain unpunished.")
     print_("Taking advantage of the ensuing cahos, you spring over the tavern table, now split in two by the impact with your assailant's arms.")
@@ -406,6 +447,8 @@ def scene1_2():
 
 ##scene 1_2_1, help him up
 def scene1_2_1():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou help him get up, while he sits back down, you order two pints and tell him you're listening")
     print_("""He starts: "as you have no doubt heard, multiple adventurers have recently lost their lives climbing the mountain" """)
     print_(""""It is my belief that this, coupled with the recent unrest and growth in strenght of dark powers in the kingdom, is no coincidence." """)
@@ -423,14 +466,19 @@ def scene1_2_1():
 
 ##scene 1_2_1_1, Accept      open
 def scene1_2_1_1():
+    global path_length
+    path_length = path_length + 1
     print_("1211")
 
 ##scene 1_2_1_2, Decline      open
 def scene1_2_1_2():
+    global path_length
+    path_length = path_length + 1
     print_("1212")
 
 ##scene 1_2_2, kill him     end
 def scene1_2_2():
+    global path_length
     print_("\n\nYou can't hear his pleas over the blood pumping through you, the adrenaline and your pain blind and deafen you completely")
     print_("Violently, you decide it's not worth it to let him live, you slice his throat thrice,")
     print_("Each time comming back with more force, digging deeper in his flesh as blood spills out on the floor")
@@ -441,10 +489,11 @@ def scene1_2_2():
     print_("He asks you to leave")
     print_("You do")
 
-    return int(2)
+    return path_length
 
 ##scene 1_2_3, wait     end
 def scene1_2_3():
+    global path_length
     print_("\n\nYou unfortunately won't ever know what he meant by that, he simply dies on you")
     print_("The pub is now silent, everyone either drawing their weapons or hiding under tables or behind barrels")
     print_(""""You all saw him trying to kill me, that was self-defence" you yell at them""")
@@ -452,10 +501,12 @@ def scene1_2_3():
     print_("He asks you to leave")
     print_("You do")
 
-    return int(2)
+    return path_length
 
 ##scene 1_3, do nothing
 def scene1_3():
+    global path_length
+    path_length = path_length + 1
     print_("\n\nYou stand your ground, facing down death in its eyes, stoic and unflinching.")
     print_("The hooded figure stops, centimeters from your throat with a slight chuckle, it sheaths its blade and lowers its hood.")
     print_(f""""You are {name},are you not? it says.""")
@@ -532,11 +583,11 @@ if path1 == "1":        #lean back
                     if path1_1_1_2_1_1 == "1":        #charge it down boldly
                         path1_1_1_2_1_1 = scene1_1_1_1_1_1()
                         if path1_1_1_2_1_1 == "1":      #defend with scraps
-                            end(scene1_1_1_1_1_1_1() + 1)
+                            end(scene1_1_1_1_1_1_1())
                         elif path1_1_1_2_1_1 == "2":        #attack while charging
-                            win(scene1_1_1_1_1_1_2() + 1)
+                            win(scene1_1_1_1_1_1_2())
                     elif path1_1_1_2_1_1 == "2":      #gather intel
-                        win(scene1_1_1_1_1_2() + 1)
+                        win(scene1_1_1_1_1_2())
                 elif path1_1_1_2_1 == "2":      #head home
                     end(scene1_1_1_2_1_2())
             elif path1_1_1_2 == "2":    # talk it out
@@ -548,9 +599,9 @@ if path1 == "1":        #lean back
                     if path1_1_1_2_3_1 == "1":        #charge it down boldly
                         path1_1_1_2_3_1_1 = scene1_1_1_1_1_1()
                         if path1_1_1_2_3_1_1 == "1":      #defend with scraps
-                            end(scene1_1_1_1_1_1_1() + 1)
+                            end(scene1_1_1_1_1_1_1())
                         elif path1_1_1_2_3_1_1 == "2":        #attack while charging
-                            win(scene1_1_1_1_1_1_2() + 1)
+                            win(scene1_1_1_1_1_1_2())
                         elif path1_1_1_2_3_1_1 == "2":      #gather intel
                             end(scene1_1_1_2_1_2())
                     elif path1_1_1_2_3 == "2":     # head home
@@ -566,11 +617,11 @@ if path1 == "1":        #lean back
                     if path1_1_2_1_1_1 == "1":        #charge it down boldly
                         path1_1_2_1_1_1_1 = scene1_1_1_1_1_1()
                         if path1_1_2_1_1_1_1 == "1":      #defend with scraps
-                            end(scene1_1_1_1_1_1_1() + 1)
+                            end(scene1_1_1_1_1_1_1())
                         elif path1_1_2_1_1_1_1 == "2":        #attack while charging
-                            win(scene1_1_1_1_1_1_2() + 1)
+                            win(scene1_1_1_1_1_1_2())
                     elif path1_1_2_1_1_1 == "2":      #gather intel
-                        win(scene1_1_1_1_1_2() + 1)
+                        win(scene1_1_1_1_1_2())
                 elif path1_1_2_1_1 == "2":        #setup camp and observe
                     path1_1_2_1_1_2 = scene1_1_1_1_2()
                     if path1_1_2_1_1_2 == "1":        #hide behind rock
@@ -578,9 +629,9 @@ if path1 == "1":        #lean back
                         if  path1_1_2_1_1_2_1 == "1":     #wait for landing
                              end(scene1_1_1_1_2_1_1())
                         elif path1_1_2_1_1_2_1 == "2":        #shoot crossbows
-                            win(scene1_1_1_1_2_1_2() + 1)
+                            win(scene1_1_1_1_2_1_2())
                     elif path1_1_2_1_1_2 == "2":      #reload crossbows
-                        end(scene1_1_1_1_2_2() + 1)
+                        end(scene1_1_1_1_2_2())
             elif path1_1_2_1 == "2":      #through forest
                 path1_1_2_1_2 = scene1_1_1_2()
                 if path1_1_2_1_2 == "1":      # pay them
@@ -590,15 +641,15 @@ if path1 == "1":        #lean back
                         if path1_1_2_1_2_1_1 == "1":        #charge it down boldly
                             path1_1_2_1_2_1_1_1 = scene1_1_1_1_1_1()
                             if path1_1_2_1_2_1_1_1 == "1":      #defend with scraps
-                                end(scene1_1_1_1_1_1_1() + 2)
+                                end(scene1_1_1_1_1_1_1())
                             elif path1_1_2_1_2_1_1_1 == "2":        #attack while charging
-                                win(scene1_1_1_1_1_1_2() + 2)
+                                win(scene1_1_1_1_1_1_2())
                         elif path1_1_2_1_2_1_1 == "2":      #gather intel
-                            win(scene1_1_1_1_1_2() + 2)
+                            win(scene1_1_1_1_1_2())
                     elif path1_1_2_1_2_1 == "2":      #head home
-                        end(scene1_1_1_2_1_2() + 1)
+                        end(scene1_1_1_2_1_2())
                 elif path1_1_2_1_2 == "2":    # talk it out
-                    end(scene1_1_1_2_2() + 1)
+                    end(scene1_1_1_2_2())
                 elif path1_1_2_1_2 == "3":    # unspeakable violence
                     path1_1_2_1_2_3 = scene1_1_1_2_3()
                     if path1_1_2_1_2_3 == "1":        # ascend
@@ -606,11 +657,11 @@ if path1 == "1":        #lean back
                         if path1_1_2_1_2_3_1 == "1":        #charge it down boldly
                             path1_1_2_1_2_3_1_1 = scene1_1_1_1_1_1()
                             if path1_1_2_1_2_3_1_1 == "1":      #defend with scraps
-                                end(scene1_1_1_1_1_1_1() + 2)
+                                end(scene1_1_1_1_1_1_1())
                             elif path1_1_2_1_2_3_1_1 == "2":        #attack while charging
-                                win(scene1_1_1_1_1_1_2() + 2)
+                                win(scene1_1_1_1_1_1_2())
                         elif path1_1_2_1_2_3_1 == "2":     # head home
-                            end(scene1_1_1_2_3_2() + 1)
+                            end(scene1_1_1_2_3_2())
         elif path1_1_2 == "2":      #decline again
             end(scene1_1_2_2())
 
@@ -623,9 +674,9 @@ elif path1 == "2":      #throw table
         elif path1_2_1 == "2":      #decline
             path1_2_1_2 = scene1_1_2()
             if path1_2_1_2 == "1":
-                print("accept")         ##replaced with the accept path
+                cprint("accept", "blue")         ##replaced with the accept path
             elif path1_2_1_2 == "2":      #decline again
-                end(scene1_1_2_2() + 1)
+                end(scene1_1_2_2() )
     elif path1_2 == "2":      #kill him
         end(scene1_2_2())
     elif path1_2 == "3":        #wait
@@ -666,11 +717,11 @@ elif path1 == "3":      #do nothing
                     if path1_3_1_2_1_1 == "1":        #charge it down boldly
                         path1_3_1_2_1_1_1 = scene1_1_1_1_1_1()
                         if path1_3_1_2_1_1_1 == "1":      #defend with scraps
-                            end(scene1_1_1_1_1_1_1() + 1)
+                            end(scene1_1_1_1_1_1_1())
                         elif path1_3_1_2_1_1_1 == "2":        #attack while charging
-                            win(scene1_1_1_1_1_1_2() + 1)
+                            win(scene1_1_1_1_1_1_2())
                     elif path1_3_1_2_1_1 == "2":      #gather intel
-                        win(scene1_1_1_1_1_2() + 1)
+                        win(scene1_1_1_1_1_2())
                 elif path1_3_1_2_1 == "2":      #head home
                     end(scene1_1_1_2_1_2())
             elif path1_3_1_2 == "2":    # talk it out
@@ -682,9 +733,9 @@ elif path1 == "3":      #do nothing
                     if path1_3_1_2_3_1 == "1":        #charge it down boldly
                         path1_3_1_2_3_1_1 = scene1_1_1_1_1_1()
                         if path1_3_1_2_3_1_1 == "1":      #defend with scraps
-                            end(scene1_1_1_1_1_1_1() + 1)
+                            end(scene1_1_1_1_1_1_1())
                         elif path1_3_1_2_3_1_1 == "2":        #attack while charging
-                            win(scene1_1_1_1_1_1_2() + 1)
+                            win(scene1_1_1_1_1_1_2())
                     elif path1_3_1_2_3 == "2":     # head home
                         end(scene1_1_1_2_3_2())
     elif path1_3 == "2":        #decline
@@ -698,11 +749,11 @@ elif path1 == "3":      #do nothing
                 if path1_3_1_1_1_1 == "1":        #charge it down boldly
                     path1_3_1_1_1_1_1 = scene1_1_1_1_1_1()
                     if path1_3_1_1_1_1_1 == "1":      #defend with scraps
-                        end(scene1_1_1_1_1_1_1() + 1)
+                        end(scene1_1_1_1_1_1_1())
                     elif path1_3_1_1_1_1_1 == "2":        #attack while charging
-                        win(scene1_1_1_1_1_1_2() + 1)
+                        win(scene1_1_1_1_1_1_2())
                 elif path1_3_1_1_1_1 == "2":      #gather intel
-                    win(scene1_1_1_1_1_2() + 1)
+                    win(scene1_1_1_1_1_2())
             elif path1_3_1_1_1 == "2":        #setup camp and observe
                 path1_3_1_1_1_2 = scene1_1_1_1_2()
                 if path1_3_1_1_1_2 == "1":        #hide behind rock
@@ -710,9 +761,9 @@ elif path1 == "3":      #do nothing
                     if  path1_3_1_1_1_2_1 == "1":     #wait for landing
                          end(scene1_1_1_1_2_1_1())
                     elif path1_3_1_1_1_2_1 == "2":        #shoot crossbows
-                        win(scene1_1_1_1_2_1_2() + 1)
+                        win(scene1_1_1_1_2_1_2())
                 elif path1_3_1_1_1_2 == "2":      #reload crossbows
-                    end(scene1_1_1_1_2_2() + 1)
+                    end(scene1_1_1_1_2_2())
         elif path1_3_2_1 == "2":      #through forest
             path1_3_1_1_2 = scene1_1_1_2()
             if path1_3_1_1_2 == "1":      # pay them
@@ -722,15 +773,15 @@ elif path1 == "3":      #do nothing
                     if path1_3_1_1_2_1_1 == "1":        #charge it down boldly
                         path1_3_1_1_2_1_1 = scene1_1_1_1_1_1()
                         if path1_3_1_1_2_1_1 == "1":      #defend with scraps
-                            end(scene1_1_1_1_1_1_1() + 2)
+                            end(scene1_1_1_1_1_1_1())
                         elif path1_3_1_1_2_1_1 == "2":        #attack while charging
-                            win(scene1_1_1_1_1_1_2() + 2)
+                            win(scene1_1_1_1_1_1_2())
                     elif path1_3_1_1_2_1_1 == "2":      #gather intel
-                        win(scene1_1_1_1_1_2() + 2)
+                        win(scene1_1_1_1_1_2())
                 elif path1_3_1_1_2_1 == "2":      #head home
-                    end(scene1_1_1_2_1_2() + 1)
+                    end(scene1_1_1_2_1_2())
             elif path1_3_1_1_2 == "2":    # talk it out
-                end(scene1_1_1_2_2() + 1)
+                end(scene1_1_1_2_2())
             elif path1_3_1_1_2 == "3":    # unspeakable violence
                 path1_3_1_1_2_3 = scene1_1_1_2_3()
                 if path1_3_1_1_2_3 == "1":        # ascend
@@ -738,12 +789,12 @@ elif path1 == "3":      #do nothing
                     if path1_3_1_1_2_3_1 == "1":        #charge it down boldly
                         path1_3_1_1_2_3_1_1 = scene1_1_1_1_1_1()
                         if path1_3_1_1_2_3_1_1 == "1":      #defend with scraps
-                            end(scene1_1_1_1_1_1_1() + 2)
+                            end(scene1_1_1_1_1_1_1())
                         elif path1_3_1_1_2_3_1_1 == "2":        #attack while charging
-                            win(scene1_1_1_1_1_1_2() + 2)
+                            win(scene1_1_1_1_1_1_2())
                         elif path1_3_1_1_2_3_1_1 == "2":      #gather intel
-                            end(scene1_1_1_2_1_2() + 1)
+                            end(scene1_1_1_2_1_2())
                     elif path1_3_1_1_2_3 == "2":     # head home
-                        end(scene1_1_1_2_3_2() + 1)
+                        end(scene1_1_1_2_3_2())
         elif path1_3_2 == "2":      #decline again
             end(scene1_1_2_2())
