@@ -581,10 +581,10 @@ if path1 == "1":        #lean back
                 if path1_1_1_2_1 == "1":        #ascend to fort
                     path1_1_1_2_1_1 = scene1_1_1_2_1_1()
                     if path1_1_1_2_1_1 == "1":        #charge it down boldly
-                        path1_1_1_2_1_1 = scene1_1_1_1_1_1()
-                        if path1_1_1_2_1_1 == "1":      #defend with scraps
+                        path1_1_1_2_1_1_1 = scene1_1_1_1_1_1()
+                        if path1_1_1_2_1_1_1 == "1":      #defend with scraps
                             end(scene1_1_1_1_1_1_1())
-                        elif path1_1_1_2_1_1 == "2":        #attack while charging
+                        elif path1_1_1_2_1_1_1 == "2":        #attack while charging
                             win(scene1_1_1_1_1_1_2())
                     elif path1_1_1_2_1_1 == "2":      #gather intel
                         win(scene1_1_1_1_1_2())
@@ -602,10 +602,10 @@ if path1 == "1":        #lean back
                             end(scene1_1_1_1_1_1_1())
                         elif path1_1_1_2_3_1_1 == "2":        #attack while charging
                             win(scene1_1_1_1_1_1_2())
-                        elif path1_1_1_2_3_1_1 == "2":      #gather intel
-                            end(scene1_1_1_2_1_2())
-                    elif path1_1_1_2_3 == "2":     # head home
-                        end(scene1_1_1_2_3_2())
+                    elif path1_1_1_2_3_1 == "2":      #gather intel
+                        win(scene1_1_1_1_1_2())
+                elif path1_1_1_2_3 == "2":     # head home
+                    end(scene1_1_1_2_3_2())
     elif path1_1 == "2":        #decline
         path1_1_2 = scene1_1_2()
         if path1_1_2 == "1":        #accept again
@@ -670,11 +670,11 @@ elif path1 == "2":      #throw table
     if path1_2 == "1":      #help him up
         path1_2_1 = scene1_2_1()
         if path1_2_1 == "1":        #Accept
-            scene1_2_1_1()
+            win(scene1_2_1_1())
         elif path1_2_1 == "2":      #decline
             path1_2_1_2 = scene1_1_2()
             if path1_2_1_2 == "1":
-                cprint("accept", "blue")         ##replaced with the accept path
+                win(path_length)
             elif path1_2_1_2 == "2":      #decline again
                 end(scene1_1_2_2() )
     elif path1_2 == "2":      #kill him
@@ -742,59 +742,59 @@ elif path1 == "3":      #do nothing
         path1_3_2 = scene1_1_2()
         if path1_3_2 == "1":        #accept again
             path1_3_2_1 = scene1_1_1()
-        if path1_3_2_1 == "1":        #across mountains
-            path1_3_1_1_1 = scene1_1_1_1()
-            if path1_3_1_1_1 == "1":      #descend towards the fortress
-                path1_3_1_1_1_1 = scene1_1_1_1_1()
-                if path1_3_1_1_1_1 == "1":        #charge it down boldly
-                    path1_3_1_1_1_1_1 = scene1_1_1_1_1_1()
-                    if path1_3_1_1_1_1_1 == "1":      #defend with scraps
-                        end(scene1_1_1_1_1_1_1())
-                    elif path1_3_1_1_1_1_1 == "2":        #attack while charging
-                        win(scene1_1_1_1_1_1_2())
-                elif path1_3_1_1_1_1 == "2":      #gather intel
-                    win(scene1_1_1_1_1_2())
-            elif path1_3_1_1_1 == "2":        #setup camp and observe
-                path1_3_1_1_1_2 = scene1_1_1_1_2()
-                if path1_3_1_1_1_2 == "1":        #hide behind rock
-                    path1_3_1_1_1_2_1 = scene1_1_1_1_2_1()
-                    if  path1_3_1_1_1_2_1 == "1":     #wait for landing
-                         end(scene1_1_1_1_2_1_1())
-                    elif path1_3_1_1_1_2_1 == "2":        #shoot crossbows
-                        win(scene1_1_1_1_2_1_2())
-                elif path1_3_1_1_1_2 == "2":      #reload crossbows
-                    end(scene1_1_1_1_2_2())
-        elif path1_3_2_1 == "2":      #through forest
-            path1_3_1_1_2 = scene1_1_1_2()
-            if path1_3_1_1_2 == "1":      # pay them
-                path1_3_1_1_2_1 = scene1_1_1_2_1()
-                if path1_3_1_1_2_1 == "1":        #ascend to fort
-                    path1_3_1_1_2_1_1 = scene1_1_1_2_1_1()
-                    if path1_3_1_1_2_1_1 == "1":        #charge it down boldly
-                        path1_3_1_1_2_1_1 = scene1_1_1_1_1_1()
-                        if path1_3_1_1_2_1_1 == "1":      #defend with scraps
+            if path1_3_2_1 == "1":        #across mountains
+                path1_3_2_1_1 = scene1_1_1_1()
+                if path1_3_2_1_1 == "1":      #descend towards the fortress
+                    path1_3_2_1_1_1 = scene1_1_1_1_1()
+                    if path1_3_2_1_1_1 == "1":        #charge it down boldly
+                        path1_3_2_1_1_1_1 = scene1_1_1_1_1_1()
+                        if path1_3_2_1_1_1_1 == "1":      #defend with scraps
                             end(scene1_1_1_1_1_1_1())
-                        elif path1_3_1_1_2_1_1 == "2":        #attack while charging
+                        elif path1_3_2_1_1_1_1 == "2":        #attack while charging
                             win(scene1_1_1_1_1_1_2())
-                    elif path1_3_1_1_2_1_1 == "2":      #gather intel
+                    elif path1_3_2_1_1_1 == "2":      #gather intel
                         win(scene1_1_1_1_1_2())
-                elif path1_3_1_1_2_1 == "2":      #head home
-                    end(scene1_1_1_2_1_2())
-            elif path1_3_1_1_2 == "2":    # talk it out
-                end(scene1_1_1_2_2())
-            elif path1_3_1_1_2 == "3":    # unspeakable violence
-                path1_3_1_1_2_3 = scene1_1_1_2_3()
-                if path1_3_1_1_2_3 == "1":        # ascend
-                    path1_3_1_1_2_3_1 = scene1_1_1_2_3_1()
-                    if path1_3_1_1_2_3_1 == "1":        #charge it down boldly
-                        path1_3_1_1_2_3_1_1 = scene1_1_1_1_1_1()
-                        if path1_3_1_1_2_3_1_1 == "1":      #defend with scraps
-                            end(scene1_1_1_1_1_1_1())
-                        elif path1_3_1_1_2_3_1_1 == "2":        #attack while charging
-                            win(scene1_1_1_1_1_1_2())
-                        elif path1_3_1_1_2_3_1_1 == "2":      #gather intel
-                            end(scene1_1_1_2_1_2())
-                    elif path1_3_1_1_2_3 == "2":     # head home
+                elif path1_3_2_1_1 == "2":        #setup camp and observe
+                    path1_3_2_1_1_2 = scene1_1_1_1_2()
+                    if path1_3_2_1_1_2 == "1":        #hide behind rock
+                        path1_3_2_1_1_2_1 = scene1_1_1_1_2_1()
+                        if  path1_3_2_1_1_2_1 == "1":     #wait for landing
+                             end(scene1_1_1_1_2_1_1())
+                        elif path1_3_2_1_1_2_1 == "2":        #shoot crossbows
+                            win(scene1_1_1_1_2_1_2())
+                    elif path1_3_2_1_1_2 == "2":      #reload crossbows
+                        end(scene1_1_1_1_2_2())
+            elif path1_3_2_1 == "2":      #through forest
+                path1_3_2_1_2 = scene1_1_1_2()
+                if path1_3_2_1_2 == "1":      # pay them
+                    path1_3_2_1_2_1 = scene1_1_1_2_1()
+                    if path1_3_2_1_2_1 == "1":        #ascend to fort
+                        path1_3_2_1_2_1_1 = scene1_1_1_2_1_1()
+                        if path1_3_2_1_2_1_1 == "1":        #charge it down boldly
+                            path1_3_2_1_2_1_1_1 = scene1_1_1_1_1_1()
+                            if path1_3_2_1_2_1_1_1 == "1":      #defend with scraps
+                                end(scene1_1_1_1_1_1_1())
+                            elif path1_3_2_1_2_1_1_1 == "2":        #attack while charging
+                                win(scene1_1_1_1_1_1_2())
+                        elif path1_3_2_1_2_1_1 == "2":      #gather intel
+                            win(scene1_1_1_1_1_2())
+                    elif path1_3_2_1_2_1 == "2":      #head home
+                        end(scene1_1_1_2_1_2())
+                elif path1_3_2_1_2 == "2":    # talk it out
+                    end(scene1_1_1_2_2())
+                elif path1_3_2_1_2 == "3":    # unspeakable violence
+                    path1_3_2_1_2_3 = scene1_1_1_2_3()
+                    if path1_3_2_1_2_3 == "1":        # ascend
+                        path1_3_2_1_2_3_1 = scene1_1_1_2_3_1()
+                        if path1_3_2_1_2_3_1 == "1":        #charge it down boldly
+                            path1_3_2_1_2_3_1_1 = scene1_1_1_1_1_1()
+                            if path1_3_2_1_2_3_1_1 == "1":      #defend with scraps
+                                end(scene1_1_1_1_1_1_1())
+                            elif path1_3_2_1_2_3_1_1 == "2":        #attack while charging
+                                win(scene1_1_1_1_1_1_2())
+                        elif path1_3_2_1_2_3_1 == "2":      #gather intel
+                            win(scene1_1_1_1_1_2())
+                    elif path1_3_2_1_2_3 == "2":     # head home
                         end(scene1_1_1_2_3_2())
         elif path1_3_2 == "2":      #decline again
             end(scene1_1_2_2())
