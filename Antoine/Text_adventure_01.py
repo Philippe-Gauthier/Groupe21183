@@ -5,14 +5,12 @@ by Antoine D-C
 
 """
 notes to self:
-- maybe clean up tree once you've finished modiying it, it could easily be cut in half just by removing the varriable change
--add dockstring to describe variables
 -Capitalise all start of line in text, for consistency, also make sure the \n are in the right place
 """
 
 #libraries
 import time
-from termcolor import colored, cprint
+from termcolor import colored, cprint 
 
 #tells the game if you are debugging it or not, 1 = debug, 0 = intended experience
 debug_mode = 1
@@ -24,7 +22,7 @@ path_length = 0
 
 def delay():
     """
-    this function handles the delay between prints, it looks wether the game is in debug mode or not and ajusts the delay accordingly
+    this function handles the delay between prints, it looks wether the game is in debug mode or not and ajusts the delay accordingly.
     when debug mode is active, no delay is set, when not, it has the text wait 0.5 sec between each line 
     """
     global debug_mode
@@ -36,8 +34,8 @@ def delay():
 def print_ (text):
     """
     This code is for adding dramatic delay to the thext display,
-    it's used exactly as a print would since the delay is already preset by the debug_delay elsewhere
-    it can also change the text color like a normal print, hough this one is decided by the text_color variable
+    it's used exactly as a print would since the delay is already preset by the debug_delay elsewhere,
+    it can also change the text color like a normal print, though this one is decided by the text_color variable
     """
     color = text_color
     scroll_delay = delay()
@@ -46,8 +44,8 @@ def print_ (text):
 
 def ans(amnt, question):
     """
-    This function deals with the path choices, it takes the amount of possible choices and the question that needs to be asked
-    it then checks wether the choice the user made is valid, if so, it returns that choice to be used in the tree
+    This function deals with the path choices, it takes the amount of possible choices and the question that needs to be asked,
+    it then checks wether the choice the user made is valid, if so, it returns that choice to be used in the tree,
     if not, it asks again while displaying an error message
     """
     while True:
@@ -72,7 +70,7 @@ def color_change(color):
 """
 All the "functions" below work similarly, they're just the different scenes , or "pages of the book"
 they have no parameters since they are not meant to threat data but store "pages" and return the user's choice.
-Some return raw int values, they're for branch ends, others return strings, they're the choices.
+Some return int values, they're for branch ends, others return strings, they're the choices.
 The first one starts the adventure, it return the user's name to be used and displayed elsewhere.
 The last two ones are the actually ends of the paths, they take an int, represrenting how many choices the user made, and display their name and nb of choices made in a text
 """
@@ -464,17 +462,95 @@ def scene1_2_1():
     print("(2) Decline")
     return ans(2, "What do you do? (1/2): ")
 
-##scene 1_2_1_1, Accept      open
+##scene 1_2_1_1, Accept
 def scene1_2_1_1():
     global path_length
     path_length = path_length + 1
-    print_("1211")
+    print_("\n\nYou accept, finaly, a quest worthy of your legendary skills.")
+    print_("You start to discuss the details of the endavour, he says he has all the necessary gear to leave at first light")
+    print_("You would normally accept but all this talking makes you remember about the town's wizzard, maybe he could help.")
+    print_("He agrees to see him and so you both leave the taverne")
+    print_("during the walk, you support him so he doesn't fall over, the injuries are still fresh after all")
+    print_("Once at the wizzard's tower, you knock, wait, knock again, finally, the door opens")
+    print_("An old bearded man appears before you both")
+    print_(f""""Ah, yes, {name}, come in, I've been expecting you both" """)
+    print_(""""I Know why you are here" he says "And I can help you" """)
+    print_(""""that's great" you say "so how do we kill this thing?" """)
+    print_(""""I have a powerfull spell you see, one that can kill any demon, from anywhere. One problem though is that it requiers a sacrifice" """)
+    print_(""""One of you will neeed to die for the demon to be banished" """)
 
-##scene 1_2_1_2, Decline      open
-def scene1_2_1_2():
+    time.sleep(delay() * 2)
+    print("\n--- What do you do? ---")
+    print("(1) Sacrifice yourself")
+    print("(2) Sacrifice your companion")
+    print("(3) Go fetch someone to be sacrificed")
+    return ans(3, "What do you do? (1/2/3): ")
+
+##scene 1_2_1_1_1, kys      end
+def scene1_2_1_1_1():
+    global path_length
+    print_("\n\nYou propose yourself as payment for the spell")
+    print_(""""Very well" the wizzard says, "We shall need your heart, please lay down" """)
+    print_("You do, he pulls out a glowing dagger and plunges it trough your chest")
+    print_("You die in atrocious agony while you faintly hear him chant in an unknown language")
+    print_("You will never know if the spell worked")
+
+    return path_length
+
+##scene 1_2_1_1_2, kill companion
+def scene1_2_1_1_2():
     global path_length
     path_length = path_length + 1
-    print_("1212")
+    print_("\n\nYou propose that, since this was his quest, it should be him who needs to die")
+    print_("He refuses, understandably, so you pull out your dagger and ask again, saying you don't really want to die today")
+    print_("He pulls out his axe from his belt and replies the same")
+    print_("he charges at you")
+    
+    time.sleep(delay() * 2)
+    print("\n--- What do you do? ---")
+    print("(1) Parry")
+    print("(2) Dodge")
+    return ans(2, "What do you do? (1/2): ")
+
+##scene 1_2_1_1_2_1, parry      end
+def scene1_2_1_1_2_1():
+    global path_length
+    print_("\n\nYou parry his attack and, while he lifts the axe again, attempt to strike his throat")
+    print_("unfortunately, he steps back and before you can turn around, loges his axe in your spine")
+    print("You fall to the ground and you can faintly see the wizard unsheathing a glowing dagger, you feel it plunging trough your chest")
+    print_("You die in atrocious agony while you faintly hear him chant in an unknown language")
+    print_("You will never know if the spell worked")
+
+    return path_length
+
+##scene 1_2_1_1_2_2, parry      win
+def scene1_2_1_1_2_2():
+    global path_length
+    print_("\n\nYou step ideways and , as the follow-through carries him forwards, you slice his throat")
+    print_("The wizzard pulls out a glowing dagger and plunges it trough his chest")
+    print_("He pulls out your companion's heart, chanting in an unknown language")
+    print_("The heart suddently bursts in flame and vanishes in ash")
+    print_(""""That's it" the wizzard says "The wyrm's dead, take half of what your freind had on him and go home, the other half will be my payment" """)
+    print_("You do as he said")
+
+    return path_length
+
+##scene 1_2_1_1_3, sac stranger         win
+def scene1_2_1_1_3():
+    global path_length
+    print_("\n\nThere's no way you would die for something like that, you then decide to look for an innocent soul to take instead")
+    print_("""You both make your way to the city hall and ask the high judge if the wizzard could "borrow" a criminal who would otherwise be headed for a public execution""")
+    print_(""""Good heavens No!" he says"What an atrocious demand! you'd be lucky that I don't have you arrested for even thinking that" """)
+    print_("You then explain the situation, how this sacrifice would save the town by killing the demon that had taken home just on the other flank of the mountain")
+    print_(""""Well..." he said uneasily "i do owe that old wizzard something, and it would be better for all of us... but not a word of it, do you understand!" """)
+    print_("""One hour later, you return to the tower with a prisoner, the wizzard gives you all a drink "as a welcome gift" and the prisoner falls asleep almost instantly""")
+    print_("you lay him on an altar and prisoner the wizzard pulls out a glowing dagger and plunges it trough his chest")
+    print_("He pulls out your companion's heart, chanting in an unknown language")
+    print_("The heart suddently bursts in flame and vanishes in ash")
+    print_(""""That's it" the wizzard says "The wyrm's dead, go home, you'll pay me later" """)
+    print_("You do as he said")
+
+    return path_length
 
 ##scene 1_2_2, kill him     end
 def scene1_2_2():
@@ -540,6 +616,16 @@ def win(depth):
     print(colored("\n________________________________________________________________________________________________________________________________", text_color))
     print(colored(f"Congratulations {name}, You have killed the Ice wyrm and saved the kingdom from almost certain doom, it only took You {depth} choices.", text_color))
     print(colored(f"You make the trip down to the village again and, after bragging about your success to the locals, go home and go to sleep.", text_color))
+    print(colored("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n\n", text_color))
+    color_change(default_text_color)
+
+## this prints when you use the ritual to kill the ice wyrm and win the game
+def win2(depth):
+    color_change("blue")
+    print(colored("\n________________________________________________________________________________________________________________________________", text_color))
+    print(colored(f"Congratulations {name}, You have killed the Ice wyrm and saved the kingdom from almost certain doom, it only took You {depth} choices.", text_color))
+    print(colored(f"Several days later, you hear a group of travelers recounting how, while they were just fighting a dragon in the mountains, it suddently drop dead", text_color))    
+    print(colored(f"You take it to mean the spell worked, even though it itches you how you can hardly claim to be the one to have done it", text_color))
     print(colored("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\n\n", text_color))
     color_change(default_text_color)
 
@@ -670,11 +756,31 @@ elif path1 == "2":      #throw table
     if path1_2 == "1":      #help him up
         path1_2_1 = scene1_2_1()
         if path1_2_1 == "1":        #Accept
-            win(scene1_2_1_1())
+            path1_2_1_1 = scene1_2_1_1()
+            if path1_2_1_1 == "1":      #kys
+                end(scene1_2_1_1_1())
+            elif path1_2_1_1 == "2":        #kill companion
+                path1_2_1_1_2 = scene1_2_1_1_2()
+                if path1_2_1_1_2 == "1":
+                    end(scene1_2_1_1_2_1())
+                elif path1_2_1_1_2 == "2":
+                    win2(scene1_2_1_1_2_2())
+            elif path1_2_1_1 == "3":        #sac stranger
+                win2(scene1_2_1_1_3())
         elif path1_2_1 == "2":      #decline
             path1_2_1_2 = scene1_1_2()
             if path1_2_1_2 == "1":
-                win(path_length)
+                path1_2_1_2_1 = scene1_2_1_1()
+                if path1_2_1_2_1 == "1":      #kys
+                    end(scene1_2_1_1_1())
+                elif path1_2_1_2_1 == "2":        #kill companion
+                    path1_2_1_2_1_2 = scene1_2_1_1_2()
+                    if path1_2_1_2_1_2 == "1":
+                        end(scene1_2_1_1_2_1())
+                    elif path1_2_1_2_1_2 == "2":
+                        win2(scene1_2_1_1_2_2())
+                elif path1_2_1_2_1 == "3":        #sac stranger
+                    win2(scene1_2_1_1_3())
             elif path1_2_1_2 == "2":      #decline again
                 end(scene1_1_2_2() )
     elif path1_2 == "2":      #kill him
