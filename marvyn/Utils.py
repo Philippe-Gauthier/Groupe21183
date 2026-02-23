@@ -12,10 +12,6 @@ def obtenir_choix_valide(min_val, max_val):
         except ValueError:
             print("Veuillez entrer un nombre valide.")
 
-# Exemple d'utilisation
-choix = obtenir_choix_valide(1, 5)
-print(f"Vous avez choisi : {choix}")
-
 
 # def obtenir_choix_valide(min_val, max_val): On crée une fonction qui:
 # Prend une valeur minimale 

@@ -1,4 +1,5 @@
 """Logique principale du jeu Protocole 0*6"""
+"""Auteur : Marvyn Mbeugmo """
 
 import time
 from Utils import obtenir_choix_valide
@@ -23,14 +24,17 @@ def chapitre(titre, options) :
     """
     print(f"\n==={titre} ===")
 
-    for i, option in enumerate(options, 1):
-        print (f"{i}. {option['desc']} ")
+    numero = 1
+
+    for option in options:
+        print(str(numero) + ". " + option["desc"])
+        numero = numero + 1
 
         choix = obtenir_choix_valide(1, len(options))
 
         selection = options[choix -1]
 
-        ajouter_points(selection["raison"], selection["ambition"])
+    ajouter_points(selection["raison"], selection["ambition"])
 
 
 def calculer_fin():
@@ -74,7 +78,7 @@ def lancer_jeu():
         ajouter_points(0, 0)
 
     print("Chargement du chapitre suivant...")
-    time.sleep(5)
+    time.sleep(2)
 
 
     # --- CHAPITRE 2 : ANALYSE ---
@@ -102,7 +106,7 @@ def lancer_jeu():
         ajouter_points(1, 0)
     
     print("Analyse en cours...")
-    time.sleep(5)
+    time.sleep(2)
 
     # --- CHAPITRE 3 : PRÉDICTIONS ---
     print("\n--- Chapitre 3 : Prédictions ---")
@@ -120,7 +124,7 @@ def lancer_jeu():
     elif choix3 == "8": ajouter_points(0, 2)
 
     print("Traitement des prédictions...")
-    time.sleep(5)
+    time.sleep(2)
 
     # --- CHAPITRE 4 : ACCÈS TOTAL ---
     print("\n--- Chapitre 4 : Accès Total ---")
@@ -138,7 +142,7 @@ def lancer_jeu():
     elif choix4 == "8": ajouter_points(1, 0)
 
     print("Accès aux serveurs finaux...")
-    time.sleep(5)
+    time.sleep(2)
     
 
     # --- CHAPITRE 5 : DÉCISION FINALE ---
@@ -157,7 +161,7 @@ def lancer_jeu():
     elif choix5 == "8": ajouter_points(1, 0)
 
     print("\nFin de l'aventure. Calcul de votre profil final...")
-    time.sleep(5)
+    time.sleep(2)
 
     
 

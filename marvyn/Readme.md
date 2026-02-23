@@ -1,7 +1,7 @@
 # PROTOCOLE 0*6
 ## Description
 Livre intéractif en python basé sur arbre décisionnel 40 choix.
-Le jouer incarne un étudiaants  confronté a plusieurs décisions critiques qui influenent le déroulement de l'histoire .
+Le jouer incarne un étudiaants  confronté a plusieurs décisions critiques qui influencent le déroulement de l'histoire .
    
 Chaque choix modifie des variables permettant d'obtenir une fin différente. 
 
@@ -10,7 +10,7 @@ Chaque choix modifie des variables permettant d'obtenir une fin différente.
 
 Ce projet démontre l'utilisation de :
 - Fonctions
-- Modulùrités
+
 - Validation des entrées utilisateur
 - Variable décisionnel
 - Arbre décisionnel
@@ -43,3 +43,8 @@ Selon les scores obtenus :
 - LE PROTECTEUR = dominance de la raison
 - LE CONTRÔLEUR = dominance de l’ambition
 - L’ARCHITECTE = équilibre entre les deux
+
+##  Auteur 
+- Marvyn Mbeugmo 
+- Projet 1
+- Groupe 21183
