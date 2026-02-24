@@ -1,3 +1,9 @@
+"""
+Auteur : Luc Desforges
+Date : 23 fevrier 2026
+Description : Fichier contenant toutes les fonctionalités concernant la base de donné.
+""" 
+
 import sqlite3
 from datetime import datetime
 
