@@ -60,7 +60,8 @@
 
 <pre><code>> py -3 -m venv .venv</code></pre>
 <pre><code>> .venv\Scripts\activate</code></pre>
-
+<pre><code>$ pip install Flask</code></pre>
+<pre><code>$ flask --app flaskr run --debug</code></pre>
 <!-- CREDITS -->
 <h2 id="credits"> :scroll: Credits</h2>
 
