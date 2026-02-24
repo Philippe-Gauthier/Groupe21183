@@ -62,11 +62,11 @@
   <pre><code>> py -3 -m venv .venv</code></pre>
   <pre><code>> .venv\Scripts\activate</code></pre>
 <details>
-<details>
+</details>
   <summary>Linux</summary>
   <pre><code>$ python3 -m venv .venv</code></pre>
   <pre><code>$ . .venv/bin/activate</code></pre>
-<details>
+</details>
 <pre><code>$ pip install Flask</code></pre>
 <pre><code>$ flask --app flaskr run --debug</code></pre>
 <!-- CREDITS -->
