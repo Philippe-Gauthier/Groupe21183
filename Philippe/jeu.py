@@ -1,5 +1,4 @@
-print(1)
+choix = input("nommer un chiffre")
 
-print(2)
-
-print(3)
+reponse = 2 + choix
+print(reponse)
