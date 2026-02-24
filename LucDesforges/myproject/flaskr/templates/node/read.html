@@ -1,21 +1,12 @@
 {% extends 'base.html' %}
 
-{% block header %}
-  <!--<h1>{% block title %}Read "{{ node['title'] }}"{% endblock %}</h1>-->
-{% endblock %}
-
 {% block content %}
-  <form method="get">
-    <!--<label for="title">Title</label>-->
-    <h1>{{ request.form['title'] or node['title'] }}</h1>
-    <!--<label for="body">Body</label><label for="body">Body</label>-->
-    <h3>{{ request.form['body'] or node['body'] }}</h3>
-  </form>
-  <hr>
-  <div style="display:flex;justify-content: space-evenly;">
-    {% for child in listOfChild %}
-      <a href="../{{ request.form['child_id'] or child['child_id'] }}/read">{{ request.form['child_title'] or child['child_title'] }}</label>
+  <h3>{{ request.form['body'] or node['body'] }}</h3>
+  <div style="display:flex;justify-content: space-evenly;flex-direction: column;">
+    {% for child in listof_child %}
+      <a href="../{{ request.form['child_id'] or child['child_id'] }}/read">[{{ request.form['child_id'] or child['child_id'] }}] {{ request.form['child_title'] or child['child_title'] }}</a>
     {% endfor %}
   </div>
 
+  <h1 style="align-self: end;">[{{ request.form['title'] or node['title'] }}]</h1>
 {% endblock %}

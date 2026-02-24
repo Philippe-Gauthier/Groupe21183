@@ -27,7 +27,7 @@
       <input type="hidden" id="id" name="id" value="{{ request.form['id'] or node['id'] }}">
       <div style="display: flex;">
         <select style="width: 3rem" name="child_id" id="child_id">
-          {% for node_item in listOfNode %}
+          {% for node_item in listof_node %}
             <option value="{{ request.form['id'] or node_item['id'] }}">{{ request.form['title'] or node_item['title'] }}</option>
           {% endfor %}
         </select>
@@ -39,7 +39,7 @@
   </div>
 <hr/>
   <div style="display:flex;justify-content: space-evenly;">
-    {% for child in listOfChild %}
+    {% for child in listof_child %}
         <a href="../{{ request.form['child_id'] or child['child_id'] }}/update">{{ request.form['child_title'] or child['child_title'] }}</a>
     {% endfor %}
   </div>
