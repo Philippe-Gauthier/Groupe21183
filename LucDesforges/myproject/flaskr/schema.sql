@@ -7,7 +7,7 @@ CREATE TABLE user (
   password TEXT NOT NULL
 );
 
-CREATE TABLE post (
+CREATE TABLE node (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   author_id INTEGER NOT NULL,
   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -16,10 +16,11 @@ CREATE TABLE post (
   FOREIGN KEY (author_id) REFERENCES user (id)
 );
 
-CREATE TABLE choice (
+CREATE TABLE edge (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    origin_id INTEGER NOT NULL,
-    destination_id INTEGER NOT NULL,
-    FOREIGN KEY (origin_id) REFERENCES post (id)
-    FOREIGN KEY (destination_id) REFERENCES post (id)
+    parent_id INTEGER NOT NULL,
+    child_id INTEGER NOT NULL,
+    child_title TEXT NOT NULL,
+    FOREIGN KEY (parent_id) REFERENCES node (id)
+    FOREIGN KEY (child_id) REFERENCES node (id)
 );
