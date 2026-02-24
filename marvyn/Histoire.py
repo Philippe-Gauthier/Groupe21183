@@ -12,7 +12,7 @@
 
 6-Scanner avec antivirus (+1 raison)
 
-7-Renommer le fichier et l’isoler (+1 raison)
+7-Renommer le fichier et l'isoler (+1 raison)
 
 8-Fermer session sans agir (0)
 
@@ -25,7 +25,7 @@
 
 3-Modifier une variable test (+1 ambition)
 
-4-Chercher l’auteur du script (+2 raison)
+4-Chercher l'auteur du script (+2 raison)
 
 5-Examiner connexions réseau (+2 raison)
 
