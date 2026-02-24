@@ -1,5 +1,4 @@
 #libraries
-import time 
 
 #variables
 current_page = () 
@@ -8,52 +7,88 @@ melons = ()
 hearts = ()
 iridium = ()
 carpe_mutante = ()
-short_de_lewis = ()
-current_page = ()
-
-#fonctions 
-
-#une fonction qui permet d'initialiser un fichier de sauvegarde 
-def get_save_files(): 
-    global current_page 
-    global money 
-    global melons 
-    global hearts 
-    global iridium 
-    global carpe_mutante 
-    global short_de_lewis 
-
-    filepath = "save.txt" 
-    with open(filepath, "r") as file:
-        lines = file.readlines()
-        current_page = lines[0]
-        money = lines[1]
-        melons = lines[2]
-        hearts = lines[3]
-        iridium = lines[4]
-        carpe_mutante  = lines[5]
-        short_de_lewis = lines[6]
-        file.close()
-
-    
+chosen_page = ()
+display_page = ()
+done = ()
 
 
 # une fonction qui permet de sauvegarder
-
-
-# une fonction pour formater la page
+def save ():
+    open('save.txt', 'w').close()
+    file = open("save.txt","w")
+    content = str(current_page) + str(money) + str(melons) + str(hearts) + str(iridium) + str(carpe_mutante)
+    file.write(content)
+    file.close()
 
 #une fonction pour call une page dans une liste de fichier txt 
+def page_calling (page_number):
+    page_number = str(page_number)
+    page_number =  page_number + ".txt"
+    file = open(page_number,"r")
+    char = file.readlines()[1]
+    header =  char[0]
+    file.close()
+    if header == current_page:
+        file = open(page_number,"r")
+        page = file.readlines()[2:]
+        file.close()
+        return (page)
+        
+    else:
+        print("numero de page invalide")
+        file.close()
+# une fonction pour ajouter les items au joueur
+def items_get ():
+    current_page = str(current_page) 
+    page = current_page + ".txt"
+    file = open(page, "r")
+    char = file.readlines()[0]
+    money = money + char[1]
+    melons = melons + char[2]
+    hearts = hearts + char[3]
+    iridium = iridium + char[4]
+    carpe_mutante = carpe_mutante + char[5]
+    file.close()
+    
+# une fonction de win_condition elle na aucune entree elle verrifie seulement
+# si le joueur a reussi a gagner le jeux en comparant les valeurs 
+# de linventaire du joueur au valeur demandee pour ganger
+def win_con ():
+    if current_page == 10 and money == 100 and melons == 1 and hearts == 6 and iridium == 5 and carpe_mutante == 1:
+        while reponse != 'X' or 'R':
+            reponse = input("Bravo vous avez gagne le centre communautaire est restaure et tout les villageois sont heureux \n que voulez vous faire \n quitter appuyez sur X      recomencer appuyez sur R")
+            if reponse == 'X':
+                save()
+                return(True)
+            elif reponse == 'R': open('save.txt', 'w').close()  
 
-# une fonction pour afficher une page
+            else: 
+                print ("reponse invalide entrez une reponse valide")
+                
+            
+    else : 
+        return(False)
 
-# une fonction pour choisier une page 
 
-# une fonction pour quitter le jeux
 
-# une fonction de win_condition
 
+
+#ouverture du ficher de sauvegarde 
+with open("save.txt","r") as file:
+    char = file.read()
+    current_page = char[0]
+    money = char[1]
+    melons = char[2]
+    hearts = char[3]
+    iridium = char[4]
+    carpe_mutante  = char[5]
+    file.close() 
 
 #main
-get_save_files()
-print(current_page)
+while done != True :
+    display_page = page_calling(current_page)
+    print (display_page)
+    current_page = input("inscrire le numero de page a laquelle vous voulez aller")
+    items_get()
+    done = win_con()
+    save()
