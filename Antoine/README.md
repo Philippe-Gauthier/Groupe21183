@@ -1,6 +1,8 @@
 # Mon projet
 ## concepte
 Aventure texte médiéval-fantastique (genre DnD) dont vous êtes le héro sous forme digitale entièrement comprise dans le terminal.
+
+Plongez dans un court jeu d’aventure où vous incarnez un héros médiéval-fantastique en quête de gloire et déterminé à terrasser le dragon des montagnes ! Redécouvrez la magie des premiers jeux de rôle textuels, à l’époque des Commodore et des Pentium, quand un simple écran cathodique monochrome et un clavier suffisaient pour faire naître des mondes entiers.
 ## Structure
 ### - structure
 Arbre décisionnel, chaque action amène un résultat différent.
