@@ -1,0 +1,11 @@
+000000
+
+pierre -merci fermier de ton aide jai besoin que tu trie les legumes 
+pierre - chaque carrote vaut une piece dor 
+pierre - voicis les legumes si  2 carrotes sont egale a 4 pomme 
+pirre - et que 5 sont egale a 15 carrotes
+pierre - combien vallent en or  en 2 patates 3 carrotes et 6 pommes
+
+13 or [page 15]
+6 or [page 16]
+11 or [page 17]
