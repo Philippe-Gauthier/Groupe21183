@@ -56,14 +56,10 @@
 </ul>
 
 <!-- GETTING STARTED -->
-<h2 id="getting-started"> :book: Getting Started</h2>
+<h2 id="getting-started"> :book: Pour commencer</h2>
 
-<p>You are able to start the game by typing the following commands in the command line:</p>
-<pre><code>$ python pacman.py</code></pre>
-
-<p>You can see the list of all options and their default values via:</p>
-<pre><code>$ python pacman.py -h</code></pre>
-<i>Note that all of the commands that appear in this project also appear in <code>commands.txt</code>, for easy copying and pasting.</i>
+<pre><code>> py -3 -m venv .venv</code></pre>
+<pre><code>> .venv\Scripts\activate</code></pre>
 
 <!-- CREDITS -->
 <h2 id="credits"> :scroll: Credits</h2>
