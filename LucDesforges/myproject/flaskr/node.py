@@ -49,16 +49,24 @@ createUFS = 'node.create'
 updateUFS = 'node.update'
 readUFS = 'node.read'
 
-#Va chercher tous les noeuds qui existe
+"""
+Entrées: -Aucune-
+Sortie: string équivalent à un string html
+Description : Va chercher tous les noeuds qui existe
+""" 
 @bp.route(indexRouteString)
-def index():
+def index() -> str:
     listOfNode = get_listOfNode()
     return render_template(indexRTS, listOfNode=listOfNode)
 
-#Fonctionalité por créer un noeud
+"""
+Entrées: -Aucune-
+Sortie: string équivalent à un string html
+Description : Fonctionalité por créer un noeud
+"""
 @bp.route(createRouteString, methods=('GET', 'POST'))
 @login_required
-def create():
+def create() -> str:
     if request.method == 'POST':
         title = request.form['title']
         body = request.form['body']
@@ -77,32 +85,14 @@ def create():
             
     return render_template(createRTS)
 
-#Fonctionalité pour chercher tous les noeud
-def get_listOfNode(db=None):
-    if(db is None):
-        db = get_db()
-
-    return db.execute(indexQuery).fetchall()
-
-#Fonctionalité pour chercher un noeud par id
-def get_node(id, check_author=True, db=None):
-    if(db is None):
-        db = get_db()
-
-    node = db.execute(getQuery, (id,)).fetchone()
-
-    if node is None:
-        abort(404, f"Node id {id} doesn't exist.")
-
-    if check_author and node['author_id'] != g.user['id']:
-        abort(403)
-
-    return node
-
-#Fonctionalité pour mettre à jour un noeud par id
+"""
+Entrées: id (identifiant du noeud)
+Sortie: string équivalent à un string html
+Description : Fonctionalité pour mettre à jour un noeud par id
+"""
 @bp.route(updateRouteString, methods=('GET', 'POST'))
 @login_required
-def update(id):
+def update(id) -> str:
     if request.method == 'POST':
         title = request.form['title']
         body = request.form['body']
@@ -127,10 +117,14 @@ def update(id):
     listOfParent = db.execute(listOfParentQuery, (param)).fetchall()
     return render_template(updateRTS, node=node, listOfNode=listOfNode, listOfChild=listOfChild, parent=listOfParent[0] if listOfParent else None )
 
-#Fonctionalité pour afficher un noeud par id, et montrer les détails
+"""
+Entrées: id (identifiant du noeud)
+Sortie: string équivalent à un string html
+Description : Fonctionalité pour afficher un noeud par id, et montrer les détails
+"""
 @bp.route(readRouteString, methods=('GET', 'POST'))
 @login_required
-def read(id):
+def read(id) -> str:
     if request.method == 'POST':
         title = request.form['title']
         body = request.form['body']
@@ -153,10 +147,14 @@ def read(id):
     listOfChild = db.execute(listOfChildQuery, (param)).fetchall()
     return render_template(readRTS, node=node, listOfChild=listOfChild)
 
-#Fonctionalité pour ajouter un noeud enfant par id
+"""
+Entrées: id (identifiant du noeud)
+Sortie: string équivalent à un string html
+Description : Fonctionalité pour ajouter un noeud enfant par id
+"""
 @bp.route(addOptionRouteString, methods=('POST',))
 @login_required
-def add_option(id):
+def add_option(id) -> str:
     if request.method == 'POST':
         error = None
 
@@ -176,13 +174,46 @@ def add_option(id):
     listOfNode = get_listOfNode(db)
     return render_template(updateRTS, node=node_parent, listOfNode=listOfNode, addOptionQuery=addOptionQuery)
 
-#Fonctionalité pour supprimer un noeud par id
+"""
+Entrées: id (identifiant du noeud)
+Sortie: string équivalent à un string html
+Description : Fonctionalité pour supprimer un noeud par id
+"""
 @bp.route(deleteRouteString, methods=('POST',))
 @login_required
-def delete(id):
+def delete(id) -> str:
     db = get_db()
     get_node(id, True, db)
     db.execute(deleteQuery, (id,))
     db.commit()
     return redirect(url_for(indexUFS))
 
+"""
+Entrées: -Aucune-
+Sortie: Liste de noeuds
+Description : Fonctionalité pour chercher tous les noeud
+"""
+def get_listOfNode(db=None) -> list[Any]:
+    if(db is None):
+        db = get_db()
+
+    return db.execute(indexQuery).fetchall()
+
+"""
+Entrées: id (identifiant du noeud), optionnels: check_author (Un boolean si on veut que seulement l'auteur puisse accéder), db (Connection à la base de donnée)
+Sortie: un noeud
+Description : Fonctionalité pour chercher un noeud par id
+"""
+def get_node(id, check_author = True, db = None):
+    if(db is None):
+        db = get_db()
+
+    node = db.execute(getQuery, (id,)).fetchone()
+
+    if node is None:
+        abort(404, f"Node id {id} doesn't exist.")
+
+    if check_author and node['author_id'] != g.user['id']:
+        abort(403)
+
+    return node
