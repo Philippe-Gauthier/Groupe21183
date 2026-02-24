@@ -12,10 +12,7 @@
 - James Bergeron
 ### Langage de programmation : python
 
-
 ---
-
-
 
 # titre
 ## titre
@@ -51,6 +48,30 @@ print("aaaa")
 ```
 ---
 ***weeeeeeeee***
----
 
 ---
+- Résumé (ce que c'est le programme)
+- image
+  - logo
+  - Exemples
+- Fonctionnalités
+- FAQ
+- Table des matières
+
+- Troubleshooting
+  - usage
+  - testing
+  - installation
+  - dépendance
+
+- Développement
+  - Hiérarchie des fichiers
+  - Todo (à faire)
+  - issues (problèmes connus)
+  - limitations
+  - Calendrier
+  
+- Lien vers documentation externe
+- Lien vers une communauté (support ou utilisateur)
+- license
+- acknowledgement
