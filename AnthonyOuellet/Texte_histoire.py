@@ -1,4 +1,8 @@
-### Projet 1: Livre interractif (Par Anthony Ouellet)
+""" 
+Projet 1: Livre interractif 
+Par Anthony Ouellet
+Date: 24-02-2026
+"""
 
 """
 Histoire interactive de style Dark Fantasy inspirée de Dark Souls/Bloodborne.
@@ -24,6 +28,7 @@ def nar(texte):
     time.sleep(0.5) # Petite pause de réflexion après la phrase
 
 # ==================== SITUATION INITIALE ====================
+
 def situation_initiale():
     nar("=== NOUVELLE PARTIE ===")
     nar("\nLa cloche funèbre résonne dans les ruines.")
