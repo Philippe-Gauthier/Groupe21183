@@ -1,5 +1,3 @@
-print(1)
+print("n'importe quoi")
 
-print(2)
-
-print(3)
+#ceci est un commentaire
