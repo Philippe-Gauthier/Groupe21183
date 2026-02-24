@@ -1,3 +1,9 @@
+"""
+Auteur : Luc Desforges
+Date : 23 fevrier 2026
+Description : Fichier contenant toutes les fonctionalités de lancement d'application.
+""" 
+
 import os
 
 from flask import Flask
@@ -32,8 +38,8 @@ def create_app(test_config=None):
     from . import auth
     app.register_blueprint(auth.bp)
 
-    from . import blog
-    app.register_blueprint(blog.bp)
+    from . import node
+    app.register_blueprint(node.bp)
     app.add_url_rule('/', endpoint='index')
 
     return app

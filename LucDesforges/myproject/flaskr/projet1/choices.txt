@@ -1,0 +1,306 @@
+Here's your 40-node "You Are the Hero" story, written in classic choose-your-own-adventure style. Each number is a node. Pick your choice and jump to the corresponding number.
+You wake up inside something warm, wet and pulsing.
+Thick transparent membrane surrounds you.
+Your body feels wrong — too many limbs, too light.
+You realize you're no longer human.
+Something just cracked the shell around you.
+1
+A) Tear the membrane violently with your new claws → 2
+B) Wait and observe quietly → 3
+C) Try to speak or make any sound → 4
+2
+The membrane rips.
+Cold air hits you.
+You're lying on black moss inside a huge fungal cavern.
+Three exits glow faintly different colors: violet, crimson, pale green.
+2
+A) Violet tunnel (smells sweet, almost hypnotic) → 5
+B) Crimson tunnel (heat waves distort the air) → 6
+C) Pale green tunnel (damp, lots of dripping water) → 7
+3
+Minutes pass.
+A slender shadow approaches.
+Insectoid creature with glass-like wings studies you.
+It speaks in your mind: «Newborn. Choose fast or I choose for you.»
+3
+A) Let it choose → 8
+B) Point at the violet tunnel → 5
+C) Point at the crimson tunnel → 6
+4
+Your attempt at speech comes out as beautiful chiming notes.
+The sound echoes.
+Small glowing motes detach from the ceiling and swirl around you protectively.
+4
+A) Follow the motes wherever they lead → 9
+B) Ignore them and crawl toward violet tunnel → 5
+C) Ignore them and crawl toward crimson tunnel → 6
+5
+Violet tunnel smells better the deeper you go.
+You feel sleepy… too sleepy.
+Flowers bloom from the walls and exhale perfume directly into your face.
+5
+A) Fight the drowsiness → 10
+B) Let yourself drift → 11
+6
+Crimson tunnel is a furnace.
+Your new skin loves it.
+You grow visibly larger with every step.
+At the end — a magma pool guarded by two burning silhouettes.
+6
+A) Challenge them → 12
+B) Try to sneak around the pool → 13
+C) Bow and offer submission → 14
+7
+Pale green tunnel is flooded ankle-deep.
+Small eel-like creatures swim around your legs.
+They don't bite… yet.
+You see bioluminescent writing on the wall.
+7
+A) Read it carefully → 15
+B) Keep moving forward fast → 16
+8
+The insectoid touches your forehead.
+«Good choice.»
+Your mind fills with orders.
+You are now its scout.
+It points to crimson tunnel.
+8
+A) Obey and go crimson → 6
+B) Resist its command → 17
+9
+Motes lead you through narrow cracks.
+You emerge in a cathedral of crystal roots.
+A female shape made of living glass sits on a throne of thorns.
+9
+A) Kneel → 18
+B) Demand answers → 19
+C) Try to steal a piece of her → 20
+10
+You bite your own tongue.
+Pain clears your mind.
+You stumble forward and fall into a nest of sleeping serpent-women.
+10
+A) Wake one up gently → 21
+B) Try to eat one while they sleep → 22
+C) Back away slowly → 23
+11
+You dream of flying forever.
+When you wake you're suspended in violet silk high above the cavern floor.
+A chorus of voices: «Our new singer.»
+11
+A) Sing for them → 24
+B) Struggle to escape → 25
+12
+You charge.
+One silhouette shatters into sparks.
+The second one laughs and slams you into the magma.
+12
+A) Dive deeper into the magma → 26
+B) Crawl out and run → 27
+13
+You almost make it.
+A whip of fire catches your ankle.
+You're dragged back.
+13
+→ 12
+14
+They accept.
+Branding iron burns a sigil into your chest.
+You are now Flameborn.
+They point to a black archway behind the pool.
+14
+A) Step through → 28
+B) Ask what is expected of you → 29
+15
+The writing says:
+«Drink and remember.
+Or drink and forget forever.»
+A small cup of glowing liquid sits below the inscription.
+15
+A) Drink → 30
+B) Smash the cup → 31
+16
+You run.
+Eels swarm.
+They bite and inject something sweet.
+Your legs stop working.
+16
+→ 32
+17
+You scream inside your mind.
+The insect shatters like dropped porcelain.
+Its death releases thousands of tiny eggs into the air.
+17
+A) Inhale them → 33
+B) Run to pale green tunnel → 7
+18
+She smiles.
+«Finally someone with manners.»
+She touches your sternum.
+A second heart starts beating inside you.
+18
+A) Ask who she is → 34
+B) Ask what you are → 35
+19
+She laughs — sound like breaking windows.
+«Rude newborns die fast.»
+Thorns lash out.
+19
+→ 36 (bad end)
+20
+You snatch a shard.
+She shrieks.
+Every crystal root in the room turns toward you.
+20
+→ 36 (bad end)
+21
+She opens emerald eyes.
+«You woke me before the molt. Dangerous.»
+She coils around you possessively.
+21
+A) Accept her embrace → 37
+B) Stab her with your claws → 38
+22
+You taste venom and regret.
+She wakes screaming.
+All of them wake.
+22
+→ 36 (bad end)
+23
+You back into a hidden passage.
+It leads to a library of living flesh books.
+23
+A) Read the closest one → 39
+B) Keep exploring deeper → 40
+24
+Your voice shatters stalactites.
+They crown you with violet silk.
+You become their Voice.
+The story ends here — you rule the fungal choir.
+24
+(ending — The Singer)
+25
+Silk tears.
+You fall thirty meters.
+Land in water.
+You survive… changed.
+25
+→ 7
+26
+Magma enters your lungs.
+You become fire.
+You rise as a living inferno.
+26
+(ending — The Cinder Sovereign)
+27
+You crawl out scorched.
+A scavenger finds you.
+Sells you to the highest bidder.
+27
+(ending — The Trophy)
+28
+Black archway → endless night.
+You walk until time loses meaning.
+You become the dark between stars.
+28
+(ending — The Between)
+29
+«Bring us a newborn every cycle.»
+You nod.
+You become their hunter.
+29
+(ending — The Harvester)
+30
+Memories flood back — you were human once.
+You remember your name.
+You remember why you came here.
+30
+A) Keep remembering → 41 (true end)
+B) Reject the memories → 42
+31
+Liquid explodes.
+You are erased from reality.
+31
+(ending — Never Were)
+32
+You wake in a cocoon.
+They are growing you into something beautiful and terrible.
+32
+(ending — The Becoming)
+33
+Eggs hatch inside you.
+You become mother to a swarm.
+33
+(ending — The Hive Queen)
+34
+«I am the First Fracture.
+You are the next.»
+34
+→ 43 (loop end — you sit on the throne now)
+35
+«You are hunger wearing stolen skin.»
+35
+→ 18
+36
+Your story ends here.
+Violently.
+(standard bad end)
+37
+She kisses venom into your veins.
+You become her consort.
+You rule the flooded galleries together.
+37
+(ending — The Coiled King/Queen)
+38
+She laughs as she dies.
+Her sisters tear you apart.
+38
+→ 36
+39
+The book is written in your own blood from a future you haven't lived yet.
+39
+A) Keep reading → 30
+B) Burn it → 44
+40
+You find a mirror of black water.
+You see what you have become.
+You can accept it… or try one last time to remember who you were.
+40
+A) Accept → 45 (ending — The New Self)
+B) Reject → 30
+41
+(true ending)
+You remember the ritual that brought you here.
+You were never meant to survive it.
+You tear open reality and step back into your human body — gasping on cold laboratory floor.
+But part of the newborn still lives inside your eyes.
+41
+(ending — Returned… mostly)
+42
+You forget everything.
+You become perfect monster.
+No regrets.
+No name.
+42
+(ending — Clean Hunger)
+43
+The throne feels familiar.
+You were always sitting here.
+The story loops forever.
+43
+(ending — Eternal Fracture)
+44
+Flames consume knowledge.
+Knowledge consumes you back.
+44
+→ 26
+45
+You smile at your reflection.
+Claws.
+Fangs.
+Wings of stained glass.
+You like what you see.
+45
+(ending — The New Self — proud)
+Pick your path, sweet thing.
+Which number do you choose first? 💜

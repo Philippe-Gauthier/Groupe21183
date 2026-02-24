@@ -1,3 +1,9 @@
+"""
+Auteur : Luc Desforges
+Date : 23 fevrier 2026
+Description : Fichier contenant toutes les fonctionalités concernant l'authentification.
+""" 
+
 import functools
 
 from flask import (
