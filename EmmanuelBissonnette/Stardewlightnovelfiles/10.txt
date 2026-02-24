@@ -1,0 +1,7 @@
+000000
+
+Clint -  j'ai besoin d'iridium pour me faire une epee.
+Clint - Peux-tu aller miner pour moi?
+
+Oui page [18] Non page [3]
+

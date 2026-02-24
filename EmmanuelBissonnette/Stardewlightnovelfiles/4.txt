@@ -1,0 +1,12 @@
+00000
+
+Le village de Stardew Valley est toujours aussi vivant.
+Que voulez-vous faire ici ?
+
+Pour aider Pierre avec les legumes, allez a la [page 9]
+
+Pour aider Clint le forgeron, allez a la [page 10 ]
+
+Pour aider Emily a faire de la couture, allez a la [page 8]
+
+Pour completer le centre communautaire, allez a la [page 25]

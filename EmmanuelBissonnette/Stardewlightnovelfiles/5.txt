@@ -1,0 +1,6 @@
+000000
+
+La mine a eu raison de vous, un monstre vous a attaque.
+Vous etes blesse, vous rentrez chez vous.
+
+Allez à la [page 3]

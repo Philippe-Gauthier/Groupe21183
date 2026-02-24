@@ -1,0 +1,8 @@
+0000000000
+1
+
+Vous etes dans la mine, plein de richesses soffrent à vous.
+De dangeureux monstres s'y trouvent faites attention.
+Vous devez rouler un de 6  pour determiner  votre reussite.
+
+[1 a 2 page 5] [3 a 4 page 6] [5 a 6 page 7]

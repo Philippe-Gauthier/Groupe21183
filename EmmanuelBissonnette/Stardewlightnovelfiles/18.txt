@@ -1,0 +1,8 @@
+00000000
+
+de retour a la mine pour clint voyons votre succes aujourdhui
+
+rouler 2 des 6 
+
+si vous avex au dessus de 10 allez a [la page 19 ]
+sinon allez a la [page 20]

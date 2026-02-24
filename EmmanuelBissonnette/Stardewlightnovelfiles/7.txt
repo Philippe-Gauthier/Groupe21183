@@ -1,0 +1,10 @@
+100100
+
+Wow!!! Un super coffre se trouve devant vous!
+
+Vous y trouvez 1 piece d'or.
+De plus, vous recuperez un minerai d'iridium.
+
+Vous etes epuise et vous rentrez a la maison.
+
+Allez a la [page 3]

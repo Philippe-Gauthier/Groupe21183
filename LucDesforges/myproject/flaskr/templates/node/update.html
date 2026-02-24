@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Edit "{{ node['title'] }}"{% endblock %}</h1>
+  <div style="display:flex;justify-content: space-evenly;">
+
+      <a href="../{{ parent['parent_id'] }}/update">{{ parent['title'] }}</a>
+  </div>
+  <a class="action" href="{{ url_for('node.read', id=node['id']) }}">Read</a>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="title">Title</label>
+    <input name="title" id="title"
+      value="{{ request.form['title'] or node['title'] }}" required>
+    <label for="body">Body</label>
+    <textarea name="body" id="body">{{ request.form['body'] or node['body'] }}</textarea>
+    <input type="submit" value="Save">
+  </form>
+  <div style="display: flex; height: 3rem; flex-direction: row-reverse; justify-content: space-between;">
+    
+    <form action="{{ url_for('node.delete', id=node['id']) }}" method="post">
+      <input style="height: 50%;" class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+    </form>
+    <form style="height: 3rem; margin: 0;" action="{{ url_for('node.add_option', id=node['id']) }}" method="post">
+      <input type="hidden" id="id" name="id" value="{{ request.form['id'] or node['id'] }}">
+      <div style="display: flex;">
+        <select style="width: 3rem" name="child_id" id="child_id">
+          {% for node_item in listof_node %}
+            <option value="{{ request.form['id'] or node_item['id'] }}">{{ request.form['title'] or node_item['title'] }}</option>
+          {% endfor %}
+        </select>
+        <input style="width: 22rem;" name="child_title" id="child_title"
+        value="{{ request.form['child_title'] or node['child_title'] }}" required>
+        <input type="submit" value="Add">
+      </div>
+    </form>
+  </div>
+<hr/>
+  <div style="display:flex;justify-content: space-evenly;">
+    {% for child in listof_child %}
+        <a href="../{{ request.form['child_id'] or child['child_id'] }}/update">{{ request.form['child_title'] or child['child_title'] }}</a>
+    {% endfor %}
+  </div>
+
+{% endblock %}

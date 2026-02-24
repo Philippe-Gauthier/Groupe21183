@@ -1,0 +1,6 @@
+00000 header ditem a rajouter a linventaire  voir linge 6
+1 header de verif (obsolete)
+TEXTE TEXTE TEXTE
+
+===================
+ordre ditem est: money , melons , hearts , iridium ,carpre_mutante

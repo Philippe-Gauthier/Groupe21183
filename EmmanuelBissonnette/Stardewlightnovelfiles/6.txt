@@ -1,0 +1,6 @@
+000100
+
+Vous trouvez un minerai d'iridium.
+Vous decidez de rentrer chez vous, car vous êtes fatigue apres votre grosse journee.
+
+Allez à la page [3]
