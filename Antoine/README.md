@@ -28,20 +28,26 @@ le résultat du-dit choix, qui promptera d'autre choix, d'ou la structure d'arbr
 ```cmd
 pip install termcolor
 ```
-assurez vous d'utiliser la bonne version den python, sinon, le code ne trouvera pas trermcolor, ne pourra pas l'importer et ne démarrera pas.
-## Arbre
-à faire
+assurez vous d'utiliser la bonne version de python, sinon, le code ne trouvera pas trermcolor, ne pourra pas l'importer et ne démarrera pas.
+
 
 ## Fonctionnalitées en attente
 ### nécéssaire
-rien
+rien, le programme fonctionne parfaitement.
+
+peut être une version francaise correcte
 ### optionnel -probablement jamais-
 un système de combat tour-à-tour
 
 un système d'inventaire avec des items et cartes utilisable en combat
+
 ## Pour la correction
 le fichier que j'ai écrit se nomme Text_adventure_01.py, malheureusement, j'écrit mieux en anglais qu'en français, j'ai donc fait mon histoire en anglais, cela a eu comme fâcheux effet de me faire commenter mon code en anglais. Comme je n'ai appris les restrictions linguistiques de la documentation que très tard dans le projet (par exemple, le jour de la remise), j'ai donc rapidement passé mon code dans DeepL translator afin de traduire le tout en français. j'ai ensuite utilisé ctrl+f et la vonction 'replace all', le 'replace all' ne fait pas la différence entre ce qui est du code et ce qui est un commentaire, il est donc possible que du ciode soit changé et inutile suite à la traduction
 
 Veuillez donc, s'il-vous-plait, corriger la documentation dans le fichier Aventure_texte_fr.py mais le code comme tel dans le fichier Text_adventure.py.
 
 merci de votre compréhention
+
+## crédit (acknowledgements)
+- code : Antoine D-C
+- avec l'aide de: Philippe Gauthier, Google.com, reddit.com et perplexity.ai
