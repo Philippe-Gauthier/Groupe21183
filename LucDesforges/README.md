@@ -30,6 +30,9 @@ Ma version du projet est une application web flask et les fonctionalités de noe
 Ainsi je limite la charge de code dédié sur la traversée de l'arbre et j'ai pu me soucier plutot de la structure de celui-ci dans une base de donnée. La structure web me permet aussi d'offrir un visuel web standard plutot que console. Le fait d'avoir une base de données me permet aussi de créer l'histoire et l'arbre directement par l'application et de l'enregistrer selon les besoin.
 </p>
 
+<h3>À corriger: node.py et read.html</h3>
+<h4>Digne d'intérêts: schema.sql, style.css et les fichiers html sous le dossier "templates\node"</h4>
+
 <!-- PROJECT FILES DESCRIPTION -->
 <h2 id="project-files-description">Description de l'hierarchie des fichiers</h2>
 
