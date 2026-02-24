@@ -1,17 +1,29 @@
 ### Projet 1: Livre interractif (Par Anthony Ouellet)
 
+"""
+Histoire interactive de style Dark Fantasy inspirée de Dark Souls/Bloodborne.
+Le joueur explore un monde sombre avec plus de 50 choix menant à différentes fins.
+"""
+
 # Bibliothèque
 import time
 
 # Fonction de naration style RPG pour ralentir l'affichage du texte histoire
+
 def nar(texte):
+    """
+    Affiche le texte lettre par lettre pour créer un effet de narration.
+    
+    Args:
+        texte (str): Le texte à afficher progressivement
+    """
     for lettre in texte: # Pour chaque caractère contenu dans la phrase (un par un)
         print(lettre, end='', flush=True) # Affiche la lettre sans passer à la ligne et force l'affichage immédiat
         time.sleep(0.03) # Vitesse d'affichage
     print()
     time.sleep(0.5) # Petite pause de réflexion après la phrase
 
-# Situation initiale
+# ==================== SITUATION INITIALE ====================
 def situation_initiale():
     nar("=== NOUVELLE PARTIE ===")
     nar("\nLa cloche funèbre résonne dans les ruines.")
@@ -36,8 +48,9 @@ def situation_initiale():
         print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
         situation_initiale()
     
+# ==================== BRANCHE 1: LA CATHÉDRALE ====================
 
-def cathedrale(): # Branche principale 1
+def cathedrale():
     nar("\nLa cathédrale est éventrée, ses vitraux pleurent le sang.")
     nar("Des statues déformées vous observent, leurs visages figés dans l'agonie.")
     nar("Au centre de la cathédrale, un chevalier en armure noire garde quelque chose.")
@@ -358,7 +371,9 @@ def observer_silhouette(): # Branche 1.3.2
         print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
         observer_silhouette()
 
-def catacombes(): # Branche principale 2
+# ==================== BRANCHE 2: LES CATACOMBES ====================
+
+def catacombes(): 
     nar("\nLes marches descendent dans l'obscurité totale.")
     nar("L'air est lourd, saturé de l'odeur de la décomposition.")
     nar("Des ossements jonchent le sol. Certains semblent récents.")
@@ -524,7 +539,9 @@ def allumer_torche(): # Branche 2.3
         print("Saisie invalide. Entrez le nombre correspondant à votre choix.")
         allumer_torche()
 
-def brouillard(): # Branche principale 3
+# ==================== BRANCHE 3: LE BROUILLARD ====================
+
+def brouillard():
     nar("\nLe brouillard est si dense que vous ne voyez pas vos propres mains.")
     nar("Le sol sous vos pieds est mou, presque vivant.")
     nar("Des silhouettes se dessinent au loin, immobiles.")
@@ -701,6 +718,12 @@ def contourner_village(): # Branche 3.3.2
     
 
 def rejouer():
+    
+    """
+    Demande au joueur s'il souhaite recommencer l'histoire.
+    Relance situation_initiale() si oui, termine le programme si non.
+    """
+    
     choix = input("\nVoulez-vous rejouer? (oui/non) : ")
     if choix == "oui":
         situation_initiale()
