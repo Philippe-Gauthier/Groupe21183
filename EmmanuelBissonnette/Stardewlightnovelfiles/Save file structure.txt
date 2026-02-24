@@ -1,5 +1,7 @@
 line 1 page
-line 2 money
-line 3 melons
-line 4 iridium
-line 5 carpe mutante
+LINE 2 PAGE
+line 3 money
+line 4 melons
+char 5 hearts
+line 6 iridium
+line 7 carpe mutante

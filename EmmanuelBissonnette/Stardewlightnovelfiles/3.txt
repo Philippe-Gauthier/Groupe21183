@@ -1,0 +1,9 @@
+000000
+2
+
+de retour a la maison apres une bonne nuit de sommeil que veux tu faire aujourdhui
+
+aller aux village [page 4]
+aller miner [page 2 ]
+aller a la peche [ page 20]
+soccuper du champs [ page 21 ]
