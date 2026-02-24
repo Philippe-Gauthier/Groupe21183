@@ -1,11 +1,10 @@
 100100
 
-Wow un super coffre se trouve devant vous. 
+Wow!!! Un super coffre se trouve devant vous!
 
-vous y trouvez 1 piece dor 
+Vous y trouvez 1 piece d'or.
+De plus, vous recuperez un minerai d'iridium.
 
-de plus vous recuperez un minerait d'iridium
+Vous etes epuise et vous rentrez a la maison.
 
-vous etes epuise et vous rentrez a la maison
-
-allez a la [page 3]
+Allez a la [page 3]

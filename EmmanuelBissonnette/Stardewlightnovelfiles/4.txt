@@ -1,12 +1,12 @@
 00000
 
-le village de stardew valley est toujours aussi vivant 
-que voulez vous faire ici ?
+Le village de Stardew Valley est toujours aussi vivant.
+Que voulez-vous faire ici ?
 
-pour aider pierre avec les legumes allez a la [page 9]
+Pour aider Pierre avec les legumes, allez a la [page 9]
 
-pour aider clint le forgeron allez a la [page 10 ]
+Pour aider Clint le forgeron, allez a la [page 10 ]
 
-aider emily a faire de la couture allez a la [page 8]
+Pour aider Emily a faire de la couture, allez a la [page 8]
 
-completter le centre communautaire [page 25]
+Pour completer le centre communautaire, allez a la [page 25]

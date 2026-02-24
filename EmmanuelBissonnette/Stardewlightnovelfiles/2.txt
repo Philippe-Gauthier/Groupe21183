@@ -1,8 +1,8 @@
 0000000000
 1
 
-vous etes dans la mine plein de richesse s`offrent a vous 
-de dangeureux monstres si trouvent faites attention
-vous devez roullez un dé 6  pour determiner  votre reussite
+Vous etes dans la mine, plein de richesses soffrent à vous.
+De dangeureux monstres s'y trouvent faites attention.
+Vous devez rouler un de 6  pour determiner  votre reussite.
 
 [1 a 2 page 5] [3 a 4 page 6] [5 a 6 page 7]

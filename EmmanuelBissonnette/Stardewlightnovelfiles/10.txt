@@ -1,7 +1,7 @@
 000000
 
-clint -  jai besoin diridium pour me faire une epee
-clint - peut tu  aller miner pour moi 
+Clint -  j'ai besoin d'iridium pour me faire une epee.
+Clint - Peux-tu aller miner pour moi?
 
-oui page [18] non page [3]
+Oui page [18] Non page [3]
 

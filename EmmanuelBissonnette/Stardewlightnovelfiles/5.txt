@@ -1,5 +1,6 @@
 000000
 
-la mine a u raison de vous un monstre vous attaque et vous etes blesse vous rentrez chez vous 
+La mine a eu raison de vous, un monstre vous a attaque.
+Vous etes blesse, vous rentrez chez vous.
 
-allez a la [page 3]
+Allez à la [page 3]

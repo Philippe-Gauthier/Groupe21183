@@ -1,9 +1,11 @@
 000000
 2
 
-de retour a la maison apres une bonne nuit de sommeil que veux tu faire aujourdhui
+De retour a la maison apres une bonne nuit de sommeil.
 
-aller aux village [page 4]
-aller miner [page 2 ]
-aller a la peche [ page 20]
-soccuper du champs [ page 21 ]
+Que veux-tu faire aujourd'hui?
+
+Aller aux village [page 4]
+Aller miner [page 2 ]
+Aller a la peche [ page 21]
+S'occuper du champs [ page 14 ]
