@@ -1,4 +1,4 @@
-# PROTOCOLE 0*6
+# PROTOCOLE 0*6 by MARVYN MBEUGMO 
 ## Description
 Livre intéractif en python basé sur arbre décisionnel 40 choix.
 Le jouer incarne un étudiaants  confronté a plusieurs décisions critiques qui influencent le déroulement de l'histoire .
